@@ -1,36 +1,59 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/Header.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+
+const projects = [
+  {
+    title: "Librairies indépendantes à Niort",
+    href: "/projets/referencement-web/librairies-independantes-niort/",
+    category: "SEO",
+    status: "Publié",
+    summary:
+      "Analyse SERP locale : types de résultats, signaux de qualité, entités, structure SGE + mini-plan de page optimisée.",
+    tags: ["SERP", "Local SEO", "Plan de page"],
+  },
+  {
+    title: "Référencement web",
+    href: "/projets/referencement-web/",
+    category: "SEO",
+    status: "Publié",
+    summary: "Page catégorie : méthode, livrables et accès aux études de cas.",
+    tags: ["Structure", "Technique", "Contenu"],
+  },
+  {
+    title: "Cybersécurité",
+    href: "/projets/cybersecurite/",
+    category: "Cyber",
+    status: "À venir",
+    summary: "Labs et write-ups : reconnaissance, analyse, compréhension des risques.",
+    tags: ["Nmap", "Méthodo", "Write-up"],
+  },
+  {
+    title: "Montage vidéo",
+    href: "/projets/montage-video/",
+    category: "Vidéo",
+    status: "À venir",
+    summary: "Montage, narration, rythme, formats courts et longs.",
+    tags: ["Rythme", "Narration", "Avant/Après"],
+  },
+];
 ---
 
-<BaseLayout title="Projets - Cassandra">
-    <Header />
+<BaseLayout title="Projets - Cassandra" description="Portfolio de projets : SEO, cybersécurité, montage vidéo.">
+  <Header />
 
-    <main>
-        <h1>Projets</h1>
+  <main>
+    <h1>Projets</h1>
+    <p class="intro">Des preuves concrètes. Pas des promesses.</p>
 
-        <section>
-            <h2><a href="/projets/referencement-web/">Référencement web</a></h2>
-            <p>Analyses SERP, structure de site, contenu et SEO technique.</p>
-            <ul>
-                <li>
-                    <a href="/projets/referencement-web/librairies-independantes-niort/">
-                    Librairies indépendantes à Niort (étude de cas SEO)
-                    </a>
-                </li>
-            </ul>
-        </section>
+    <section class="grid" aria-label="Liste de projets">
+      {projects.map((p) => <ProjectCard {...p} />)}
+    </section>
 
-        <section>
-            <h2><a href="/projets/cybersecurite/">Cybersécurité</a></h2>
-            <p>Labs, analyses, compréhension des risques.</p>
-            <p>A venir.</p>
-        </section>
-
-        <section>
-            <h2><a href="/projets/montage-video/">Montage vidéo</a></h2>
-            <p>Montage, narration, formats courts et longs.</p>
-            <p>A venir.</p>
-        </section>
-    </main>
+    <style>
+      .intro { max-width: 60ch; color: #374151; margin-top: .5rem; }
+      .grid { display: grid; gap: 1rem; margin-top: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    </style>
+  </main>
 </BaseLayout>

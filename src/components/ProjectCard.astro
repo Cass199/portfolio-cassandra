@@ -1,0 +1,128 @@
+---
+const {
+  title,
+  href,
+  category = "Projet",
+  status = "Publié", // "Publié" | "À venir"
+  summary = "",
+  tags = [],
+} = Astro.props;
+
+// Sécurisation des données (évite 90 % des bugs silencieux)
+const safeTitle = typeof title === "string" && title.trim() ? title : "Projet";
+const safeHref = typeof href === "string" && href.trim() ? href : "#";
+const safeSummary = typeof summary === "string" ? summary : "";
+const safeTags = Array.isArray(tags) ? tags : [];
+const isLive = status === "Publié";
+---
+
+<article class="card">
+  <a class="card-link" href={safeHref}>
+    <header class="card-header">
+      <div class="badges">
+        <span class="badge badge-category">{category}</span>
+        <span class={`badge badge-status ${isLive ? "is-live" : "is-soon"}`}>
+          {status}
+        </span>
+      </div>
+
+      <h3 class="card-title">{safeTitle}</h3>
+
+      {safeSummary ? (
+        <p class="card-summary">{safeSummary}</p>
+      ) : null}
+    </header>
+
+    {safeTags.length > 0 ? (
+      <ul class="tag-list">
+        {safeTags.map((t) => (
+          <li class="tag">{t}</li>
+        ))}
+      </ul>
+    ) : null}
+  </a>
+
+  <style>
+    .card {
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      background: #ffffff;
+      transition: transform 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: #d1d5db;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    }
+
+    .card-link {
+      display: block;
+      padding: 1rem;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .card-header {
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .badges {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .badge {
+      font-size: 0.85rem;
+      padding: 0.15rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      width: fit-content;
+    }
+
+    .badge-status.is-live {
+      border-color: #16a34a;
+      background: #f0fdf4;
+    }
+
+    .badge-status.is-soon {
+      border-color: #f59e0b;
+      background: #fffbeb;
+    }
+
+    .card-title {
+      margin: 0;
+      font-size: 1.1rem;
+      line-height: 1.25;
+    }
+
+    .card-summary {
+      margin: 0;
+      color: #374151;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .tag-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.75rem 0 0;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      padding: 0.1rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+    }
+  </style>
+</article>
+

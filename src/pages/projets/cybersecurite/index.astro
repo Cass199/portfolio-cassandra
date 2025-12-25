@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+---
+
+<BaseLayout
+  title="Cybersécurité — Projets"
+  description="Labs et analyses : reconnaissance, compréhension des risques, write-ups."
+>
+  <Header />
+
+  <main>
+    <h1>Cybersécurité</h1>
+    <p>
+      Ici je documente des labs et des analyses : objectifs, méthode, commandes/outils,
+      interprétation et leçons retenues.
+    </p>
+
+    <section class="section">
+      <h2>TryHackMe</h2>
+      <p class="intro">
+        Projets pratiques réalisés sur TryHackMe : défense (SOC, SIEM, WAF) et attaque (reconnaissance, brute force).
+      </p>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">Défensif</span>
+          <h3>Fakebank - Sécurité défensive</h3>
+          <p>
+            Investigation d'un incident de sécurité via SIEM : analyse, blocage IP, WAF, rate limiting.
+          </p>
+          <a href="/projets/cybersecurite/fakebank-defense/">Voir le projet</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Offensif</span>
+          <h3>Fakebank - Sécurité offensive</h3>
+          <p>
+            Attaque d'une application bancaire fictive : reconnaissance, Gobuster, accès non autorisé.
+          </p>
+          <a href="/projets/cybersecurite/fakebank-offense/">Voir le projet</a>
+        </article>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

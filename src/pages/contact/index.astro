@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+
+const title = "Contact — Cassandra";
+const description = "Me contacter pour une question, un projet ou un échange.";
+---
+
+<BaseLayout title={title} description={description}>
+  <Header />
+  <main>
+    <h1>Contact</h1>
+    <p class="intro">
+      Pour une question, un retour sur un projet, ou une demande de collaboration.
+    </p>
+
+    <section class="card" style="padding: 1rem;">
+      <p><strong>Email :</strong> <a href="mailto:heinui.cassandra@gmail.com">heinui.cassandra@gmail.com</a></p>
+      <p><strong>GitHub :</strong> <a href="https://github.com/Cass199" target="_blank" rel="noreferrer">https://github.com/Cass199</a></p>
+      <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/cassandra-michel-2b3225319" target="_blank" rel="noreferrer">https://www.linkedin.com/in/cassandra-michel-2b3225319</a></p>
+    </section>
+
+    <p style="margin-top: 1rem; color: var(--muted);">
+      Réponse généralement sous 24–72h.
+    </p>
+  </main>
+</BaseLayout>

@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+
+const title = "À propos — Cassandra";
+const description = "Présentation courte : méthodes, domaines, manière de travailler.";
+---
+
+<BaseLayout title={title} description={description}>
+  <Header />
+  <main>
+    <h1>À propos</h1>
+    <p class="intro">
+      Je construis un portfolio de projets concrets en SEO, cybersécurité et montage vidéo.
+      Mon approche : comprendre, documenter, livrer.
+    </p>
+
+    <h2>Ce que je fais</h2>
+    <ul>
+      <li><strong>SEO :</strong> analyse de SERP, structure de page, optimisation locale, contenu.</li>
+      <li><strong>Cybersécurité :</strong> labs TryHackMe, reconnaissance, méthodologie, write-ups.</li>
+      <li><strong>Montage vidéo :</strong> narration, rythme, formats courts et longs.</li>
+    </ul>
+
+    <h2>Ma manière de travailler</h2>
+    <ul>
+      <li>Je pars des faits (SERP, données, tests) avant de proposer une solution.</li>
+      <li>Je documente pour pouvoir reproduire, améliorer, et prouver le résultat.</li>
+      <li>Je privilégie une exécution propre, même sur des projets simples.</li>
+    </ul>
+
+    <h2>En ce moment</h2>
+    <p>
+      Le site évolue au fil de nouveaux projets. L’objectif est de montrer une progression réelle.
+    </p>
+  </main>
+</BaseLayout>

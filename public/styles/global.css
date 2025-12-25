@@ -1,48 +1,235 @@
-:root {
-    --max-width: 900px;
-    --text-color: #111;
-    --bg-color: #fff;
-    --link-color: #005fcc;
+/* ========== Base ==========
+   Sobriété, lisibilité, cohérence
+*/
+:root{
+  --bg: #f9fafb;
+  --surface: #ffffff;
+  --text: #111827;
+  --muted: #374151;
+  --border: #e5e7eb;
+  --border-strong: #d1d5db;
+  --shadow: 0 10px 25px rgba(0,0,0,0.06);
+
+  --radius: 14px;
+  --container: 980px;
 }
 
-* {
-    box-sizing: border-box;
+*{ box-sizing: border-box; }
+
+html, body{
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
 }
 
-body {
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    color: var(--text-color);
-    background: var(--bg-color);
-    line-height: 1.6;
+img{ max-width: 100%; height: auto; display: block; }
+a{ color: inherit; text-underline-offset: 0.18em; }
+a:hover{ text-decoration-thickness: 2px; }
+
+main{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 1.75rem 1rem 3rem;
 }
 
-main {
-    max-width: var(--max-width);
-    margin: 2rem auto;
-    padding: 0 1rem;
+/* ========== Typo ==========
+   Hiérarchie simple, efficace
+*/
+h1, h2, h3{
+  line-height: 1.2;
+  margin: 0 0 .75rem;
 }
 
-h1, h2, h2 {
-    line-height: 1,25;
+h1{ font-size: clamp(1.8rem, 2.6vw, 2.35rem); }
+h2{ font-size: clamp(1.25rem, 2vw, 1.5rem); margin-top: 1.75rem; }
+h3{ font-size: 1.1rem; margin-top: 1rem; }
+
+p{
+  margin: 0 0 1rem;
+  max-width: 75ch;
+  color: var(--muted);
 }
 
-a {
-    color: var(--link-color);
-    text-decoration: none;
+strong{ color: var(--text); }
+
+ul, ol{
+  margin: 0 0 1rem;
+  padding-left: 1.2rem;
+  max-width: 80ch;
 }
 
-a:hover {
-    text-decoration: underline;
+li{ margin: .25rem 0; color: var(--muted); }
+
+hr{
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 1.75rem 0;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+/* ========== Blocs ==========
+   citations, code, encadrés
+*/
+blockquote{
+  margin: 1rem 0;
+  padding: .75rem 1rem;
+  border-left: 4px solid var(--border-strong);
+  background: #ffffff;
+  border-radius: 10px;
+  color: var(--muted);
 }
 
-nav li {
-    display: inline-block;
-    margin-right: 1rem;
+code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.95em;
+  padding: .1rem .35rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
 }
 
+pre{
+  overflow-x: auto;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+pre code{
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+/* ========== Cards ==========
+   Si tu utilises des <article class="card">, elles auront un style cohérent partout
+*/
+.card{
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition: transform 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.card:hover{
+  transform: translateY(-2px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow);
+}
+
+.card a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ========== Petits patterns utiles ==========
+   Utilise ces classes si tu veux sans te prendre la tête
+*/
+.intro{
+  margin-top: .5rem;
+  max-width: 70ch;
+  color: var(--muted);
+}
+
+.section{
+  margin-top: 1.75rem;
+}
+
+.badge{
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  font-size: .85rem;
+  padding: .15rem .6rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--muted);
+}
+
+/* ========== Header/Nav (si tu as un header) ==========
+   Tu peux ignorer si tu as déjà ton CSS
+*/
+header.site-header{
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+}
+
+header.site-header .inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: .75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav{
+   display: flex;
+   gap: 1rem;
+   flex-wrap: wrap;
+}
+
+.nav a{
+  color: var(--text);
+  text-decoration: none;
+  padding: .35rem .55rem;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.nav a:hover{
+  background: #f3f4f6;
+  color: var(--text);
+  text-decoration: underline;
+}
+
+.cta-row{
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin: 1.25rem 0 2rem;
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .65rem .95rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-strong);
+  background: var(--text);
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn:hover{ filter: brightness(0.95); }
+
+.btn-ghost{
+  background: #fff;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-ghost:hover{
+  background: #f3f4f6;
+}
+
+.highlights{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 1.25rem;
+}
+
+.highlight{
+  padding: 1.1rem;
+}
+
+.highlight h2{
+  margin-top: 0;
+}

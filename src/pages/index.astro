@@ -7,17 +7,34 @@ import Header from "../components/Header.astro";
 	<Header />
 	
 	<main>
-		<h1>Cassandra<h1>
-		<p>
-			Portfolio de projets en référencement web, cybersécurité et montage vidéo.
-		</p>
+		<h1>Cassandra</h1>
+<p class="intro">Portfolio de projets en référencement web, cybersécurité et montage vidéo.</p>
 
-		<nav>
-			<ul>
-				<li><a href="/projets/">Projets</a></li>
-				<li><a href="/a-propos/">A propos</a><li>
-				<li><a href="/contact/"<Contact</a><li>
-			</ul>
-		</nav>
+<div class="cta-row">
+  <a class="btn" href="/projets/">Voir les projets</a>
+  <a class="btn btn-ghost" href="/a-propos/">À propos</a>
+  <a class="btn btn-ghost" href="/contact/">Contact</a>
+</div>
+
+<section class="highlights">
+  <div class="highlight card">
+    <h2>SEO</h2>
+    <p>Analyses SERP, structure de page, stratégie locale.</p>
+    <a href="/projets/referencement-web/">Explorer</a>
+  </div>
+
+  <div class="highlight card">
+    <h2>Cybersécurité</h2>
+    <p>Labs TryHackMe : reconnaissance, méthodo, write-ups.</p>
+    <a href="/projets/cybersecurite/">Explorer</a>
+  </div>
+
+  <div class="highlight card">
+    <h2>Montage vidéo</h2>
+    <p>Montage, narration, rythme, formats courts & longs.</p>
+    <a href="/projets/montage-video/">Explorer</a>
+  </div>
+</section>
+
 	</main>
 </BaseLayout>
