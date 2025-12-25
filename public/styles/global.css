@@ -112,52 +112,53 @@ blockquote{
   color: var(--muted);
 }
 
+/* ========== Code / Pre ==========
+   cohérent et lisible (pas de fond blanc)
+*/
+pre{
+  overflow-x: auto;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.06);
+}
+
 code{
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   font-size: 0.95em;
   padding: .1rem .35rem;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: #fff;
+  background: rgba(255,255,255,0.06);
+  color: rgba(233,234,245,0.92);
 }
 
-pre{
-  overflow-x: auto;
-  padding: 1rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: #fff;
-}
-
-pre code{
-  border: 0;
-  padding: 0;
-  background: transparent;
-}
-
-/* ========== Cards ==========
-   Si tu utilises des <article class="card">, elles auront un style cohérent partout
-*/
-.card{
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.05));
-  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
-  transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
-}
-
-.card:hover{
-  transform: translateY(-2px);
-  border-color: rgba(139,92,246,0.45);
-  box-shadow:
-    0 26px 70px rgba(0,0,0,0.55),
-    0 0 0 1px rgba(139,92,246,0.25);
-}
-
-.card a{
-  text-decoration: none;
+/* === VERROU PROJETS (anti-carte-blanche) === */
+.card,
+.card * {
   color: inherit;
 }
+
+.card {
+  background: linear-gradient(
+      180deg,
+      rgba(15,23,42,0.92),
+      rgba(11,12,26,0.92)
+    ) !important;
+  border: 1px solid rgba(233,234,245,0.12) !important;
+  color: rgba(233,234,245,0.92) !important;
+}
+
+.card p,
+.card li,
+.card .card-summary {
+  color: rgba(233,234,245,0.85) !important;
+}
+
+.card a {
+  color: rgba(233,234,245,0.92) !important;
+}
+
 
 /* ========== Petits patterns utiles ==========
    Utilise ces classes si tu veux sans te prendre la tête
@@ -167,6 +168,13 @@ pre code{
   max-width: 70ch;
   color: var(--muted);
 }
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
 
 .section{
   margin-top: 1.75rem;
@@ -179,9 +187,9 @@ pre code{
   font-size: .85rem;
   padding: .15rem .6rem;
   border-radius: 999px;
-  border: 1px solid var(--border);
-  background: #fff;
-  color: var(--muted);
+  color: rgba(233,234,245,0.88);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(233,234,245,0.16);
 }
 
 /* ========== Header/Nav (si tu as un header) ==========
@@ -199,10 +207,13 @@ pre code{
   box-shadow: var(--shadow);
 }
 
-.hero-home .intro{
-  font-size: 1.05rem;
-  max-width: 65ch;
+.hero-home p,
+.hero-home li,
+.hero-home .intro,
+.hero-home .muted{
+  color: rgba(233,234,245,0.84);
 }
+
 
 .muted{
   color: rgba(233,234,245,0.70);
@@ -226,36 +237,6 @@ pre code{
 .nav a:hover{
   background: rgba(139,92,246,0.12);
   border: 1px solid rgba(139,92,246,0.22);
-}
-
-.hero-home{
-  padding: 2.5rem;
-  margin: 1.5rem 0 2rem;
-  border-radius: calc(var(--radius) + 8px);
-  background:
-    linear-gradient(
-      135deg,
-      rgba(91,91,214,0.12),
-      rgba(59,47,111,0.08),
-      #ffffff
-    );
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-}
-
-.hero-home h1{
-  font-size: clamp(2.2rem, 4vw, 3rem);
-  letter-spacing: -0.02em;
-}
-
-.hero-home .intro{
-  font-size: 1.05rem;
-  max-width: 65ch;
-}
-
-.hero-home .muted{
-  color: var(--accent-deep);
-  opacity: .85;
 }
 
 .cta-row{
@@ -318,13 +299,57 @@ pre code{
   padding: .35rem .55rem;
   border-radius: 10px;
   border: 1px solid var(--border);
-  background: #fff;
-  color: var(--text);
+  background: rgba(255,255,255,0.06);
+  color: rgba(233,234,245,0.92);
   text-decoration: none;
 }
 
 .highlight a:hover{
-  background: var(--accent-soft);
-  border-color: var(--border-strong);
-  text-decoration: none;
+  background: rgba(139,92,246,0.14);
+  border-color: rgba(139,92,246,0.35);
+}
+
+/* ==============================
+   FIX BADGES + TAGS (lisibilité)
+   À mettre tout en bas du CSS
+============================== */
+
+/* Base badge : sombre, lisible */
+.badge{
+  background: rgba(255,255,255,0.08) !important;
+  border: 1px solid rgba(233,234,245,0.16) !important;
+  color: rgba(233,234,245,0.92) !important;
+}
+
+/* Badge "catégorie" un peu plus neutre */
+.badge-category{
+  background: rgba(255,255,255,0.06) !important;
+  color: rgba(233,234,245,0.88) !important;
+}
+
+/* Statuts : on garde un code couleur, mais en dark-friendly */
+.badge-status.is-live{
+  background: rgba(22,163,74,0.16) !important;
+  border-color: rgba(22,163,74,0.55) !important;
+  color: rgba(233,234,245,0.95) !important;
+}
+
+.badge-status.is-soon{
+  background: rgba(245,158,11,0.18) !important;
+  border-color: rgba(245,158,11,0.65) !important;
+  color: rgba(233,234,245,0.95) !important;
+}
+
+/* Tags (tes <li class="tag">) : même logique que les badges */
+.tag{
+  background: rgba(255,255,255,0.07) !important;
+  border: 1px solid rgba(233,234,245,0.14) !important;
+  color: rgba(233,234,245,0.90) !important;
+}
+
+/* Optionnel : au survol, un peu d'accent */
+.tag:hover,
+.badge:hover{
+  border-color: rgba(139,92,246,0.45) !important;
+  background: rgba(139,92,246,0.14) !important;
 }
