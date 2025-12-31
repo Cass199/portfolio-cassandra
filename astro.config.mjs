@@ -1,8 +1,9 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import mdx from "@astrojs/mdx";
+import mdx from '@astrojs/mdx';
+import sitemap from '@astrojs/sitemap';
 
-// https://astro.build/config
 export default defineConfig({
-    integrations: [mdx()],
+  site: 'https://cassandra-michel-portfolio.netlify.app',
+  integrations: [mdx(), sitemap()],
 });
