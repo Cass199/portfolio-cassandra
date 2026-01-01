@@ -1,5 +1,6 @@
 ---
 const {
+  type = "case", // "category" | "case"
   title,
   href,
   category = "Projet",
@@ -13,12 +14,18 @@ const safeHref = typeof href === "string" && href.trim() ? href : "#";
 const safeSummary = typeof summary === "string" ? summary : "";
 const safeTags = Array.isArray(tags) ? tags : [];
 const isLive = status === "Publié";
+
+const typeLabel =
+  type === "category" ? "Catégorie" :
+  type === "cyber-project" ? "Projet" :
+  "Étude de cas";
 ---
 
-<article class="card project-card">
+<article class="card project-card" data-type={type}>
   <a class="card-link" href={safeHref}>
     <header class="card-header">
       <div class="badges">
+        <span class={`badge badge-type ${type}`}>{typeLabel}</span>
         <span class="badge badge-category">{category}</span>
         <span class={`badge badge-status ${isLive ? "is-live" : "is-soon"}`}>
           {status}
@@ -73,6 +80,20 @@ const isLive = status === "Publié";
     .project-card .card-title,
     .project-card .card-summary {
       margin: 0;
+    }
+
+    .project-card[data-type="category"] {
+      border-style: dashed;
+    }
+
+    .project-card .badge-type {
+      font-size: 0.72rem;
+      letter-spacing: 0.02em;
+    }
+
+    /* Optionnel : rendre la catégorie légèrement “moins lourde” visuellement */
+    .project-card[data-type="category"] .card-summary {
+      opacity: 0.95;
     }
   </style>
 </article>

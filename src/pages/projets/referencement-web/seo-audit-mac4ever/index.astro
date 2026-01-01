@@ -1,0 +1,151 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import Header from "../../../../components/Header.astro";
+
+const pageTitle = "Audit SEO site média — Cas Mac4Ever";
+const pageDescription =
+  "Cas pratique d’audit SEO d’un site média à forte volumétrie : architecture, URLs, crawl, robots.txt, sitemap, indexation, et plan d’action priorisé.";
+const canonicalUrl = "https://cassandra-michel-portfolio.netlify.app/projets/referencement-web/seo-audit-mac4ever/";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <Header />
+
+  <main>
+    <header>
+      <h1>{pageTitle}</h1>
+      <p>
+        Cas pratique d’analyse SEO externe (sans accès Search Console ni logs) sur un site média français
+        orienté High Tech/Apple : <strong>mac4ever.com</strong>.
+        L’objectif est de comprendre comment un média à forte volumétrie est interprété par Google
+        (structure, crawl, indexation) et de proposer un plan d’action réaliste.
+      </p>
+
+      <ul>
+        <li><strong>Type :</strong> Audit SEO externe (site média)</li>
+        <li><strong>Axes :</strong> architecture, URLs, crawl, robots.txt, sitemap, indexation</li>
+        <li><strong>Livrable :</strong> diagnostic + recommandations prioritaires</li>
+      </ul>
+    </header>
+
+    <section>
+      <h2>Méthodologie</h2>
+      <p>
+        Analyse basée sur des signaux accessibles publiquement (structure de navigation, patterns d’URL,
+        règles robots, sitemaps déclarés, observation des pages types et des pratiques SEO usuelles des médias).
+        Ce format reproduit une situation d’audit “boîte noire” : comprendre un site de l’extérieur et en déduire
+        des actions concrètes.
+      </p>
+    </section>
+
+    <section>
+      <h2>1) Architecture</h2>
+      <p>
+        Mac4Ever est un site média : contenus éditoriaux (actualités, tests, guides), rubriques thématiques (iPhone, Mac,
+        Apple Watch, etc.) et organisation relativement plate. L’enjeu SEO principal n’est pas une structure géographique,
+        mais la gestion d’un corpus volumineux (ancienneté + fraîcheur + evergreen).
+      </p>
+    </section>
+
+    <section>
+      <h2>2) URLs</h2>
+      <p>
+        Les URLs suivent une logique éditoriale classique : catégories + slugs descriptifs.
+        Ce format est favorable au SEO car il rend l’intention lisible et stable (tests, actualités, guides).
+      </p>
+      <pre><code>https://www.mac4ever.com/&lt;categorie&gt;/&lt;slug-article&gt;</code></pre>
+    </section>
+
+    <section>
+      <h2>3) Crawl</h2>
+      <p>
+        Sur un média, Googlebot priorise les sections actives : actualités récentes, tests, guides d’achat,
+        pages populaires. Les zones moins actives (archives, forum) reçoivent généralement moins de crawl.
+        L’objectif d’un pilotage SEO est de concentrer le crawl budget sur les pages à forte valeur.
+      </p>
+    </section>
+
+    <section>
+      <h2>4) robots.txt</h2>
+      <p>
+        Le fichier robots.txt autorise le crawl global et bloque des endpoints fonctionnels (login/logout, etc.).
+        Point important : le robots.txt déclare des sitemaps segmentés (index, news, vidéo), cohérent avec une volumétrie
+        élevée.
+      </p>
+      <pre><code>{`User-agent: *
+Disallow: /login
+Disallow: /logout
+Disallow: /analytic
+Disallow: /gateway
+Sitemap: https://www.mac4ever.com/sitemaps/sitemap_default-index.xml.gz
+Sitemap: https://www.mac4ever.com/sitemaps/sitemap_news.xml.gz
+Sitemap: https://www.mac4ever.com/sitemaps/sitemap_default-video.xml.gz`}</code></pre>
+    </section>
+
+    <section>
+      <h2>5) Sitemap</h2>
+      <p>
+        Les sitemaps sont partitionnés (index / news / vidéo). Cette approche est standard pour un média :
+        elle facilite la découverte et la mise à jour des contenus, tout en évitant un sitemap unique ingérable.
+      </p>
+    </section>
+
+    <section>
+      <h2>6) Indexation</h2>
+      <p>
+        Indexation attendue : large mais sélective. Les contenus à forte valeur (tests, guides, evergreen, pages produits)
+        sont les meilleurs candidats à une indexation stable. Les sections interactives (forum), pages anciennes peu visitées,
+        ou pages techniques sont souvent moins visibles et/ou filtrées par Google.
+      </p>
+    </section>
+
+    <section>
+      <h2>Plan d’action SEO (5 points)</h2>
+      <ol>
+        <li>
+          <strong>Reprendre le contrôle de l’indexation :</strong> noindex sur pages faibles/redondantes, canonicals stricts,
+          focus sur tests/guides/evergreen/comparatifs.
+        </li>
+        <li>
+          <strong>Créer des hubs thématiques :</strong> pages piliers (iPhone, Mac, Watch, IA) + maillage interne contrôlé.
+        </li>
+        <li>
+          <strong>Séparer “actualité chaude” et “contenu durable” :</strong> stratégie de mise à jour, signaler la fraîcheur
+          des guides.
+        </li>
+        <li>
+          <strong>Optimiser le crawl budget :</strong> limiter paramètres/pagination, rapprocher les pages clés des hubs,
+          éviter les chemins JS inutiles.
+        </li>
+        <li>
+          <strong>Renforcer l’E-E-A-T :</strong> pages auteurs solides, transparence test/affiliation, méthodologie claire.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>À retenir</h2>
+      <p>
+        Sur un média mature, le SEO ne se gagne pas avec des “astuces”, mais avec de la concentration :
+        réduire le bruit, structurer l’autorité, guider le crawl et stabiliser les pages evergreen.
+      </p>
+    </section>
+
+    <section>
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="https://www.mac4ever.com/" rel="nofollow">mac4ever.com</a></li>
+        <li><a href="https://www.mac4ever.com/robots.txt" rel="nofollow">robots.txt</a></li>
+        <li><a href="https://www.mac4ever.com/sitemaps/sitemap_default-index.xml.gz" rel="nofollow">sitemap index</a></li>
+        <li><a href="https://www.mac4ever.com/sitemaps/sitemap_news.xml.gz" rel="nofollow">sitemap news</a></li>
+        <li><a href="https://www.mac4ever.com/sitemaps/sitemap_default-video.xml.gz" rel="nofollow">sitemap video</a></li>
+      </ul>
+      <p>
+        Note : analyse réalisée sans accès aux outils internes du site (Search Console, logs). Les constats “crawl” et
+        “indexation” décrivent un comportement attendu pour un média à forte volumétrie, basé sur signaux observables.
+      </p>
+    </section>
+  </main>
+
+  <link rel="canonical" href={canonicalUrl} />
+</BaseLayout>

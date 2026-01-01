@@ -5,36 +5,75 @@ import Header from "../../../components/Header.astro";
 
 <BaseLayout
   title="Référencement web — Projets"
-  description="Projets SEO : analyses SERP, structure, contenu, SEO technique."
+  description="Cas pratiques SEO : analyse SERP, architecture, contenu, crawl, indexation."
 >
   <Header />
 
   <main>
     <h1>Référencement web</h1>
     <p>
-      Je travaille sur des projets SEO orientés résultats : analyse d’intention, structure
-      de site, contenu, signaux de confiance, et technique (crawl, indexation, performance).
+      Ici je documente des cas pratiques SEO : intention, structure, contenu, signaux de confiance,
+      et technique (crawl, indexation, performance).
     </p>
 
-    <section>
+    <section class="section">
       <h2>Études de cas</h2>
-      <ul>
-        <li>
-          <a href="/projets/referencement-web/librairies-independantes-niort/">
-            Librairies indépendantes à Niort — analyse SERP + plan de page
-          </a>
-        </li>
-      </ul>
+      <p class="intro">
+        Analyses externes structurées : diagnostic, livrables actionnables, et recommandations priorisées.
+      </p>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">SERP / Local</span>
+          <h3>Librairies indépendantes à Niort</h3>
+          <p>
+            Analyse SERP locale : types de résultats, signaux de qualité, entités, structure SGE + mini-plan de page.
+          </p>
+          <a href="/projets/referencement-web/librairies-independantes-niort/">Voir le projet</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Audit / Technique</span>
+          <h3>Audit SEO — Mac4Ever</h3>
+          <p>
+            Audit externe : architecture, URLs, crawl, robots.txt, sitemap, indexation + plan d’action priorisé.
+          </p>
+          <a href="/projets/referencement-web/seo-audit-mac4ever/">Voir le projet</a>
+        </article>
+      </div>
     </section>
 
-    <section>
+    <section class="section">
       <h2>Livrables typiques</h2>
-      <ul>
-        <li>Analyse SERP (features, intent, concurrence, signaux)</li>
-        <li>Plan de page + architecture (Hn, maillage, clusters)</li>
-        <li>Recommandations on-page (title, meta, contenu, entités)</li>
-        <li>Checklist technique (indexation, duplication, perf, logs)</li>
-      </ul>
+      <p class="intro">
+        Formats récurrents que je produis sur les audits et cas pratiques.
+      </p>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">Analyse</span>
+          <h3>Analyse SERP</h3>
+          <p>Intent, features, concurrence, signaux, entités, opportunités.</p>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Structure</span>
+          <h3>Plan de page + architecture</h3>
+          <p>Hn, maillage interne, clusters, pages hubs, priorisation.</p>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">On-page</span>
+          <h3>Recommandations contenu</h3>
+          <p>Title/meta, structure éditoriale, couverture d’entités, sections.</p>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Technique</span>
+          <h3>Checklist crawl & indexation</h3>
+          <p>Indexation, duplication, canonicals, perf, erreurs, validation.</p>
+        </article>
+      </div>
     </section>
   </main>
 </BaseLayout>

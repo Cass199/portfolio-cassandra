@@ -4,7 +4,9 @@ import Header from "../../components/Header.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
 
 const projects = [
+  // Etudes de cas (SEO)
   {
+    type: "case",
     title: "Librairies indépendantes à Niort",
     href: "/projets/referencement-web/librairies-independantes-niort/",
     category: "SEO",
@@ -14,6 +16,37 @@ const projects = [
     tags: ["SERP", "Local SEO", "Plan de page"],
   },
   {
+    type: "case",
+    title: "Audit SEO — Mac4Ever",
+    href: "/projets/referencement-web/seo-audit-mac4ever/",
+    category: "SEO",
+    status: "Publié",
+    summary:
+      "Audit externe : architecture, URLs, crawl, robots.txt, sitemap, indexation + plan d’action priorisé.",
+    tags: ["Audit", "Crawl", "Indexation"],
+  },
+  {
+    type: "cyber-project",
+    title: "Fakebank — Sécurité défensive",
+    href: "/projets/cybersecurite/fakebank-defense/",
+    category: "Cyber",
+    status: "Publié",
+    summary: "Investigation d'un incident via SIEM : analyse, blocage IP, WAF, rate limiting.",
+    tags: ["SIEM", "WAF", "Rate limiting"],
+  },
+  {
+    type: "cyber-project",
+    title: "Fakebank — Sécurité offensive",
+    href: "/projets/cybersecurite/fakebank-offense/",
+    category: "Cyber",
+    status: "Publié",
+    summary: "Attaque d'une app bancaire fictive : reconnaissance, Gobuster, accès non autorisé.",
+    tags: ["Recon", "Gobuster", "Accès"],
+  },
+
+  // Catégories (hubs)
+  {
+    type: "category",
     title: "Référencement web",
     href: "/projets/referencement-web/",
     category: "SEO",
@@ -22,14 +55,16 @@ const projects = [
     tags: ["Structure", "Technique", "Contenu"],
   },
   {
+    type: "category",
     title: "Cybersécurité",
     href: "/projets/cybersecurite/",
     category: "Cyber",
-    status: "À venir",
+    status: "Publié",
     summary: "Labs et write-ups : reconnaissance, analyse, compréhension des risques.",
     tags: ["Nmap", "Méthodo", "Write-up"],
   },
   {
+    type: "category",
     title: "Montage vidéo",
     href: "/projets/montage-video/",
     category: "Vidéo",
@@ -38,6 +73,10 @@ const projects = [
     tags: ["Rythme", "Narration", "Avant/Après"],
   },
 ];
+
+const categories = projects.filter((p) => p.type === "category");
+const cases = projects.filter((p) => p.type === "case");
+const cyberProjects = projects.filter((p) => p.type === "cyber-project");
 ---
 
 <BaseLayout title="Projets - Cassandra" description="Portfolio de projets : SEO, cybersécurité, montage vidéo.">
@@ -45,10 +84,25 @@ const projects = [
 
   <main>
     <h1>Projets</h1>
-    <p class="intro">Des preuves concrètes. Pas des promesses.</p>
+    <p class="intro">Des preuves concrètes.</p>
 
-    <section class="grid" aria-label="Liste de projets">
-      {projects.map((p) => <ProjectCard {...p} />)}
+    <section aria-label="Catégories">
+      <h2>Catégories</h2>
+      <section class="grid" aria-label="Liste des catégories">
+        {categories.map((p) => <ProjectCard {...p} />)}
+      </section>
+    </section>
+
+    <section aria-label="Études de cas">
+      <h2>Études de cas</h2>
+      <section class="grid" aria-label="Liste des études de cas">
+        {cases.map((p) => <ProjectCard {...p} />)}
+    </section>
+
+    <section aria-label="Projets — Cybersécurité">
+      <h2>Projets — Cybersécurité</h2>
+      <section class="grid" aria-label="Liste des projets cybersécurité">
+        {cyberProjects.map((p) => <ProjectCard {...p} />)}
     </section>
   </main>
 </BaseLayout>

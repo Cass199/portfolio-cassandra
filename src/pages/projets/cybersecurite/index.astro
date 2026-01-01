@@ -42,5 +42,62 @@ import Header from "../../../components/Header.astro";
         </article>
       </div>
     </section>
+
+    <section class="section">
+      <h2>Livrables typiques</h2>
+      <p class="intro">
+        Formats récurrents que je produis dans mes labs et write-ups : méthode, commandes, preuves et leçons retenues.
+      </p>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">Reconnaissance</span>
+          <h3>Phase de découverte</h3>
+          <p>
+            Cartographie de la surface d’attaque : services, ports, endpoints, technologies, hypothèses de vecteurs.
+          </p>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Procédure</span>
+          <h3>Journal de commandes</h3>
+          <p>
+            Commandes/outils utilisés (nmap, gobuster, etc.), paramètres, résultats, et interprétation.
+          </p>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Analyse</span>
+          <h3>Diagnostic & risques</h3>
+          <p>
+            Lecture des logs/indices, scénarios d’attaque, évaluation du risque, causes probables, impact.
+          </p>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Remédiation</span>
+          <h3>Mesures de défense</h3>
+          <p>
+            Recommandations : durcissement, WAF, rate limiting, règles SIEM, blocages, contrôles d’accès.
+          </p>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Preuves</span>
+          <h3>Résultats reproductibles</h3>
+          <p>
+            Captures/outputs, étapes reproductibles, critères de validation, et limites de l’analyse.
+          </p>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Synthèse</span>
+          <h3>Leçons retenues</h3>
+          <p>
+            Ce que j’ai appris, erreurs à éviter, bonnes pratiques, et comment j’améliorerais le lab.
+          </p>
+        </article>
+      </div>
+    </section>
   </main>
 </BaseLayout>
