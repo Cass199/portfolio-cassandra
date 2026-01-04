@@ -1,0 +1,256 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import Header from "../../../../components/Header.astro";
+
+const pageTitle = "Audit mobile (CWV + Lighthouse) — Cas butsoccers.com";
+const pageDescription =
+  "Cas pratique d’audit mobile d’un site média WordPress : Core Web Vitals (CrUX via PageSpeed Insights), Lighthouse (lab), écarts terrain/labo, problèmes SEO techniques (403, robots.txt invalide), et plan d’action priorisé.";
+const canonicalUrl =
+  "https://cassandra-michel-portfolio.netlify.app/projets/referencement-web/audit-mobile-butsoccers/";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <Header />
+
+  <main>
+    <header>
+      <h1>{pageTitle}</h1>
+      <p>
+        Cas pratique d’audit externe (sans accès Search Console ni logs) sur un site média football sous WordPress :
+        <strong> butsoccers.com</strong>. L’analyse croise <strong>Core Web Vitals</strong> (données terrain CrUX via PageSpeed
+        Insights) et <strong>Lighthouse mobile</strong> (données labo) afin d’identifier les écarts, les freins techniques et
+        les actions prioritaires.
+      </p>
+
+      <ul>
+        <li><strong>Type :</strong> Audit mobile (performance + SEO technique)</li>
+        <li><strong>Axes :</strong> Core Web Vitals, rendu mobile, ressources tierces, erreurs techniques, robots.txt</li>
+        <li><strong>Livrable :</strong> diagnostic + mini-rapport (problème / impact / solution) + plan d’action</li>
+      </ul>
+    </header>
+
+    <section>
+      <h2>Méthodologie</h2>
+      <p>
+        Audit basé sur des signaux accessibles publiquement : rapports PageSpeed Insights (CrUX + lab), Lighthouse (mobile),
+        et lecture des causes probables (chemin de rendu, ressources bloquantes, scripts tiers, règles robots). Ce format
+        reproduit un audit “boîte noire” : analyser l’expérience et la santé technique d’un site de l’extérieur, puis proposer
+        un plan d’action réaliste.
+      </p>
+    </section>
+
+    <section>
+      <h2>1) Verdict exécutif (ce que disent vraiment les données)</h2>
+      <p>
+        <strong>PageSpeed Insights / CrUX (terrain) :</strong> Core Web Vitals validés — l’expérience réelle des utilisateurs
+        est globalement bonne.
+      </p>
+      <p>
+        <strong>Lighthouse (labo) :</strong> performance mobile pénalisée — surtout par le <strong>rendu bloqué</strong> et la
+        <strong>charge tierce</strong> (consentement, pubs, widgets), malgré un thread principal peu bloqué.
+      </p>
+      <p>
+        <strong>Conclusion :</strong> UX rapide ≠ site sain ≠ site indexable. Les métriques peuvent être bonnes côté
+        utilisateur, tout en masquant des <strong>problèmes SEO techniques</strong> (403) et de <strong>conformité robots.txt</strong>.
+      </p>
+    </section>
+
+    <section>
+      <h2>2) Audit CWV — PageSpeed Insights (données terrain / CrUX)</h2>
+      <h3>Core Web Vitals : RÉUSSITE</h3>
+      <ul>
+        <li><strong>LCP :</strong> 1,1 s (excellent)</li>
+        <li><strong>INP :</strong> 82 ms (excellent)</li>
+        <li><strong>CLS :</strong> 0 (parfait)</li>
+      </ul>
+      <p>
+        Ces résultats indiquent une expérience mobile <strong>stable et réactive</strong> sur le terrain. Le contenu principal
+        apparaît vite, les interactions ne sont pas ralenties, et l’interface ne “saute” pas.
+      </p>
+
+      <h3>Points bloquants signalés (SEO / santé technique)</h3>
+      <ul>
+        <li><strong>HTTP 403</strong> sur la page testée (critique : crawl/indexation)</li>
+        <li><strong>robots.txt invalide</strong> (directive inconnue)</li>
+        <li><strong>meta description</strong> manquante (signal SEO basique)</li>
+      </ul>
+
+      <p>
+        Remarque : un <strong>403</strong> peut fausser une partie des analyses SEO/accessibilité, car l’outil peut mesurer une
+        page d’erreur ou une réponse filtrée par un WAF/anti-bot.
+      </p>
+    </section>
+
+    <section>
+      <h2>3) Audit Lighthouse mobile (données labo)</h2>
+
+      <h3>Scores (mobile)</h3>
+      <ul>
+        <li><strong>Performance :</strong> 61</li>
+        <li><strong>Accessibilité :</strong> 96</li>
+        <li><strong>Bonnes pratiques :</strong> 77</li>
+        <li><strong>SEO :</strong> 92</li>
+      </ul>
+
+      <h3>Métriques labo</h3>
+      <ul>
+        <li><strong>FCP :</strong> ~4,3 s (lent)</li>
+        <li><strong>LCP :</strong> ~9,5 s (très lent)</li>
+        <li><strong>Speed Index :</strong> ~6,3 s</li>
+        <li><strong>TBT :</strong> ~30 ms (ok)</li>
+        <li><strong>CLS :</strong> 0 (excellent)</li>
+      </ul>
+
+      <p>
+        Profil typique : ce n’est pas le CPU qui bloque (TBT bas), mais le <strong>réseau</strong> + le
+        <strong>rendu bloqué</strong> par CSS/polices/tiers. Les overlays (bannière consentement) peuvent aussi gonfler le LCP
+        en “lab” si l’élément le plus visible devient le plus grand élément mesuré.
+      </p>
+    </section>
+
+    <section>
+      <h2>4) Diagnostics clés (performance)</h2>
+
+      <h3>Chaîne de requêtes critiques et rendu bloqué</h3>
+      <p>
+        Plusieurs CSS (thème + plugins + librairies) sont chargées tôt. Ajout de polices externes (Google Fonts) sans
+        préconnexion, ce qui allonge le chemin critique et retarde le rendu initial sur mobile.
+      </p>
+
+      <h3>JavaScript inutilisé (tiers)</h3>
+      <p>
+        Les scripts tiers (pubs/Doubleclick, widgets sociaux, consentement) représentent une part importante du JS non utilisé
+        au rendu initial. Même si le thread principal reste relativement libre, le coût réseau et les tâches tierces
+        dégradent le rendu et la stabilité des audits.
+      </p>
+
+      <h3>Images surdimensionnées</h3>
+      <p>
+        Plusieurs thumbnails sont téléchargées dans des dimensions supérieures à l’affichage. Sur mobile, cela augmente le
+        poids transféré sans valeur visuelle, avec un impact direct sur FCP/Speed Index/LCP.
+      </p>
+    </section>
+
+    <section>
+      <h2>5) Problèmes techniques (bonnes pratiques)</h2>
+
+      <h3>Erreur console : type MIME CSS incorrect</h3>
+      <p>
+        Lighthouse signale une feuille CSS refusée car l’URL renvoie du HTML (type MIME <code>text/html</code>) au lieu de
+        <code>text/css</code>. Cela indique souvent un fichier manquant, une ressource bloquée (403), une redirection, ou un
+        plugin mal configuré.
+      </p>
+
+      <h3>APIs obsolètes (tiers)</h3>
+      <p>
+        Avertissements liés à des scripts publicitaires. Non bloquant, mais révélateur d’une dette technique apportée par les
+        tiers.
+      </p>
+    </section>
+
+    <section>
+      <h2>6) SEO technique (exploration & indexation)</h2>
+
+      <h3>robots.txt invalide</h3>
+      <p>
+        Présence d’une directive non standard (ex. “Content-Signal…”) signalée comme inconnue. Un robots.txt doit contenir
+        uniquement des directives reconnues, sinon il peut générer des erreurs et une interprétation incertaine.
+      </p>
+
+      <h3>HTTP 403 (bloquant crawl / indexation)</h3>
+      <p>
+        Un <strong>403</strong> sur la page testée ou certaines ressources est un problème critique : Googlebot peut être
+        empêché d’explorer et d’indexer correctement. Les audits automatiques peuvent aussi être filtrés si le serveur/WAF
+        bloque certains user-agents.
+      </p>
+
+      <h3>Meta description manquante</h3>
+      <p>
+        Signal SEO basique : ajout recommandé au niveau des gabarits (home + articles) pour améliorer la présentation et la
+        pertinence perçue dans les SERP (sans garantir l’affichage).
+      </p>
+    </section>
+
+    <section>
+      <h2>Mini-rapport (problème / impact / solution)</h2>
+
+      <h3>1) Rendu bloqué par CSS, polices et chemin critique long</h3>
+      <p><strong>Problème :</strong> trop de CSS/polices chargées tôt, bloquant le rendu initial.</p>
+      <p><strong>Impact :</strong> FCP/LCP labo élevés sur mobile, risque de dégradation en réseaux lents.</p>
+      <p>
+        <strong>Solution :</strong> réduire les CSS au chargement initial, différer le non-critique, optimiser les polices
+        (préconnexion / auto-hébergement / réduction des variantes).
+      </p>
+
+      <h3>2) Scripts tiers lourds (pubs / social / consentement)</h3>
+      <p><strong>Problème :</strong> JS tiers chargé tôt, en partie inutilisé au rendu initial.</p>
+      <p><strong>Impact :</strong> surcharge réseau, variabilité de l’expérience, pénalités Lighthouse.</p>
+      <p><strong>Solution :</strong> charger après consentement et/ou interaction, lazy-load des widgets sociaux, limiter le tiers “global”.</p>
+
+      <h3>3) Erreurs techniques (403, MIME incorrect)</h3>
+      <p><strong>Problème :</strong> certaines ressources renvoient un statut/format inattendu (CSS servie en HTML).</p>
+      <p><strong>Impact :</strong> styles non appliqués, instabilité, baisse du score “bonnes pratiques”.</p>
+      <p><strong>Solution :</strong> corriger plugin/serveur, vérifier headers (<code>Content-Type</code>), purger caches, contrôler WAF/CDN.</p>
+
+      <h3>4) robots.txt invalide</h3>
+      <p><strong>Problème :</strong> directive inconnue.</p>
+      <p><strong>Impact :</strong> avertissements SEO, interprétation incertaine.</p>
+      <p><strong>Solution :</strong> supprimer les directives non standards, conserver un fichier conforme (User-agent/Disallow/Sitemap).</p>
+
+      <h3>5) Accessibilité (contraste)</h3>
+      <p><strong>Problème :</strong> contraste insuffisant sur certains éléments (notamment overlay consentement).</p>
+      <p><strong>Impact :</strong> lisibilité réduite, risque WCAG, baisse de score.</p>
+      <p><strong>Solution :</strong> ajuster couleurs texte/fond, vérifier focus visible et navigation clavier sur la modale.</p>
+    </section>
+
+    <section>
+      <h2>Plan d’action priorisé</h2>
+
+      <h3>P0 — Critique (bloquant crawl / stabilité)</h3>
+      <ol>
+        <li><strong>Supprimer la directive robots.txt invalide</strong> et valider le fichier.</li>
+        <li><strong>Corriger les 403</strong> (pages et ressources) : vérifier WAF/anti-bot, règles serveur/CDN, plugins sécurité.</li>
+        <li><strong>Corriger l’erreur MIME</strong> (CSS servie en HTML) : plugin concerné + headers + cache.</li>
+      </ol>
+
+      <h3>P1 — Gains rapides en performance mobile (rendu)</h3>
+      <ol>
+        <li><strong>Optimiser la bannière consentement</strong> (éviter un overlay dominant au chargement).</li>
+        <li><strong>Délayer les tiers</strong> (pubs/social) après consentement et/ou interaction.</li>
+        <li><strong>Optimiser les polices</strong> (préconnexion / auto-hébergement / variantes minimales).</li>
+      </ol>
+
+      <h3>P2 — Optimisation structurelle</h3>
+      <ol>
+        <li><strong>CSS critique</strong> (inline above-the-fold) + différer le reste.</li>
+        <li><strong>Images</strong> : formats WebP/AVIF + tailles adaptées (responsive).</li>
+        <li><strong>Nettoyage plugins</strong> : désactiver scripts/styles non utilisés globalement.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>À retenir</h2>
+      <p>
+        Ce cas illustre un point classique : un site peut être <strong>bon en Core Web Vitals</strong> sur le terrain, tout en
+        restant fragile en audit labo et surtout vulnérable côté SEO technique (403, robots.txt invalide, ressources mal
+        servies). La priorité n’est pas “gagner des points Lighthouse”, mais <strong>stabiliser l’accès crawlable</strong> et
+        réduire l’entropie (tiers/plugins).
+      </p>
+    </section>
+
+    <section>
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="https://butsoccers.com/" rel="nofollow">butsoccers.com</a></li>
+        <li><a href="https://pagespeed.web.dev/analysis/https-butsoccers-com/klki8jrv6l?hl=fr&form_factor=mobile" rel="nofollow">PageSpeed Insights (mobile)</a></li>
+        <li><a href="https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fbutsoccers.com%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&locale=fr&utm_source=lh-chrome-ext" rel="nofollow">Lighthouse viewer (mobile)</a></li>
+      </ul>
+      <p>
+        Note : audit réalisé sans accès aux outils internes du site (Search Console, logs serveur). Les constats “crawl” et
+        “indexation” décrivent des causes probables basées sur les rapports PSI/Lighthouse et les comportements attendus.
+      </p>
+    </section>
+  </main>
+
+  <link rel="canonical" href={canonicalUrl} />
+</BaseLayout>
