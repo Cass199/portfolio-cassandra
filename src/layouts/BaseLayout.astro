@@ -1,7 +1,11 @@
 ---
 const {
-  title = "Cassandra - Portfolio",
-  description = "Portfolio de Cassandra : projets web, SEO, cybersécurité et créations numériques."
+  title = "Cassandra Michel — Web, SEO, cybersécurité & montage vidéo | Portfolio",
+  description = "Portfolio de Cassandra Michel : projets web, référencement SEO, cybersécurité et montage vidéo. Analyses techniques, études de cas et réalisations documentées.",
+  // Chemin de la page courante (Astro fournit Astro.url)
+  canonical = Astro.url?.toString(),
+  // URL absolue de l'image pour les partages (à créer si tu ne l'as pas encore)
+  ogImage = "https://cassandramichelweb.fr/og.png",
 } = Astro.props;
 
 import "../styles/global.css";
@@ -15,10 +19,25 @@ import "../styles/global.css";
 
     <title>{title}</title>
 
+    <link rel="canonical" href={canonical} />
+
     <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Cassandra Michel — Portfolio" />
+    <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
 
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Search Console (tu peux le laisser même si tu as validé en DNS) -->
     <meta name="google-site-verification" content="dnKLwGKo8-ehW" />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -28,4 +47,5 @@ import "../styles/global.css";
     <slot />
   </body>
 </html>
+
 
