@@ -1,0 +1,203 @@
+---
+import BaseLayout from "../../../../../layouts/BaseLayout.astro";
+import Header from "../../../../../components/Header.astro";
+---
+
+<BaseLayout
+  title="Intention de recherche — audit SEO, méthode + exemples | Cassandra Michel"
+  description="Comprendre l’intention de recherche en audit SEO : typologie, signaux SERP, pièges courants, structure de page et checklist. Exemples concrets."
+>
+  <Header />
+
+  <main>
+    <p class="muted">
+      <a href="/projets/referencement-web/audit-seo/">← Hub Audit SEO</a> ·{" "}
+      <a href="/projets/referencement-web/audit-seo/analyse-serp/">Analyse SERP (méthode)</a> ·{" "}
+      <a href="/projets/referencement-web/">Référencement web (page pilier)</a>
+    </p>
+
+    <h1>Intention de recherche (audit SEO)</h1>
+    <p>
+      L’intention de recherche, c’est le besoin implicite derrière une requête. En SEO, une page ranke rarement
+      parce qu’elle “contient le mot-clé”. Elle ranke parce qu’elle correspond au format et au niveau de preuve
+      attendus par Google… et par les utilisateurs.
+    </p>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <p id="toc-title" class="toc-title">Sommaire</p>
+      <ul class="toc-list">
+        <li><a href="#definition">Définition et typologie</a></li>
+        <li><a href="#signaux">Signaux d’intention dans la SERP</a></li>
+        <li><a href="#methode">Méthode pour valider l’intention</a></li>
+        <li><a href="#erreurs">Erreurs fréquentes</a></li>
+        <li><a href="#checklist">Checklist</a></li>
+        <li><a href="#exemples">Exemples</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" id="definition">
+      <h2>Définition et typologie</h2>
+      <p>
+        On classe souvent l’intention en 4 familles. Elles ne sont pas “pures”, mais elles aident à décider le bon format
+        de page et le bon CTA.
+      </p>
+
+      <ul>
+        <li><strong>Informationnelle</strong> : apprendre, comprendre, résoudre un problème.</li>
+        <li><strong>Transactionnelle</strong> : acheter, réserver, demander un devis, comparer une offre.</li>
+        <li><strong>Navigationnelle</strong> : trouver un site, une marque, un service précis.</li>
+        <li><strong>Locale</strong> : trouver près de chez soi (local pack, avis, itinéraire).</li>
+      </ul>
+
+      <p>
+        Une même requête peut être <strong>mixte</strong> : par exemple “apprendre X” (info) avec une attente de
+        cours/coach (transactionnel). Dans ce cas, la page doit répondre à l’info tout en ouvrant une porte de conversion
+        cohérente (CTA).
+      </p>
+    </section>
+
+    <section class="section" id="signaux">
+      <h2>Signaux d’intention dans la SERP</h2>
+      <p>
+        La SERP révèle l’intention dominante. Quelques signaux concrets :
+      </p>
+
+      <ul>
+        <li><strong>Présence de pages “service”</strong> (devis, tarifs, offres) → intention transactionnelle.</li>
+        <li><strong>Guides / tutoriels</strong> en top positions → intention informationnelle.</li>
+        <li><strong>Local pack</strong>, avis, “près de moi” → intention locale.</li>
+        <li><strong>Marque + sitelinks</strong>, pages officielles → intention navigationnelle.</li>
+        <li><strong>PAA / vidéos</strong> → besoin d’explications, démonstration, pédagogie.</li>
+      </ul>
+
+      <div class="related-links">
+        <h3 class="related-title">À relier</h3>
+        <ul class="related-list">
+          <li>
+            <a href="/projets/referencement-web/audit-seo/analyse-serp/">Méthode : analyse SERP</a>
+            <span class="hint">— features, concurrence, entités</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/audit-seo/mots-cles-seo/">Mots-clés SEO (cartographie & clusters)</a>
+            <span class="hint">— construire un mapping pages ↔ intentions</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="methode">
+      <h2>Méthode pour valider l’intention</h2>
+
+      <h3>1) Observer le top 5–10</h3>
+      <p>
+        Le top résultats impose souvent le format : article, page service, liste, comparatif, annuaire, vidéo…
+      </p>
+
+      <h3>2) Identifier le “job to be done”</h3>
+      <p>
+        Traduction simple : qu’est-ce que la personne essaie d’obtenir ? Une réponse rapide ? Une méthode ?
+        Un prestataire ? Une preuve ? Un prix ? Un lieu ?
+      </p>
+
+      <h3>3) Déduire les éléments attendus</h3>
+      <p>
+        Selon l’intention, la page doit apporter : définitions, étapes, exemples, preuves, comparatifs, tarifs,
+        FAQ, avis, informations locales, etc.
+      </p>
+
+      <h3>4) Choisir un CTA cohérent</h3>
+      <p>
+        Info → CTA “ressource / diagnostic / checklist”. Transactionnel → CTA “contact / devis”.
+        Mixte → d’abord répondre à l’info, puis proposer la conversion.
+      </p>
+    </section>
+
+    <section class="section" id="erreurs">
+      <h2>Erreurs fréquentes</h2>
+      <ul>
+        <li><strong>Erreur de format</strong> : produire une page service quand Google attend un guide (ou l’inverse).</li>
+        <li><strong>CTA agressif trop tôt</strong> : vendre avant d’avoir répondu au besoin info.</li>
+        <li><strong>Couverture incomplète</strong> : ignorer les sous-questions visibles dans PAA et recherches associées.</li>
+        <li><strong>Mixité mal gérée</strong> : page qui hésite → ni utile, ni convertissante.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="checklist">
+      <h2>Checklist (intention de recherche)</h2>
+      <ul>
+        <li>Intention dominante validée par le top 10</li>
+        <li>Format attendu identifié (guide/service/comparatif/annuaire/local…)</li>
+        <li>Features SERP notées (PAA, vidéos, local pack…)</li>
+        <li>Sous-questions à couvrir (PAA + associés + H2 concurrents)</li>
+        <li>Éléments de preuve nécessaires (avis, sources, expertise, exemples)</li>
+        <li>CTA aligné avec l’intention (et positionné au bon moment)</li>
+      </ul>
+    </section>
+
+    <section class="section" id="exemples">
+      <h2>Exemples</h2>
+      <p>
+        Exemple de requête à intention <strong>mixte</strong> : “apprendre à chanter du gospel”.
+        On attend de la pédagogie (informationnel) mais aussi des formats d’accompagnement (cours/coach),
+        donc une page performante doit traiter les deux sans se contredire.
+      </p>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">SERP / Intention</span>
+          <h3>Apprendre à chanter du gospel</h3>
+          <p>Intention info + transactionnelle, vidéos, PAA, brief SEO complet.</p>
+          <a href="/projets/referencement-web/apprendre-chanter-gospel/">Voir l’étude de cas</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">SERP / Méthode</span>
+          <h3>Analyse SERP (audit SEO)</h3>
+          <p>Méthode en 7 étapes + checklist + exemples.</p>
+          <a href="/projets/referencement-web/audit-seo/analyse-serp/">Voir la page</a>
+        </article>
+      </div>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">FAQ — Intention de recherche</h2>
+
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Comment savoir si l’intention est mixte ?</summary>
+          <div class="faq-answer">
+            <p>
+              Si le top 10 mélange des guides et des pages “service/offre”, ou si Google affiche à la fois PAA/vidéos
+              et des résultats orientés achat/devis. Dans ce cas, réponds d’abord à l’info, puis propose un CTA cohérent.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Est-ce que l’intention est toujours stable ?</summary>
+          <div class="faq-answer">
+            <p>
+              Non. Elle peut évoluer selon la saison, le marché, les tendances ou l’évolution de Google.
+              D’où l’intérêt de revalider la SERP avant de refondre un contenu.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Quel est le meilleur CTA pour une page informationnelle ?</summary>
+          <div class="faq-answer">
+            <p>
+              Un CTA “soft” : checklist, ressource, diagnostic, ou prise de contact contextualisée. Vendre trop tôt
+              réduit souvent la crédibilité et l’engagement.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn" href="/contact/">Discuter d’un diagnostic d’intention</a>
+        <a class="btn btn-ghost" href="/projets/referencement-web/audit-seo/">Retour à la page Audit SEO</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

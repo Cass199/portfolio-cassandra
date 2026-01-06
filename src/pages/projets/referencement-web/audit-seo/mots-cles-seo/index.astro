@@ -1,0 +1,237 @@
+---
+import BaseLayout from "../../../../../layouts/BaseLayout.astro";
+import Header from "../../../../../components/Header.astro";
+---
+
+<BaseLayout
+  title="Mots-clés SEO — cartographie, cluster et mapping (audit SEO) | Cassandra Michel"
+  description="Méthode mots-clés SEO en audit : intention, clustering, pages piliers/satellites, mapping requêtes→pages, et checklist. Exemples et erreurs à éviter."
+>
+  <Header />
+
+  <main>
+    <p class="muted">
+      <a href="/projets/referencement-web/audit-seo/">←Audit SEO</a> ·{" "}
+      <a href="/projets/referencement-web/audit-seo/analyse-serp/">Analyse SERP</a> ·{" "}
+      <a href="/projets/referencement-web/audit-seo/intention-recherche/">Intention de recherche</a> ·{" "}
+      <a href="/projets/referencement-web/">Référencement web</a>
+    </p>
+
+    <h1>Mots-clés SEO</h1>
+    <p>
+      En audit SEO, les mots-clés ne sont pas une “liste”. Ce sont des <strong>requêtes regroupées par intention</strong>,
+      organisées en <strong>clusters</strong>, puis <strong>mappées</strong> sur des pages (piliers/satellites).
+      Objectif : savoir <em>quoi créer</em>, <em>quoi fusionner</em>, <em>quoi renforcer</em> — et éviter la cannibalisation.
+    </p>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <p id="toc-title" class="toc-title">Sommaire</p>
+      <ul class="toc-list">
+        <li><a href="#principes">Principes utiles (sans mystique)</a></li>
+        <li><a href="#methode">Méthode en 6 étapes</a></li>
+        <li><a href="#clusters">Construire un cluster</a></li>
+        <li><a href="#mapping">Mapping requêtes → pages</a></li>
+        <li><a href="#erreurs">Erreurs fréquentes</a></li>
+        <li><a href="#checklist">Checklist</a></li>
+        <li><a href="#exemples">Exemples sur mon site</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" id="principes">
+      <h2>Principes utiles (sans mystique)</h2>
+      <ul>
+        <li><strong>Une requête ≠ une page</strong> : une page peut couvrir plusieurs requêtes proches.</li>
+        <li><strong>Intention d’abord</strong> : le volume n’a aucun intérêt si l’intention ne colle pas.</li>
+        <li><strong>Cluster</strong> : groupe de requêtes liées à un même besoin.</li>
+        <li><strong>Pilier</strong> : page “hub” qui couvre le sujet principal et pousse vers des satellites.</li>
+        <li><strong>Satellite</strong> : page dédiée à un sous-sujet / une sous-intention.</li>
+        <li><strong>Cannibalisation</strong> : plusieurs pages se battent sur la même intention → aucune ne gagne vraiment.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="methode">
+      <h2>Méthode mots-clés en audit SEO (6 étapes)</h2>
+
+      <h3>1) Partir des intentions et des pages existantes</h3>
+      <p>
+        L’audit commence par le réel : pages actuelles, objectifs, offres, et requêtes ciblées. Puis on observe la SERP
+        pour vérifier le format attendu.
+      </p>
+
+      <h3>2) Collecter les requêtes (sources)</h3>
+      <p>
+        Selon le contexte : Google (PAA, associés), Search Console, logs, outils SEO, analyse concurrentielle.
+        Le but n’est pas d’en avoir 10 000, mais d’avoir <strong>les bonnes</strong>.
+      </p>
+
+      <h3>3) Normaliser et dédupliquer</h3>
+      <p>
+        On regroupe synonymes, variantes, pluriels, formulations proches. On enlève le bruit. C’est là que la “liste”
+        devient une matière exploitable.
+      </p>
+
+      <h3>4) Grouper en clusters (intention + proximité sémantique)</h3>
+      <p>
+        Un cluster n’est pas un sac de mots : c’est un ensemble de requêtes qui attendent globalement le même type de page
+        et les mêmes sections de réponse.
+      </p>
+
+      <h3>5) Mapper requêtes → pages (piliers/satellites)</h3>
+      <p>
+        Chaque cluster devient un plan : quelles pages existent déjà, lesquelles manquent, lesquelles doivent être fusionnées,
+        et où placer les CTAs.
+      </p>
+
+      <h3>6) Prioriser</h3>
+      <p>
+        Priorité = impact business + faisabilité + opportunité SERP. L’objectif : un plan d’action réel, pas un dossier qu’on
+        oublie dans un tiroir.
+      </p>
+
+      <div class="related-links">
+        <h3 class="related-title">À relier</h3>
+        <ul class="related-list">
+          <li>
+            <a href="/projets/referencement-web/audit-seo/analyse-serp/">Analyse SERP</a>
+            <span class="hint">— valider formats et features</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/audit-seo/intention-recherche/">Intention de recherche</a>
+            <span class="hint">— éviter le mauvais format / mauvais CTA</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/audit-seo/structure-site/">Structure de site</a>
+            <span class="hint">— pilier/satellites + maillage interne</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="clusters">
+      <h2>Construire un cluster</h2>
+      <p>
+        Un cluster efficace contient :
+      </p>
+      <ul>
+        <li><strong>Requête pilier</strong> (le sujet principal)</li>
+        <li><strong>Variantes proches</strong> (synonymes / reformulations)</li>
+        <li><strong>Sous-intentions</strong> (FAQ, comparatifs, prix, méthodes, erreurs)</li>
+        <li><strong>Pages satellites</strong> (une page par sous-sujet important)</li>
+      </ul>
+
+      <p>
+        Exemple typique : une requête “service” (transactionnelle) + satellites “prix”, “méthode”, “exemples”, “audit”, etc.
+      </p>
+    </section>
+
+    <section class="section" id="mapping">
+      <h2>Mapping requêtes → pages (et maillage)</h2>
+      <p>
+        Le mapping sert à décider <strong>où</strong> chaque requête doit vivre :
+      </p>
+      <ul>
+        <li>si plusieurs pages ciblent la même intention → <strong>risque de cannibalisation</strong></li>
+        <li>si un cluster n’a pas de page → <strong>opportunité de création</strong></li>
+        <li>si une page est trop large → <strong>créer des satellites</strong> et redistribuer</li>
+      </ul>
+
+      <p>
+        Un bon mapping produit aussi un maillage interne logique : pilier → satellites, satellites → pilier, et liens “pages sœurs”
+        quand c’est pertinent.
+      </p>
+    </section>
+
+    <section class="section" id="erreurs">
+      <h2>Erreurs fréquentes</h2>
+      <ul>
+        <li><strong>Confondre volume et valeur</strong> : viser gros mais hors intention.</li>
+        <li><strong>Créer une page par mot-clé</strong> : dilution, duplication, cannibalisation.</li>
+        <li><strong>Ignorer la SERP</strong> : produire le mauvais format pour la bonne requête.</li>
+        <li><strong>Oublier le maillage</strong> : pages isolées → autorité thématique faible.</li>
+        <li><strong>Pas de priorisation</strong> : tout “important” = rien n’avance.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="checklist">
+      <h2>Checklist mots-clés (audit)</h2>
+      <ul>
+        <li>Requêtes collectées depuis plusieurs sources (SERP, GSC, concurrents…)</li>
+        <li>Déduplication + regroupement des variantes</li>
+        <li>Clusters construits par intention (pas par mots isolés)</li>
+        <li>Mapping requêtes → pages (piliers/satellites)</li>
+        <li>Risques de cannibalisation identifiés</li>
+        <li>Maillage interne défini (pilier ↔ satellites ↔ pages sœurs)</li>
+        <li>Priorisation P0/P1/P2</li>
+      </ul>
+    </section>
+
+    <section class="section" id="exemples">
+      <h2>Exemples sur mon site</h2>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">SERP / Cluster</span>
+          <h3>Apprendre à chanter du gospel</h3>
+          <p>Analyse SERP, PAA, cluster sémantique et brief SEO complet.</p>
+          <a href="/projets/referencement-web/apprendre-chanter-gospel/">Voir l’étude de cas</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Audit / Méthode</span>
+          <h3>Analyse SERP (audit SEO)</h3>
+          <p>Méthode + checklist : features, concurrence, entités, opportunités.</p>
+          <a href="/projets/referencement-web/audit-seo/analyse-serp/">Voir la page</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Audit / Intention</span>
+          <h3>Intention de recherche</h3>
+          <p>Typologie, signaux SERP, erreurs, CTA cohérents.</p>
+          <a href="/projets/referencement-web/audit-seo/intention-recherche/">Voir la page</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">FAQ — Mots-clés SEO</h2>
+
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Faut-il un outil SEO payant pour faire une recherche de mots-clés ?</summary>
+          <div class="faq-answer">
+            <p>
+              Pas forcément. La SERP, les PAA, les recherches associées et Search Console donnent déjà beaucoup d’informations.
+              Les outils payants aident surtout à élargir, estimer et comparer, mais la logique intention/format reste centrale.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Combien de mots-clés doit contenir un cluster ?</summary>
+          <div class="faq-answer">
+            <p>
+              Il n’y a pas de chiffre magique. Un cluster doit être cohérent : mêmes attentes SERP, mêmes sections de réponse,
+              et une page capable de couvrir le besoin sans se disperser.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Comment éviter la cannibalisation ?</summary>
+          <div class="faq-answer">
+            <p>
+              En mappant les intentions : une page principale par intention dominante, puis des satellites si un sous-sujet
+              mérite une page dédiée. Si deux pages ciblent la même intention, fusionner ou redifférencier.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn" href="/contact/">Discuter d’une cartographie mots-clés</a>
+        <a class="btn btn-ghost" href="/projets/referencement-web/audit-seo/">Retour à la page Audit SEO</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

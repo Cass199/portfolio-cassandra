@@ -1,0 +1,212 @@
+---
+import BaseLayout from "../../../../../layouts/BaseLayout.astro";
+import Header from "../../../../../components/Header.astro";
+---
+
+<BaseLayout
+  title="Crawl & indexation — checklist audit SEO (robots, sitemap, canonicals) | Cassandra Michel"
+  description="Audit SEO crawl & indexation : erreurs fréquentes, robots.txt, sitemap, canonicals, statuts HTTP, duplication et checklist actionnable + exemples."
+>
+  <Header />
+
+  <main>
+    <p class="muted">
+      <a href="/projets/referencement-web/audit-seo/">← Hub Audit SEO</a> ·{" "}
+      <a href="/projets/referencement-web/seo-audit-mac4ever/">Audit SEO — Mac4Ever</a> ·{" "}
+      <a href="/projets/referencement-web/audit-mobile-butsoccers/">Audit mobile — Butsoccers</a> ·{" "}
+      <a href="/projets/referencement-web/">Référencement web (page pilier)</a>
+    </p>
+
+    <h1>Crawl & indexation (audit SEO)</h1>
+    <p>
+      Le crawl et l’indexation, c’est la plomberie du SEO. Si c’est cassé, le reste est décoratif.
+      Ici : les contrôles essentiels (robots.txt, sitemap, canonicals, statuts HTTP, duplication) et une checklist
+      actionnable pour diagnostiquer vite.
+    </p>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <p id="toc-title" class="toc-title">Sommaire</p>
+      <ul class="toc-list">
+        <li><a href="#definitions">Crawl vs indexation</a></li>
+        <li><a href="#symptomes">Symptômes typiques</a></li>
+        <li><a href="#points">Points de contrôle essentiels</a></li>
+        <li><a href="#checklist">Checklist actionnable</a></li>
+        <li><a href="#exemples">Exemples</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" id="definitions">
+      <h2>Crawl vs indexation</h2>
+      <ul>
+        <li><strong>Crawl</strong> : Googlebot explore vos URLs (découverte + navigation).</li>
+        <li><strong>Indexation</strong> : Google décide de stocker une page dans son index (donc éligible à ranker).</li>
+      </ul>
+      <p>
+        Une page peut être crawlée mais non indexée (qualité faible, duplication, noindex, canonicals, etc.),
+        et une page peut être théoriquement indexable mais jamais découverte (maillage pauvre, orpheline).
+      </p>
+    </section>
+
+    <section class="section" id="symptomes">
+      <h2>Symptômes typiques</h2>
+      <ul>
+        <li>Pages importantes invisibles dans Google</li>
+        <li>Indexation partielle, instable, ou “pages exclues” en masse</li>
+        <li>Beaucoup d’URLs inutiles crawlées (paramètres, filtres, facettes)</li>
+        <li>Duplication (www/non-www, http/https, slash, paramètres)</li>
+        <li>Erreurs 3xx/4xx/5xx sur des pages censées être stratégiques</li>
+      </ul>
+    </section>
+
+    <section class="section" id="points">
+      <h2>Points de contrôle essentiels</h2>
+
+      <h3>1) Statuts HTTP</h3>
+      <p>
+        Vérifiez les 200/301/302/404/410/5xx. Les 301 doivent être cohérents (pas de chaînes), les 404/410 doivent être assumées,
+        et les 5xx sont des urgences.
+      </p>
+
+      <h3>2) robots.txt</h3>
+      <p>
+        Robots bloque le crawl. Ce n’est pas un outil de “désindexation”. On évite de bloquer des sections stratégiques
+        et on s’assure que sitemap est déclaré.
+      </p>
+
+      <h3>3) Sitemap XML</h3>
+      <p>
+        Le sitemap doit contenir les URLs canoniques importantes (200, indexables), pas du bruit. Il sert à accélérer la découverte
+        et à clarifier ce qui compte.
+      </p>
+
+      <h3>4) Balises meta robots (noindex/nofollow)</h3>
+      <p>
+        Noindex empêche l’indexation (même si la page est crawlée). Très utile, mais dangereux si appliqué par erreur.
+      </p>
+
+      <h3>5) Canonicals</h3>
+      <p>
+        Canonical indique la version “officielle” d’une page. Si les canonicals sont incohérents, vous demandez à Google de
+        choisir à votre place, et il le fera… parfois mal.
+      </p>
+
+      <h3>6) Duplication & variantes d’URL</h3>
+      <p>
+        Variantes techniques (http/https, www/non-www, trailing slash), paramètres, pages proches : ça dilue le crawl budget
+        et affaiblit la clarté de l’index.
+      </p>
+
+      <h3>7) Maillage interne (découverte)</h3>
+      <p>
+        Une page importante doit recevoir des liens internes depuis un hub/pilier. Sans liens entrants, elle est “orpheline” :
+        découverte tardive, poids faible.
+      </p>
+
+      <div class="related-links">
+        <h3 class="related-title">Pages sœurs</h3>
+        <ul class="related-list">
+          <li>
+            <a href="/projets/referencement-web/audit-seo/structure-site/">Structure de site</a>
+            <span class="hint">— hubs, profondeur, pages orphelines</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/audit-seo/mots-cles-seo/">Mots-clés SEO</a>
+            <span class="hint">— mapping pages ↔ intentions</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="checklist">
+      <h2>Checklist actionnable (crawl & indexation)</h2>
+
+      <h3>P0 (bloquants)</h3>
+      <ul>
+        <li>Pages stratégiques en noindex / canonicals erronés</li>
+        <li>Robots.txt bloque des sections importantes</li>
+        <li>5xx / erreurs serveur sur pages importantes</li>
+        <li>Chaînes de redirections ou boucles</li>
+      </ul>
+
+      <h3>P1 (optimisations fortes)</h3>
+      <ul>
+        <li>Sitemap pollué (URLs non canoniques / inutiles)</li>
+        <li>Duplication d’URLs (variantes, paramètres)</li>
+        <li>Orphelines : pages importantes sans liens internes</li>
+        <li>Pagination/facettes mal contrôlées</li>
+      </ul>
+
+      <h3>P2 (améliorations continues)</h3>
+      <ul>
+        <li>Nettoyage du crawl “bruit” (paramètres inutiles)</li>
+        <li>Consolidation progressive des clusters (fusion de pages faibles)</li>
+        <li>Monitoring Search Console (exclusions, couverture)</li>
+      </ul>
+    </section>
+
+    <section class="section" id="exemples">
+      <h2>Exemples</h2>
+      <p>
+        Ces études de cas illustrent le type de points contrôlés dans un audit crawl/indexation et dans les livrables techniques.
+      </p>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">Audit / Technique</span>
+          <h3>Audit SEO — Mac4Ever</h3>
+          <p>Architecture, URLs, crawl, robots.txt, sitemap, indexation + plan d’action priorisé.</p>
+          <a href="/projets/referencement-web/seo-audit-mac4ever/">Voir le projet</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Audit / Mobile</span>
+          <h3>Audit mobile — Butsoccers</h3>
+          <p>Core Web Vitals + erreurs techniques (403, robots.txt) + plan d’action.</p>
+          <a href="/projets/referencement-web/audit-mobile-butsoccers/">Voir le projet</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">FAQ — Crawl & indexation</h2>
+
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Robots.txt empêche-t-il l’indexation ?</summary>
+          <div class="faq-answer">
+            <p>
+              Robots.txt empêche surtout le crawl. Une URL bloquée peut parfois rester indexée si elle est connue ailleurs.
+              Pour empêcher l’indexation, on utilise plutôt <code>noindex</code> ou une stratégie de consolidation.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>À quoi sert un canonical ?</summary>
+          <div class="faq-answer">
+            <p>
+              Le canonical indique la version préférée d’un contenu. Il aide Google à choisir la bonne URL quand il existe
+              plusieurs variantes proches (paramètres, catégories, doublons).
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Le sitemap suffit-il pour être indexé ?</summary>
+          <div class="faq-answer">
+            <p>
+              Non. Le sitemap aide à découvrir, mais l’indexation dépend aussi de la qualité, de la duplication, des signaux,
+              et du fait que la page soit utile et cohérente avec l’intention.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn" href="/contact/">Discuter d’un audit crawl/indexation</a>
+        <a class="btn btn-ghost" href="/projets/referencement-web/audit-seo/">Retour à la page Audit SEO</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

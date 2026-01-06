@@ -1,0 +1,223 @@
+---
+import BaseLayout from "../../../../../layouts/BaseLayout.astro";
+import Header from "../../../../../components/Header.astro";
+---
+
+<BaseLayout
+  title="Structure de site — architecture & maillage interne (audit SEO) | Cassandra Michel"
+  description="Audit SEO : structure de site, architecture de l’information, maillage interne, pages piliers/satellites, profondeur de crawl et checklist actionnable."
+>
+  <Header />
+
+  <main>
+    <p class="muted">
+      <a href="/projets/referencement-web/audit-seo/">← Hub Audit SEO</a> ·{" "}
+      <a href="/projets/referencement-web/audit-seo/mots-cles-seo/">Mots-clés SEO</a> ·{" "}
+      <a href="/projets/referencement-web/">Référencement web (page pilier)</a>
+    </p>
+
+    <h1>Structure de site (architecture & maillage interne)</h1>
+    <p>
+      Une bonne structure aide Google à comprendre le site… et empêche les humains de fuir en hurlant.
+      En audit SEO, on travaille l’architecture pour rendre les pages trouvables, cohérentes, et bien reliées :
+      <strong>piliers</strong>, <strong>satellites</strong>, <strong>maillage interne</strong>, et profondeur de navigation.
+    </p>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <p id="toc-title" class="toc-title">Sommaire</p>
+      <ul class="toc-list">
+        <li><a href="#principes">Principes d’architecture</a></li>
+        <li><a href="#piliers">Piliers & satellites</a></li>
+        <li><a href="#maillage">Maillage interne : règles simples</a></li>
+        <li><a href="#crawl">Profondeur de crawl & indexation</a></li>
+        <li><a href="#checklist">Checklist</a></li>
+        <li><a href="#exemples">Exemples sur mon site</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" id="principes">
+      <h2>Principes d’architecture</h2>
+      <ul>
+        <li><strong>Hiérarchie claire</strong> : catégories → sous-catégories → pages.</li>
+        <li><strong>Une page = une intention dominante</strong> : sinon c’est flou et ça cannibalise.</li>
+        <li><strong>Navigation prévisible</strong> : on doit savoir “où on est” et “où aller”.</li>
+        <li><strong>Maillage utile</strong> : lier pour aider, pas pour “faire du lien”.</li>
+        <li><strong>Éviter les orphelines</strong> : une page sans liens entrants, c’est une page invisible.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="piliers">
+      <h2>Piliers & satellites</h2>
+      <p>
+        Le modèle pilier/satellites rend un site lisible :
+      </p>
+      <ul>
+        <li>
+          <strong>Page pilier (hub)</strong> : couvre le sujet principal, donne le cadre, et pointe vers des pages plus
+          spécifiques.
+        </li>
+        <li>
+          <strong>Pages satellites</strong> : répondent à un sous-sujet / une sous-intention (plus ciblé, plus actionnable).
+        </li>
+      </ul>
+
+      <p>
+        Bon signal : quand votre pilier ressemble à une table des matières intelligente, et que les satellites
+        ressemblent à des chapitres utiles.
+      </p>
+
+      <div class="related-links">
+        <h3 class="related-title">Liens dans mon cluster</h3>
+        <ul class="related-list">
+          <li>
+            <a href="/projets/referencement-web/">Pilier : Référencement web</a>
+            <span class="hint">— méthode, livrables, CTA</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/audit-seo/">Hub : Audit SEO</a>
+            <span class="hint">— pages filles (SERP, intention, mots-clés…)</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="maillage">
+      <h2>Maillage interne : règles simples</h2>
+
+      <h3>1) Pilier → satellites (et pas juste en bas de page)</h3>
+      <p>
+        Le pilier doit pousser vers les satellites via des liens contextuels, au moment où le sujet est évoqué.
+        Une liste “liens utiles” en bas aide, mais ne remplace pas les liens intégrés au texte.
+      </p>
+
+      <h3>2) Satellites → pilier (retour + consolidation)</h3>
+      <p>
+        Chaque satellite renvoie au hub/pilier : cela renforce le thème, et évite les pages isolées.
+      </p>
+
+      <h3>3) Pages sœurs (quand c’est logique)</h3>
+      <p>
+        Exemple : <em>analyse SERP</em> ↔ <em>intention</em> ↔ <em>mots-clés</em>. Si le lecteur est déjà dans le sujet,
+        lui donner le “chapitre d’après” a du sens.
+      </p>
+
+      <h3>4) Ancres naturelles</h3>
+      <p>
+        L’ancre “clique ici” n’aide personne. Une ancre qui décrit l’action (“audit SEO”, “analyse SERP”, “mots-clés SEO”)
+        améliore l’accessibilité et la compréhension.
+      </p>
+
+      <div class="related-links">
+        <h3 class="related-title">Pages sœurs (à relier)</h3>
+        <ul class="related-list">
+          <li>
+            <a href="/projets/referencement-web/audit-seo/analyse-serp/">Analyse SERP</a>
+            <span class="hint">— formats, features, concurrence</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/audit-seo/intention-recherche/">Intention de recherche</a>
+            <span class="hint">— bon format, bon CTA</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/audit-seo/mots-cles-seo/">Mots-clés SEO</a>
+            <span class="hint">— clusters & mapping</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="crawl">
+      <h2>Profondeur de crawl & indexation</h2>
+      <p>
+        Une structure SEO-friendly limite les “clics” nécessaires pour atteindre une page importante.
+        Si une page est à 6 clics de la home, elle existe surtout pour décorer.
+      </p>
+      <ul>
+        <li><strong>Pages importantes</strong> : accessibles rapidement depuis les hubs.</li>
+        <li><strong>Catégories logiques</strong> : pas de “misc” fourre-tout.</li>
+        <li><strong>Liens internes cohérents</strong> : pas de renvois incohérents au hasard.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="checklist">
+      <h2>Checklist (structure & maillage)</h2>
+      <ul>
+        <li>Architecture lisible (catégories → sous-catégories → pages)</li>
+        <li>Pages piliers identifiées + satellites définies</li>
+        <li>Liens contextuels pilier → satellites</li>
+        <li>Liens satellites → pilier</li>
+        <li>Pages sœurs reliées quand logique</li>
+        <li>Pas de pages orphelines</li>
+        <li>Priorisation : quelles pages doivent recevoir le plus de liens internes</li>
+      </ul>
+    </section>
+
+    <section class="section" id="exemples">
+      <h2>Exemples sur mon site</h2>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">Pilier</span>
+          <h3>Référencement web</h3>
+          <p>Page pilier : méthode, livrables, études de cas, CTA.</p>
+          <a href="/projets/referencement-web/">Voir la page</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Hub</span>
+          <h3>Audit SEO</h3>
+          <p>Hub : méthode + liens vers pages filles (SERP, intention, mots-clés…).</p>
+          <a href="/projets/referencement-web/audit-seo/">Voir la page</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Étude de cas</span>
+          <h3>Audit SEO — Mac4Ever</h3>
+          <p>Exemple : audit technique + plan d’action.</p>
+          <a href="/projets/referencement-web/seo-audit-mac4ever/">Voir le projet</a>
+        </article>
+      </div>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">FAQ — Structure de site</h2>
+
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Combien de niveaux de navigation faut-il ?</summary>
+          <div class="faq-answer">
+            <p>
+              Le moins possible, mais autant que nécessaire. Vise une structure où les pages importantes sont accessibles
+              rapidement depuis les hubs. Une hiérarchie claire vaut mieux qu’un millefeuille confus.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Faut-il mettre des liens partout ?</summary>
+          <div class="faq-answer">
+            <p>
+              Non. Le maillage doit être utile : guider l’utilisateur et distribuer l’importance. Trop de liens diluent
+              l’attention et rendent la page bruyante.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Comment détecter les pages orphelines ?</summary>
+          <div class="faq-answer">
+            <p>
+              Par crawl (outil SEO), sitemap, ou simplement en auditant le maillage : une page importante doit recevoir
+              des liens depuis des hubs et des pages liées. Sans liens entrants, elle est faible.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn" href="/contact/">Discuter d’une structure SEO</a>
+        <a class="btn btn-ghost" href="/projets/referencement-web/audit-seo/">Retour à la page Audit SEO</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

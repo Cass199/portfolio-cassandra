@@ -1,0 +1,29 @@
+---
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qu’est-ce qu’une consultante freelance en référencement web ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Une consultante freelance en référencement web (SEO) intervient sur la visibilité d’un site dans Google : diagnostic, analyse de la SERP, structuration des pages et audit technique."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle différence entre freelance SEO et agence SEO ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Une agence SEO mobilise plusieurs profils avec des coûts fixes plus élevés. Une freelance SEO propose un accompagnement plus direct et flexible, adapté à des périmètres ciblés."
+      }
+    }
+    // … autres questions
+  ]
+};
+---
+
+<script type="application/ld+json">
+  {JSON.stringify(schema)}
+</script>
