@@ -3,47 +3,92 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 ---
 
-<BaseLayout title="Cassandra - Portfolio">
-	<Header />
-	
-	<main>
+<BaseLayout
+  title="Cassandra Michel | Consultante en référencement web"
+  description="Cassandra Michel, consultante en référencement web. Analyses SEO, audits, compréhension de l’intention de recherche et livrables pour projets web."
+>
+  <Header />
+
+  <main>
+
+    <!-- HERO -->
     <section class="hero-home">
-      <h1>Cassandra Michel - Portfolio</h1>
+      <h1>Cassandra Michel, consultante en référencement web</h1>
+
       <p class="intro">
-        Portfolio de projets en référencement web, cybersécurité et montage vidéo.
-        Approche analytique, progression documentée.
+        Je travaille sur la visibilité des sites web
+        à travers le référencement naturel.
+        J’accompagne les projets en analysant les résultats de recherche,
+        l’intention des utilisateurs et la structure des contenus.
       </p>
+
       <p class="muted">
-        Observer. Comprendre. Documenter.
+        Une approche analytique, progressive et documentée.
       </p>
 
       <div class="cta-row">
-        <a class="btn" href="/projets/">Voir les projets</a>
-        <a class="btn btn-ghost" href="/a-propos/">À propos</a>
-        <a class="btn btn-ghost" href="/contact/">Contact</a>
+        <a class="btn" href="/projets/referencement-web/">Voir les études de cas SEO</a>
+        <a class="btn btn-ghost" href="/referencement-web/livrables/">Découvrir les livrables</a>
       </div>
     </section>
-		
 
-<section class="highlights">
-  <div class="highlight card">
-    <h2>Référencement web</h2>
-    <p>Analyses SERP, structure de page, stratégie locale.</p>
-    <a href="/projets/referencement-web/">Explorer</a>
-  </div>
+    <!-- CE QUE JE FAIS -->
+    <section class="highlights">
+      <div class="highlight card">
+        <h2>Analyse SEO</h2>
+        <p>
+          Analyse des pages de résultats (SERP), compréhension de l’intention de recherche
+          et observation de la concurrence.
+        </p>
+      </div>
 
-  <div class="highlight card">
-    <h2>Cybersécurité</h2>
-    <p>Labs TryHackMe : reconnaissance, méthodo, write-ups.</p>
-    <a href="/projets/cybersecurite/">Explorer</a>
-  </div>
+      <div class="highlight card">
+        <h2>Audits et structuration</h2>
+        <p>
+          Audits SEO orientés compréhension et priorisation :
+          structure du site, organisation des pages et cohérence sémantique.
+        </p>
+      </div>
 
-  <div class="highlight card">
-    <h2>Montage vidéo</h2>
-    <p>Montage, narration, rythme, formats courts & longs.</p>
-    <a href="/projets/montage-video/">Explorer</a>
-  </div>
-</section>
+      <div class="highlight card">
+        <h2>Livrables SEO</h2>
+        <p>
+          Briefs SEO, plans de page, mappings de mots-clés
+          et recommandations claires pour aider à la prise de décision.
+        </p>
+      </div>
+    </section>
 
-	</main>
+    <!-- METHODE -->
+    <section class="method">
+      <h2>Ma façon de travailler</h2>
+
+      <p>
+        Je privilégie une approche basée sur l’analyse et l’observation,
+        en prenant le temps de comprendre le contexte de chaque projet.
+        Les recommandations s’appuient sur des hypothèses explicites
+        et une priorisation raisonnée.
+      </p>
+
+      <p>
+        Le référencement web est pour moi un travail de compréhension progressive,
+        qui demande méthode et recul.
+      </p>
+    </section>
+
+    <!-- PREUVES -->
+    <section class="cta-final">
+      <h2>Études de cas SEO</h2>
+      <p>
+        Je partage ici des études de cas SEO :
+        analyses de SERP, audits, structuration de pages
+        et exemples de livrables.
+      </p>
+
+      <a class="btn" href="/projets/referencement-web/">
+        Accéder aux études de cas
+      </a>
+    </section>
+
+  </main>
 </BaseLayout>

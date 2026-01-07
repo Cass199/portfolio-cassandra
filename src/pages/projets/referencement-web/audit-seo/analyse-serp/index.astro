@@ -11,16 +11,22 @@ import Header from "../../../../../components/Header.astro";
 
   <main>
     <p class="muted">
-      <a href="/projets/referencement-web/audit-seo/">←Audit SEO</a> ·{" "}
+      <a href="/projets/referencement-web/audit-seo/">← Audit SEO</a> ·{" "}
       <a href="/projets/referencement-web/">Référencement web</a>
     </p>
 
     <h1>Analyse SERP</h1>
     <p>
       L’analyse de la SERP (page de résultats Google) sert à comprendre ce que Google considère comme “la bonne réponse”
-      pour une requête : types de résultats, formats dominants, concurrence, signaux de confiance, entités et intention
-      implicite. C’est souvent la différence entre “une page correcte” et “une page qui ranke”.
+      pour une requête : formats dominants, types de pages, features (PAA, vidéos, local pack…), concurrence, signaux de confiance,
+      entités et intention implicite. C’est le point de départ qui évite de construire une page “correcte”… mais hors-format.
     </p>
+
+    <div class="cta-row" aria-label="Accès rapides analyse SERP">
+      <a class="btn btn-ghost" href="#methode">Voir la méthode</a>
+      <a class="btn btn-ghost" href="#exemples">Voir des exemples</a>
+      <a class="btn" href="/contact/">Discuter d’un besoin</a>
+    </div>
 
     <nav class="toc" aria-labelledby="toc-title">
       <p id="toc-title" class="toc-title">Sommaire</p>
@@ -28,6 +34,7 @@ import Header from "../../../../../components/Header.astro";
         <li><a href="#pourquoi">Pourquoi analyser une SERP</a></li>
         <li><a href="#methode">Méthode en 7 étapes</a></li>
         <li><a href="#checklist">Checklist rapide</a></li>
+        <li><a href="#livrable">Ce que produit une analyse SERP</a></li>
         <li><a href="#exemples">Exemples (cas pratiques)</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
@@ -36,13 +43,12 @@ import Header from "../../../../../components/Header.astro";
     <section class="section" id="pourquoi">
       <h2>Pourquoi analyser une SERP</h2>
       <p>
-        La SERP vous dit déjà ce que vous devez analyser. Elle révèle :
-        l’intention dominante (informationnelle, transactionnelle, locale), les formats que Google met en avant
-        (PAA, vidéos, local pack…), et le niveau d’exigence (marques, médias, pages guides, comparatifs, etc.).
+        La SERP vous donne déjà une grande partie du brief : intention dominante (informationnelle, transactionnelle, locale),
+        formats attendus (guides, pages services, annuaires, catégories…), et niveau d’exigence (marques, médias, experts).
       </p>
       <p>
-        En pratique, une analyse SERP évite trois erreurs classiques : écrire une page au mauvais format,
-        viser une intention différente, et sous-estimer les signaux de confiance nécessaires.
+        En pratique, une analyse SERP évite trois erreurs classiques :
+        viser la mauvaise intention, produire le mauvais format, et sous-estimer les signaux de confiance nécessaires.
       </p>
     </section>
 
@@ -51,45 +57,46 @@ import Header from "../../../../../components/Header.astro";
 
       <h3>1) Identifier l’intention dominante</h3>
       <p>
-        Observez les 5–10 premiers résultats : sont-ce des guides, des pages produit, des catégories, des annuaires,
-        des vidéos, des résultats locaux ? L’intention dominante impose le format de la page cible.
+        Observez les 5–10 premiers résultats : guides, pages service, catégories, annuaires, vidéos, résultats locaux…
+        Le format dominant impose le format de la page cible. Si vous forcez un format opposé, vous combattez la SERP au lieu de la comprendre.
       </p>
 
       <h3>2) Repérer les features Google</h3>
       <p>
         Notez la présence de PAA, vidéos, local pack, featured snippet, carrousels, images, avis…
-        Ces éléments indiquent ce que Google juge utile pour satisfaire la requête.
+        Ces éléments indiquent ce que Google juge utile pour satisfaire la requête et influencent la structure attendue.
       </p>
 
       <h3>3) Cartographier la concurrence réelle</h3>
       <p>
-        Qui ranke ? Plateformes ? Marques ? Médias ? Blogs experts ? Si les 10 premiers résultats sont dominés
-        par des sites très forts, il faudra une stratégie plus ciblée (longue traîne, angle éditorial plus net,
-        preuve, niche, local…).
+        Qui ranke : plateformes, marques, médias, blogs experts ? Si la SERP est dominée par des sites très forts,
+        il faudra souvent une stratégie plus ciblée (angle plus net, longue traîne, niche, local, preuve).
       </p>
 
       <h3>4) Extraire les signaux de confiance implicites</h3>
       <p>
-        Regardez ce que les pages top 3 ont en commun : auteur identifié, preuves, avis, données, mentions légales,
-        profondeur, maillage interne, UX, performance, E-E-A-T (expérience, expertise, autorité, fiabilité).
+        Regardez ce que les pages top 3 ont en commun : auteur identifié, preuves, données, avis, mentions légales,
+        profondeur, maillage interne, UX, performance. En clair : ce qui rend la page crédible (et pas juste “bien écrite”).
       </p>
 
       <h3>5) Repérer les entités dominantes</h3>
       <p>
-        Entités = concepts “nommables” que Google comprend (marques, lieux, méthodes, objets, personnes, genres…).
-        Elles apparaissent dans les titres, les H2, les questions PAA, et les concurrents.
+        Les entités sont les concepts “nommables” que Google comprend (marques, lieux, méthodes, objets, personnes…).
+        Elles apparaissent dans les titres, les H2, les PAA, et les contenus des concurrents.
+        Les ignorer, c’est souvent écrire une page “à côté” du sujet.
       </p>
 
       <h3>6) Déduire les sous-questions à couvrir</h3>
       <p>
-        Les PAA, les “recherches associées” et les H2 des pages concurrentes vous aident à construire une couverture
-        complète : définitions, étapes, erreurs, outils, prix, délais, alternatives.
+        PAA, recherches associées et H2 concurrents servent à construire une couverture complète :
+        définitions, étapes, erreurs, outils, prix, délais, alternatives. Vous identifiez ce que l’utilisateur attend sans le formuler.
       </p>
 
       <h3>7) Décider l’angle éditorial + le plan de page</h3>
       <p>
-        Vous finissez avec une décision : quel format (guide, hub, page service…), quel angle différenciant,
+        Conclusion opérationnelle : quel format (guide, page service, hub), quel angle différenciant,
         quelles sections incontournables, et quels CTA cohérents avec l’intention.
+        Une analyse SERP utile se termine par une décision, pas par une liste de constats.
       </p>
     </section>
 
@@ -97,14 +104,34 @@ import Header from "../../../../../components/Header.astro";
       <h2>Checklist rapide (audit SERP)</h2>
       <ul>
         <li>Intention dominante confirmée (info / transaction / local)</li>
-        <li>Formats/features présents (PAA, vidéos, local pack, snippet…)</li>
+        <li>Features présentes (PAA, vidéos, local pack, snippet…)</li>
         <li>Type de concurrents (plateformes, marques, médias, experts)</li>
         <li>Profondeur moyenne des pages top 5</li>
         <li>Signaux de confiance récurrents (preuves, auteur, avis, sources)</li>
-        <li>Entités et termes qui reviennent (titres/H2/PAA)</li>
+        <li>Entités et termes récurrents (titres/H2/PAA)</li>
         <li>Sous-questions à traiter (PAA + recherches associées)</li>
         <li>Décision : angle éditorial + structure Hn + maillage</li>
       </ul>
+    </section>
+
+    <section class="section" id="livrable">
+      <h2>Ce que produit une analyse SERP</h2>
+      <p>
+        Une analyse SERP utile ne reste pas au stade “intéressant”. Elle débouche sur un livrable exploitable :
+      </p>
+      <ul>
+        <li>un résumé de l’intention dominante + format attendu</li>
+        <li>une liste de features à intégrer (ou à contourner)</li>
+        <li>les signaux de confiance minimum à atteindre</li>
+        <li>les entités/sous-thèmes à couvrir</li>
+        <li>un plan de page (Hn) + un angle différenciant</li>
+        <li>des pistes de maillage interne (page pilier ↔ pages satellites)</li>
+      </ul>
+
+      <p class="intro">
+        Pour voir comment ça s’intègre dans une mission complète :
+        <a href="/projets/referencement-web/livrables-seo/">Livrables SEO</a>.
+      </p>
     </section>
 
     <section class="section" id="exemples">
@@ -143,11 +170,11 @@ import Header from "../../../../../components/Header.astro";
           <li>
             <a href="/projets/referencement-web/audit-seo/intention-recherche/">Intention de recherche (méthode)</a>
             <span class="hint">— valider le format attendu + le bon CTA</span>
-        </li>
-        <li>
+          </li>
+          <li>
             <a href="/projets/referencement-web/audit-seo/mots-cles-seo/">Mots-clés SEO (cartographie & clusters)</a>
-            <span class="hint">— construire un mapping pages ↔ intentions</span>
-        </li>
+            <span class="hint">— mapping pages ↔ intentions</span>
+          </li>
         </ul>
       </div>
     </section>
@@ -171,7 +198,7 @@ import Header from "../../../../../components/Header.astro";
           <div class="faq-answer">
             <p>
               Oui : localisation, historique, appareil, langue et contexte peuvent influencer certains résultats.
-              Pour limiter le bruit, compare sur mobile/desktop et observe les constantes (features, types de pages).
+              Pour limiter le bruit, compare mobile/desktop et observe les constantes (features, types de pages).
             </p>
           </div>
         </details>
@@ -191,6 +218,8 @@ import Header from "../../../../../components/Header.astro";
         <a class="btn" href="/contact/">Discuter d’une analyse SERP</a>
         <a class="btn btn-ghost" href="/projets/referencement-web/audit-seo/">Retour à la page Audit SEO</a>
       </div>
+
+      <p class="intro">Après diagnostic, pas avant.</p>
     </section>
   </main>
 </BaseLayout>

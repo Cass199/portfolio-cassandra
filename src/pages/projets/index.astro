@@ -45,62 +45,6 @@ const projects = [
       "Audit mobile complet : Core Web Vitals (CrUX), Lighthouse, écarts terrain/labo, erreurs techniques (403, robots.txt) et plan d’action priorisé.",
     tags: ["CWV", "Lighthouse", "Mobile-first", "Performance"],
   },
-  {
-    type: "cyber-project",
-    title: "Fakebank — Sécurité défensive",
-    href: "/projets/cybersecurite/fakebank-defense/",
-    category: "Cyber",
-    status: "Publié",
-    summary: "Investigation d'un incident via SIEM : analyse, blocage IP, WAF, rate limiting.",
-    tags: ["SIEM", "WAF", "Rate limiting"],
-  },
-  {
-    type: "cyber-project",
-    title: "Fakebank — Sécurité offensive",
-    href: "/projets/cybersecurite/fakebank-offense/",
-    category: "Cyber",
-    status: "Publié",
-    summary: "Attaque d'une app bancaire fictive : reconnaissance, Gobuster, accès non autorisé.",
-    tags: ["Recon", "Gobuster", "Accès"],
-  },
-  {
-    type: "cyber-project",
-    title: "Analyse de phishing — Investigation SOC",
-    href: "/projets/cybersecurite/analyse-phishing/",
-    category: "Cyber",
-    status: "Publié",
-    summary: "Analyse d’emails suspects : extraction d’artefacts, décodage Base64 et identification d’IOC.",
-    tags: ["Phishing", "Email", "Base64", "IOC", "SOC"],
-  },
-
-  // Catégories (hubs)
-  {
-    type: "category",
-    title: "Référencement web",
-    href: "/projets/referencement-web/",
-    category: "SEO",
-    status: "Publié",
-    summary: "Page catégorie : méthode, livrables et accès aux études de cas.",
-    tags: ["Structure", "Technique", "Contenu"],
-  },
-  {
-    type: "category",
-    title: "Cybersécurité",
-    href: "/projets/cybersecurite/",
-    category: "Cyber",
-    status: "Publié",
-    summary: "Labs et write-ups : reconnaissance, analyse, compréhension des risques.",
-    tags: ["Nmap", "Méthodo", "Write-up"],
-  },
-  {
-    type: "category",
-    title: "Montage vidéo",
-    href: "/projets/montage-video/",
-    category: "Vidéo",
-    status: "À venir",
-    summary: "Montage, narration, rythme, formats courts et longs.",
-    tags: ["Rythme", "Narration", "Avant/Après"],
-  },
 ];
 
 const categories = projects.filter((p) => p.type === "category");
@@ -115,23 +59,10 @@ const cyberProjects = projects.filter((p) => p.type === "cyber-project");
     <h1>Projets</h1>
     <p class="intro">Des preuves concrètes.</p>
 
-    <section aria-label="Catégories">
-      <h2>Catégories</h2>
-      <section class="grid" aria-label="Liste des catégories">
-        {categories.map((p) => <ProjectCard {...p} />)}
-      </section>
-    </section>
-
     <section aria-label="Études de cas">
       <h2>Études de cas</h2>
       <section class="grid" aria-label="Liste des études de cas">
         {cases.map((p) => <ProjectCard {...p} />)}
-    </section>
-
-    <section aria-label="Projets — Cybersécurité">
-      <h2>Projets — Cybersécurité</h2>
-      <section class="grid" aria-label="Liste des projets cybersécurité">
-        {cyberProjects.map((p) => <ProjectCard {...p} />)}
     </section>
   </main>
 </BaseLayout>

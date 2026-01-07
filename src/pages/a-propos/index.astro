@@ -1,37 +1,86 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/Header.astro";
-
-const title = "À propos — Cassandra";
-const description = "Présentation courte : méthodes, domaines, manière de travailler.";
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout
+  title="À propos — Cassandra Michel, consultante en référencement web"
+  description="À propos de Cassandra Michel, consultante en référencement web. Approche analytique, méthodique et progressive du SEO."
+>
   <Header />
-  <main>
-    <h1>À propos</h1>
-    <p class="intro">
-      Je construis un portfolio de projets concrets en SEO, cybersécurité et montage vidéo.
-      Mon approche : comprendre, documenter, livrer.
-    </p>
 
-    <h2>Ce que je fais</h2>
-    <ul>
-      <li><strong>SEO :</strong> analyse de SERP, structure de page, optimisation locale, contenu.</li>
-      <li><strong>Cybersécurité :</strong> labs TryHackMe, reconnaissance, méthodologie, write-ups.</li>
-      <li><strong>Montage vidéo :</strong> narration, rythme, formats courts et longs.</li>
-    </ul>
+  <main class="about">
 
-    <h2>Ma manière de travailler</h2>
-    <ul>
-      <li>Je pars des faits (SERP, données, tests) avant de proposer une solution.</li>
-      <li>Je documente pour pouvoir reproduire, améliorer, et prouver le résultat.</li>
-      <li>Je privilégie une exécution propre, même sur des projets simples.</li>
-    </ul>
+    <section class="about-intro">
+      <h1>À propos</h1>
 
-    <h2>En ce moment</h2>
-    <p>
-      Le site évolue au fil de nouveaux projets. L’objectif est de montrer une progression réelle.
-    </p>
+      <p class="intro">
+        Je m’appelle Cassandra Michel.
+        Je me spécialise dans le référencement web, avec une approche analytique
+        et méthodique, centrée sur la compréhension des moteurs de recherche
+        et des intentions des utilisateurs.
+      </p>
+    </section>
+
+    <section class="about-content">
+      <h2>Mon approche du référencement web</h2>
+
+      <p>
+        Je considère le SEO comme un travail d’observation, d’analyse
+        et de structuration de l’information.
+        Avant toute recommandation, je prends le temps d’examiner
+        les pages de résultats, le contexte concurrentiel
+        et les objectifs réels du projet.
+      </p>
+
+      <p>
+        Mon travail repose sur des hypothèses explicites,
+        des choix argumentés et une priorisation progressive.
+        Je privilégie des décisions compréhensibles et documentées,
+        plutôt que des optimisations automatiques ou des promesses rapides.
+      </p>
+    </section>
+
+    <section class="about-content">
+      <h2>Ce que je fais aujourd’hui</h2>
+
+      <p>
+        J’accompagne des projets web à travers des analyses SEO,
+        des audits et la production de livrables clairs
+        destinés à aider à la prise de décision.
+        J’interviens principalement en amont,
+        lorsque la structure et le positionnement doivent être définis.
+      </p>
+
+      <p>
+        Je documente également mes travaux sous forme d’études de cas,
+        afin de rendre visibles les raisonnements, les limites
+        et les choix effectués.
+      </p>
+    </section>
+
+    <section class="about-content">
+      <h2>En dehors du cadre strictement opérationnel</h2>
+
+      <p>
+        Je m’intéresse aux mécanismes de recherche d’information,
+        aux biais d’interprétation et aux interactions
+        entre humains et systèmes techniques.
+        Ces sujets nourrissent ma manière d’aborder le référencement web,
+        sans en être le cœur visible.
+      </p>
+    </section>
+
+    <section class="about-cta">
+      <p>
+        Pour découvrir comment cette approche se traduit concrètement,
+        vous pouvez consulter les études de cas SEO.
+      </p>
+
+      <a class="btn" href="/projets/referencement-web/">
+        Voir les études de cas
+      </a>
+    </section>
+
   </main>
 </BaseLayout>

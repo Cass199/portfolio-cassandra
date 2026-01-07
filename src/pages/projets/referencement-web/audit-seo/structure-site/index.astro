@@ -23,6 +23,12 @@ import Header from "../../../../../components/Header.astro";
       <strong>piliers</strong>, <strong>satellites</strong>, <strong>maillage interne</strong>, et profondeur de navigation.
     </p>
 
+    <div class="cta-row" aria-label="Accès rapides structure de site">
+      <a class="btn btn-ghost" href="#maillage">Voir le maillage</a>
+      <a class="btn btn-ghost" href="#checklist">Voir la checklist</a>
+      <a class="btn" href="/contact/">Discuter d’une structure</a>
+    </div>
+
     <nav class="toc" aria-labelledby="toc-title">
       <p id="toc-title" class="toc-title">Sommaire</p>
       <ul class="toc-list">
@@ -30,6 +36,7 @@ import Header from "../../../../../components/Header.astro";
         <li><a href="#piliers">Piliers & satellites</a></li>
         <li><a href="#maillage">Maillage interne : règles simples</a></li>
         <li><a href="#crawl">Profondeur de crawl & indexation</a></li>
+        <li><a href="#livrable">Ce que produit une structure</a></li>
         <li><a href="#checklist">Checklist</a></li>
         <li><a href="#exemples">Exemples sur mon site</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -49,9 +56,7 @@ import Header from "../../../../../components/Header.astro";
 
     <section class="section" id="piliers">
       <h2>Piliers & satellites</h2>
-      <p>
-        Le modèle pilier/satellites rend un site lisible :
-      </p>
+      <p>Le modèle pilier/satellites rend un site lisible :</p>
       <ul>
         <li>
           <strong>Page pilier (hub)</strong> : couvre le sujet principal, donne le cadre, et pointe vers des pages plus
@@ -72,11 +77,15 @@ import Header from "../../../../../components/Header.astro";
         <ul class="related-list">
           <li>
             <a href="/projets/referencement-web/">Pilier : Référencement web</a>
-            <span class="hint">— méthode, livrables, CTA</span>
+            <span class="hint">— méthode, livrables, études de cas</span>
           </li>
           <li>
             <a href="/projets/referencement-web/audit-seo/">Hub : Audit SEO</a>
             <span class="hint">— pages filles (SERP, intention, mots-clés…)</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/audit-seo/crawl-indexation/">Crawl & indexation</a>
+            <span class="hint">— validation technique de l’architecture</span>
           </li>
         </ul>
       </div>
@@ -138,6 +147,25 @@ import Header from "../../../../../components/Header.astro";
         <li><strong>Catégories logiques</strong> : pas de “misc” fourre-tout.</li>
         <li><strong>Liens internes cohérents</strong> : pas de renvois incohérents au hasard.</li>
       </ul>
+
+      <p class="intro">
+        Checklist technique associée :
+        <a href="/projets/referencement-web/audit-seo/crawl-indexation/">crawl & indexation</a>.
+      </p>
+    </section>
+
+    <section class="section" id="livrable">
+      <h2>Ce que produit une structure de site</h2>
+      <p>
+        Une “bonne architecture” n’est pas un avis. C’est un ensemble de décisions vérifiables :
+      </p>
+      <ul>
+        <li>une hiérarchie (hubs → satellites → pages)</li>
+        <li>un maillage interne (pilier ↔ satellites ↔ pages sœurs)</li>
+        <li>des pages prioritaires identifiées (celles qui doivent recevoir le plus de liens internes)</li>
+        <li>des pages à fusionner / déplacer / supprimer (pour éviter duplication et cannibalisation)</li>
+        <li>une profondeur raisonnable (pages importantes accessibles vite)</li>
+      </ul>
     </section>
 
     <section class="section" id="checklist">
@@ -178,6 +206,7 @@ import Header from "../../../../../components/Header.astro";
           <a href="/projets/referencement-web/seo-audit-mac4ever/">Voir le projet</a>
         </article>
       </div>
+    </section>
 
     <section class="section" id="faq" aria-labelledby="faq-title">
       <h2 id="faq-title">FAQ — Structure de site</h2>
@@ -187,7 +216,7 @@ import Header from "../../../../../components/Header.astro";
           <summary>Combien de niveaux de navigation faut-il ?</summary>
           <div class="faq-answer">
             <p>
-              Le moins possible, mais autant que nécessaire. Vise une structure où les pages importantes sont accessibles
+              Le moins possible, mais autant que nécessaire. Visez une structure où les pages importantes sont accessibles
               rapidement depuis les hubs. Une hiérarchie claire vaut mieux qu’un millefeuille confus.
             </p>
           </div>
@@ -207,7 +236,7 @@ import Header from "../../../../../components/Header.astro";
           <summary>Comment détecter les pages orphelines ?</summary>
           <div class="faq-answer">
             <p>
-              Par crawl (outil SEO), sitemap, ou simplement en auditant le maillage : une page importante doit recevoir
+              Par crawl (outil SEO), sitemap, ou en auditant le maillage : une page importante doit recevoir
               des liens depuis des hubs et des pages liées. Sans liens entrants, elle est faible.
             </p>
           </div>
@@ -218,6 +247,8 @@ import Header from "../../../../../components/Header.astro";
         <a class="btn" href="/contact/">Discuter d’une structure SEO</a>
         <a class="btn btn-ghost" href="/projets/referencement-web/audit-seo/">Retour à la page Audit SEO</a>
       </div>
+
+      <p class="intro">Après diagnostic, pas avant.</p>
     </section>
   </main>
 </BaseLayout>

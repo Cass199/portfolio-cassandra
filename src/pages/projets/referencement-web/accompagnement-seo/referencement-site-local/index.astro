@@ -1,0 +1,302 @@
+---
+import BaseLayout from "../../../../../layouts/BaseLayout.astro";
+import Header from "../../../../../components/Header.astro";
+
+const sections = [
+  { href: "#enjeux", label: "Enjeux du SEO local" },
+  { href: "#serp", label: "Ce que la SERP locale impose" },
+  { href: "#fondations", label: "Fondations (offre, pages, preuves)" },
+  { href: "#gmb", label: "Google Business Profile & cohérence NAP" },
+  { href: "#pages-locales", label: "Pages locales & structure" },
+  { href: "#signaux", label: "Signaux de confiance" },
+  { href: "#process", label: "Process d’accompagnement" },
+  { href: "#livrables", label: "Livrables adaptés" },
+  { href: "#exemples", label: "Exemples" },
+  { href: "#faq", label: "FAQ" },
+];
+---
+
+<BaseLayout
+  title="Référencement site local — SEO local, pages, avis & signaux | Cassandra Michel"
+  description="Référencement site local : local pack, Google Business Profile, cohérence NAP, pages locales, avis, signaux de confiance et priorisation P0/P1/P2. Méthode pragmatique."
+>
+  <Header />
+
+  <main>
+    <p class="muted">
+      <a href="/projets/referencement-web/accompagnement-seo/">← Hub Accompagnement SEO</a> ·{" "}
+      <a href="/projets/referencement-web/">Référencement web (page pilier)</a> ·{" "}
+      <a href="/projets/referencement-web/audit-seo/analyse-serp/">Analyse SERP</a> ·{" "}
+      <a href="/projets/referencement-web/livrables-seo/">Livrables SEO</a>
+    </p>
+
+    <h1>Référencement site local (SEO local)</h1>
+
+    <p>
+      Le SEO local, c’est une discipline simple sur le papier : être visible quand quelqu’un cherche un service
+      <strong>près de chez lui</strong>. En pratique, la SERP locale impose ses règles (local pack, avis, entités),
+      et la visibilité dépend autant de la <strong>pertinence</strong> que de la <strong>confiance</strong>.
+    </p>
+
+    <p class="intro">
+      En SEO local, le coût dépend de la concurrence et des signaux de confiance attendus :
+      <a href="/projets/referencement-web/cout-referencement-web/">budget SEO site web</a>.
+    </p>
+
+    <p>
+      Cette page pose un cadre clair : ce que Google met en avant, ce que cela implique pour un site local,
+      et comment prioriser les actions sans transformer le projet en foire à la checklist.
+    </p>
+
+    <div class="cta-row" aria-label="Accès rapides référencement local">
+      <a class="btn btn-ghost" href="#fondations">Voir les fondations</a>
+      <a class="btn btn-ghost" href="#gmb">Google Business Profile</a>
+      <a class="btn" href="/contact/">Discuter d’un besoin local</a>
+    </div>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <p id="toc-title" class="toc-title">Sommaire</p>
+      <ul class="toc-list">
+        {sections.map((s) => (
+          <li><a href={s.href}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    {/* Enjeux */}
+    <section class="section" id="enjeux">
+      <h2>Enjeux du SEO local</h2>
+      <ul>
+        <li><strong>Visibilité transactionnelle</strong> : l’utilisateur cherche souvent à appeler, réserver, se déplacer.</li>
+        <li><strong>Confiance</strong> : avis, preuves, informations pratiques cohérentes.</li>
+        <li><strong>Concurrence “terrain”</strong> : vous ne vous battez pas seulement contre des sites, mais contre des fiches.</li>
+        <li><strong>SERP très variable</strong> : géolocalisation, mobile, intention “près de moi”.</li>
+      </ul>
+
+      <p class="intro">
+        Base méthodo : <a href="/projets/referencement-web/audit-seo/">Audit SEO</a> (hub) et{" "}
+        <a href="/projets/referencement-web/audit-seo/analyse-serp/">analyse SERP</a> (lecture des formats locaux).
+      </p>
+    </section>
+
+    {/* SERP */}
+    <section class="section" id="serp">
+      <h2>Ce que la SERP locale impose</h2>
+      <p>
+        Sur beaucoup de requêtes locales, Google place le <strong>local pack</strong> avant les résultats “classiques”.
+        Cela change la priorité : il faut optimiser à la fois <strong>la présence locale</strong> (fiche, cohérence, avis)
+        et <strong>le site</strong> (pages services, preuves, structure).
+      </p>
+
+      <ul>
+        <li><strong>Local pack</strong> → importance des avis, catégories, informations pratiques, proximité.</li>
+        <li><strong>Questions / PAA</strong> → besoin d’explications rapides et rassurantes.</li>
+        <li><strong>Sites d’annuaires</strong> → concurrence indirecte sur la confiance et la comparaison.</li>
+      </ul>
+
+      <div class="related-links">
+        <h3 class="related-title">À relier</h3>
+        <ul class="related-list">
+          <li>
+            <a href="/projets/referencement-web/audit-seo/intention-recherche/">Intention de recherche</a>
+            <span class="hint">— local = souvent transactionnel</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/audit-seo/mots-cles-seo/">Mots-clés SEO</a>
+            <span class="hint">— mapping requêtes → pages locales/services</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    {/* Fondations */}
+    <section class="section" id="fondations">
+      <h2>Fondations : offre claire, pages utiles, preuves visibles</h2>
+      <p>
+        Un site local performant commence par l’évidence : l’utilisateur doit comprendre en 10 secondes
+        <strong>ce que vous faites</strong>, <strong>où</strong>, <strong>pour qui</strong>, et <strong>comment vous contacter</strong>.
+        Si ce n’est pas clair, Google ne fera pas la traduction à votre place.
+      </p>
+
+      <h3>P0 — Bloquants</h3>
+      <ul>
+        <li>Pages services absentes ou trop vagues</li>
+        <li>Informations pratiques incohérentes (adresse/téléphone/horaires)</li>
+        <li>Problèmes d’indexation (pages importantes invisibles)</li>
+      </ul>
+
+      <h3>P1 — Gros impact</h3>
+      <ul>
+        <li>Pages services solides (une intention dominante par page)</li>
+        <li>Preuves (avis, réalisations, photos, garanties, éléments concrets)</li>
+        <li>Maillage interne simple (accès rapide aux pages importantes)</li>
+      </ul>
+
+      <p class="intro">
+        Pour la structure : <a href="/projets/referencement-web/audit-seo/structure-site/">Structure de site</a>.
+      </p>
+    </section>
+
+    {/* GBP */}
+    <section class="section" id="gmb">
+      <h2>Google Business Profile & cohérence NAP</h2>
+      <p>
+        Pour le local, la fiche (Google Business Profile) est souvent la première “landing page”.
+        L’objectif n’est pas de la remplir comme un formulaire administratif : c’est un asset marketing.
+      </p>
+
+      <h3>Ce qui compte vraiment</h3>
+      <ul>
+        <li><strong>Catégories</strong> cohérentes</li>
+        <li><strong>Horaires</strong> exacts et mis à jour</li>
+        <li><strong>Avis</strong> (quantité + qualité + réponses)</li>
+        <li><strong>Photos</strong> et signaux de légitimité</li>
+        <li><strong>NAP</strong> cohérent (Name / Address / Phone) partout</li>
+      </ul>
+
+      <p>
+        Si votre NAP varie selon les plateformes, vous ne “faites pas du SEO local”, vous semez des contradictions.
+      </p>
+    </section>
+
+    {/* Pages locales */}
+    <section class="section" id="pages-locales">
+      <h2>Pages locales & structure</h2>
+      <p>
+        Les pages locales ne sont pas des duplications “Ville A / Ville B” collées au chausse-pied.
+        Une page locale utile décrit un <strong>service</strong> dans un <strong>contexte</strong> : zones couvertes,
+        modalités, contraintes, exemples, informations pratiques.
+      </p>
+
+      <h3>Architecture simple</h3>
+      <ul>
+        <li>Hub “Services” → pages services</li>
+        <li>Hub “Zones” (si pertinent) → pages locales utiles</li>
+        <li>Liens contextuels (services ↔ zones) quand c’est logique</li>
+      </ul>
+
+      <p class="intro">
+        Pour éviter les orphelines et la confusion :{" "}
+        <a href="/projets/referencement-web/audit-seo/crawl-indexation/">Crawl & indexation</a>.
+      </p>
+    </section>
+
+    {/* Signaux */}
+    <section class="section" id="signaux">
+      <h2>Signaux de confiance (le nerf de la guerre local)</h2>
+      <ul>
+        <li><strong>Avis</strong> : demander, répondre, traiter les critiques</li>
+        <li><strong>Preuves</strong> : cas, réalisations, photos réelles, certifications</li>
+        <li><strong>Clarté</strong> : tarifs indicatifs, délais, zones, process</li>
+        <li><strong>Infos pratiques</strong> : accès, stationnement, horaires, contact</li>
+      </ul>
+
+      <p>
+        Localement, une page “joli texte” sans preuves ressemble à une vitrine… vide. Personne n’achète dans une vitrine vide.
+      </p>
+    </section>
+
+    {/* Process */}
+    <section class="section" id="process">
+      <h2>Process d’accompagnement (SEO local)</h2>
+      <ol>
+        <li><strong>Lecture de SERP locale</strong> : local pack, concurrents, exigences.</li>
+        <li><strong>Diagnostic</strong> : pages services, structure, indexation, signaux.</li>
+        <li><strong>Priorisation</strong> : P0/P1/P2 selon impact business local.</li>
+        <li><strong>Mise en œuvre</strong> : pages, maillage, preuves, cohérence.</li>
+        <li><strong>Validation</strong> : indexation, signaux, ajustements.</li>
+      </ol>
+
+      <p class="intro">
+        Cadre global : <a href="/projets/referencement-web/accompagnement-seo/">Accompagnement SEO</a>.
+      </p>
+    </section>
+
+    {/* Livrables */}
+    <section class="section" id="livrables">
+      <h2>Livrables adaptés au SEO local</h2>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">Analyse</span>
+          <h3>Analyse SERP locale</h3>
+          <p>Local pack, features, concurrents, signaux, entités.</p>
+          <a href="/projets/referencement-web/audit-seo/analyse-serp/">Voir la méthode</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Structure</span>
+          <h3>Plan de pages services / locales</h3>
+          <p>Hn, sections, preuves, CTA, maillage interne.</p>
+          <a href="/projets/referencement-web/livrables-seo/">Voir les livrables</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Synthèse</span>
+          <h3>Plan d’action priorisé</h3>
+          <p>P0/P1/P2, ordre d’exécution, validations.</p>
+          <a href="/projets/referencement-web/livrables-seo/">Voir les livrables</a>
+        </article>
+      </div>
+    </section>
+
+    {/* Exemples */}
+    <section class="section" id="exemples">
+      <h2>Exemples</h2>
+      <p>
+        Ces pages illustrent des éléments typiques du SEO local : lecture de SERP, entités, signaux, et structuration.
+      </p>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">SERP / Local</span>
+          <h3>Librairies indépendantes à Niort</h3>
+          <p>Analyse SERP locale : types de résultats, entités, signaux, opportunités.</p>
+          <a href="/projets/referencement-web/librairies-independantes-niort/">Voir l’étude de cas</a>
+        </article>
+      </div>
+    </section>
+
+    {/* FAQ */}
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">FAQ — Référencement site local</h2>
+
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Le SEO local dépend-il surtout de la fiche Google ?</summary>
+          <div class="faq-answer">
+            <p>
+              La fiche est centrale pour le local pack, mais le site reste déterminant : pages services,
+              preuves, cohérence, et capacité à convertir. Les deux doivent être alignés.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Faut-il créer une page par ville ?</summary>
+          <div class="faq-answer">
+            <p>
+              Pas automatiquement. Une page locale doit être utile et différenciée. Des duplications “Ville A / Ville B”
+              sans valeur ajoutée créent du bruit et fragilisent la qualité globale.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Quels signaux comptent le plus en local ?</summary>
+          <div class="faq-answer">
+            <p>
+              Clarté de l’offre, cohérence des informations, avis, preuves, et pages services solides.
+              L’utilisateur local veut une décision rapide : confiance + action.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn" href="/contact/">Discuter d’un besoin local</a>
+        <a class="btn btn-ghost" href="/projets/referencement-web/accompagnement-seo/">Retour au hub Accompagnement SEO</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

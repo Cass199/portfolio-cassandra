@@ -11,7 +11,7 @@ import Header from "../../../../../components/Header.astro";
 
   <main>
     <p class="muted">
-      <a href="/projets/referencement-web/audit-seo/">←Audit SEO</a> ·{" "}
+      <a href="/projets/referencement-web/audit-seo/">← Audit SEO</a> ·{" "}
       <a href="/projets/referencement-web/audit-seo/analyse-serp/">Analyse SERP</a> ·{" "}
       <a href="/projets/referencement-web/audit-seo/intention-recherche/">Intention de recherche</a> ·{" "}
       <a href="/projets/referencement-web/">Référencement web</a>
@@ -21,8 +21,14 @@ import Header from "../../../../../components/Header.astro";
     <p>
       En audit SEO, les mots-clés ne sont pas une “liste”. Ce sont des <strong>requêtes regroupées par intention</strong>,
       organisées en <strong>clusters</strong>, puis <strong>mappées</strong> sur des pages (piliers/satellites).
-      Objectif : savoir <em>quoi créer</em>, <em>quoi fusionner</em>, <em>quoi renforcer</em> — et éviter la cannibalisation.
+      Objectif : savoir <em>quoi créer</em>, <em>quoi fusionner</em>, <em>quoi renforcer</em> — et limiter la cannibalisation.
     </p>
+
+    <div class="cta-row" aria-label="Accès rapides mots-clés SEO">
+      <a class="btn btn-ghost" href="#methode">Voir la méthode</a>
+      <a class="btn btn-ghost" href="#mapping">Voir le mapping</a>
+      <a class="btn" href="/contact/">Discuter d’un besoin</a>
+    </div>
 
     <nav class="toc" aria-labelledby="toc-title">
       <p id="toc-title" class="toc-title">Sommaire</p>
@@ -33,6 +39,7 @@ import Header from "../../../../../components/Header.astro";
         <li><a href="#mapping">Mapping requêtes → pages</a></li>
         <li><a href="#erreurs">Erreurs fréquentes</a></li>
         <li><a href="#checklist">Checklist</a></li>
+        <li><a href="#livrable">Ce que produit une cartographie</a></li>
         <li><a href="#exemples">Exemples sur mon site</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
@@ -42,11 +49,11 @@ import Header from "../../../../../components/Header.astro";
       <h2>Principes utiles (sans mystique)</h2>
       <ul>
         <li><strong>Une requête ≠ une page</strong> : une page peut couvrir plusieurs requêtes proches.</li>
-        <li><strong>Intention d’abord</strong> : le volume n’a aucun intérêt si l’intention ne colle pas.</li>
-        <li><strong>Cluster</strong> : groupe de requêtes liées à un même besoin.</li>
+        <li><strong>Intention d’abord</strong> : viser un volume “haut” n’a aucun intérêt si l’intention ne colle pas.</li>
+        <li><strong>Cluster</strong> : groupe de requêtes liées à un même besoin (donc à un même format SERP).</li>
         <li><strong>Pilier</strong> : page “hub” qui couvre le sujet principal et pousse vers des satellites.</li>
         <li><strong>Satellite</strong> : page dédiée à un sous-sujet / une sous-intention.</li>
-        <li><strong>Cannibalisation</strong> : plusieurs pages se battent sur la même intention → aucune ne gagne vraiment.</li>
+        <li><strong>Cannibalisation</strong> : plusieurs pages se battent sur la même intention → dilution.</li>
       </ul>
     </section>
 
@@ -55,38 +62,38 @@ import Header from "../../../../../components/Header.astro";
 
       <h3>1) Partir des intentions et des pages existantes</h3>
       <p>
-        L’audit commence par le réel : pages actuelles, objectifs, offres, et requêtes ciblées. Puis on observe la SERP
-        pour vérifier le format attendu.
+        L’audit commence par le réel : pages actuelles, objectifs, offres, requêtes déjà travaillées.
+        Ensuite, on observe la SERP pour vérifier le format attendu et le niveau d’exigence.
       </p>
 
       <h3>2) Collecter les requêtes (sources)</h3>
       <p>
         Selon le contexte : Google (PAA, associés), Search Console, logs, outils SEO, analyse concurrentielle.
-        Le but n’est pas d’en avoir 10 000, mais d’avoir <strong>les bonnes</strong>.
+        Le but n’est pas d’en avoir 10 000, mais d’avoir <strong>celles qui décrivent un besoin réel</strong>.
       </p>
 
       <h3>3) Normaliser et dédupliquer</h3>
       <p>
-        On regroupe synonymes, variantes, pluriels, formulations proches. On enlève le bruit. C’est là que la “liste”
-        devient une matière exploitable.
+        On regroupe synonymes, variantes, pluriels, formulations proches. On enlève le bruit.
+        C’est là que la “liste” devient exploitable.
       </p>
 
       <h3>4) Grouper en clusters (intention + proximité sémantique)</h3>
       <p>
-        Un cluster n’est pas un sac de mots : c’est un ensemble de requêtes qui attendent globalement le même type de page
-        et les mêmes sections de réponse.
+        Un cluster n’est pas un sac de mots : c’est un ensemble de requêtes qui attendent globalement
+        le même type de page et les mêmes sections de réponse.
       </p>
 
       <h3>5) Mapper requêtes → pages (piliers/satellites)</h3>
       <p>
-        Chaque cluster devient un plan : quelles pages existent déjà, lesquelles manquent, lesquelles doivent être fusionnées,
-        et où placer les CTAs.
+        Chaque cluster devient une décision : quelles pages existent déjà, lesquelles manquent,
+        lesquelles doivent être fusionnées, et comment organiser le maillage interne.
       </p>
 
       <h3>6) Prioriser</h3>
       <p>
-        Priorité = impact business + faisabilité + opportunité SERP. L’objectif : un plan d’action réel, pas un dossier qu’on
-        oublie dans un tiroir.
+        Priorité = opportunité SERP + impact (business / visibilité) + faisabilité (temps, ressources, contraintes techniques).
+        L’objectif : un plan d’action réaliste, itérable.
       </p>
 
       <div class="related-links">
@@ -110,26 +117,23 @@ import Header from "../../../../../components/Header.astro";
 
     <section class="section" id="clusters">
       <h2>Construire un cluster</h2>
-      <p>
-        Un cluster efficace contient :
-      </p>
+      <p>Un cluster cohérent contient :</p>
       <ul>
         <li><strong>Requête pilier</strong> (le sujet principal)</li>
         <li><strong>Variantes proches</strong> (synonymes / reformulations)</li>
         <li><strong>Sous-intentions</strong> (FAQ, comparatifs, prix, méthodes, erreurs)</li>
-        <li><strong>Pages satellites</strong> (une page par sous-sujet important)</li>
+        <li><strong>Satellites</strong> (une page par sous-sujet significatif)</li>
       </ul>
 
       <p>
         Exemple typique : une requête “service” (transactionnelle) + satellites “prix”, “méthode”, “exemples”, “audit”, etc.
+        Le format de chaque page se valide à la SERP, pas à l’intuition.
       </p>
     </section>
 
     <section class="section" id="mapping">
       <h2>Mapping requêtes → pages (et maillage)</h2>
-      <p>
-        Le mapping sert à décider <strong>où</strong> chaque requête doit vivre :
-      </p>
+      <p>Le mapping sert à décider <strong>où</strong> chaque requête doit vivre :</p>
       <ul>
         <li>si plusieurs pages ciblent la même intention → <strong>risque de cannibalisation</strong></li>
         <li>si un cluster n’a pas de page → <strong>opportunité de création</strong></li>
@@ -137,8 +141,8 @@ import Header from "../../../../../components/Header.astro";
       </ul>
 
       <p>
-        Un bon mapping produit aussi un maillage interne logique : pilier → satellites, satellites → pilier, et liens “pages sœurs”
-        quand c’est pertinent.
+        Un bon mapping produit aussi un maillage interne lisible : pilier → satellites, satellites → pilier,
+        et liens “pages sœurs” quand c’est utile (même audience, intention adjacente).
       </p>
     </section>
 
@@ -164,6 +168,25 @@ import Header from "../../../../../components/Header.astro";
         <li>Maillage interne défini (pilier ↔ satellites ↔ pages sœurs)</li>
         <li>Priorisation P0/P1/P2</li>
       </ul>
+    </section>
+
+    <section class="section" id="livrable">
+      <h2>Ce que produit une cartographie mots-clés</h2>
+      <p>
+        Une cartographie utile ne se résume pas à des colonnes. Elle débouche sur des décisions actionnables :
+      </p>
+      <ul>
+        <li>une liste de clusters (intention + format SERP)</li>
+        <li>un mapping requêtes → pages (piliers/satellites)</li>
+        <li>une liste de pages à créer / fusionner / renforcer</li>
+        <li>des risques de cannibalisation (et comment les corriger)</li>
+        <li>un schéma de maillage interne (pilier ↔ satellites ↔ pages sœurs)</li>
+        <li>une priorisation (P0/P1/P2) alignée avec les contraintes du projet</li>
+      </ul>
+
+      <p class="intro">
+        Pour voir les formats livrables associés : <a href="/projets/referencement-web/livrables-seo/">Livrables SEO</a>.
+      </p>
     </section>
 
     <section class="section" id="exemples">
@@ -232,6 +255,8 @@ import Header from "../../../../../components/Header.astro";
         <a class="btn" href="/contact/">Discuter d’une cartographie mots-clés</a>
         <a class="btn btn-ghost" href="/projets/referencement-web/audit-seo/">Retour à la page Audit SEO</a>
       </div>
+
+      <p class="intro">Après diagnostic, pas avant.</p>
     </section>
   </main>
 </BaseLayout>

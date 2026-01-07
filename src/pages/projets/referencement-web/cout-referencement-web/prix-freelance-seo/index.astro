@@ -1,0 +1,214 @@
+---
+import BaseLayout from "../../../../../layouts/BaseLayout.astro";
+import Header from "../../../../../components/Header.astro";
+
+const sections = [
+  { href: "#definition", label: "Ce que recouvre un prix freelance SEO" },
+  { href: "#facteurs", label: "Facteurs qui influencent le prix" },
+  { href: "#formats", label: "Formats de mission" },
+  { href: "#ordres-de-grandeur", label: "Ordres de grandeur réalistes" },
+  { href: "#comparaison", label: "Freelance vs agence" },
+  { href: "#erreurs", label: "Erreurs fréquentes" },
+  { href: "#faq", label: "FAQ" },
+];
+---
+
+<BaseLayout
+  title="Prix freelance SEO — repères, formats et réalités | Cassandra Michel"
+  description="Prix freelance SEO : ce qui influence le coût, formats de mission, ordres de grandeur réalistes et différences avec une agence. Sans promesses magiques."
+>
+  <Header />
+
+  <main>
+    <p class="muted">
+      <a href="/projets/referencement-web/cout-referencement-web/">← Coût d’un référencement web</a> ·{" "}
+      <a href="/projets/referencement-web/">Référencement web</a> ·{" "}
+      <a href="/projets/referencement-web/accompagnement-seo/">Accompagnement SEO</a>
+    </p>
+
+    <h1>Prix freelance SEO</h1>
+
+    <p>
+      Le prix d’un freelance SEO ne correspond pas à “du SEO” en général, mais à un
+      <strong>périmètre de travail précis</strong> : diagnostic, priorisation, recommandations,
+      accompagnement, ou mise en œuvre ciblée.
+    </p>
+
+    <p>
+      Cette page donne des <strong>repères réalistes</strong> pour comprendre ce qui fait varier
+      un prix freelance SEO, sans grille universelle ni promesse artificielle.
+    </p>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <p id="toc-title" class="toc-title">Sommaire</p>
+      <ul class="toc-list">
+        {sections.map((s) => (
+          <li><a href={s.href}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    {/* Définition */}
+    <section class="section" id="definition">
+      <h2>Ce que recouvre un prix freelance SEO</h2>
+      <p>
+        Un freelance SEO vend rarement “du référencement” au sens vague.
+        Il facture un <strong>temps d’analyse</strong>, une <strong>expertise méthodologique</strong>,
+        et des <strong>livrables exploitables</strong>.
+      </p>
+      <p>
+        Le prix inclut généralement :
+      </p>
+      <ul>
+        <li>le diagnostic (SERP, intention, structure, technique)</li>
+        <li>la priorisation des actions (P0 / P1 / P2)</li>
+        <li>des livrables clairs (audit, plan d’action, brief SEO, checklist)</li>
+        <li>un accompagnement ou un cadrage décisionnel</li>
+      </ul>
+
+      <p class="intro">
+        Voir aussi :
+        <a href="/projets/referencement-web/livrables-seo/">Livrables SEO</a>.
+      </p>
+    </section>
+
+    {/* Facteurs */}
+    <section class="section" id="facteurs">
+      <h2>Facteurs qui influencent le prix freelance SEO</h2>
+      <ul>
+        <li><strong>État du site</strong> : propre, bancal, ou franchement en ruines</li>
+        <li><strong>Nombre de pages</strong> et profondeur de l’architecture</li>
+        <li><strong>Niveau de concurrence</strong> dans la SERP</li>
+        <li><strong>Objectifs</strong> : local, national, pages services, contenu éditorial</li>
+        <li><strong>Degré d’accompagnement</strong> (audit seul vs suivi)</li>
+      </ul>
+
+      <p>
+        Deux sites “équivalents” en apparence peuvent nécessiter des charges de travail très différentes.
+        Le prix reflète cette réalité, pas un barème abstrait.
+      </p>
+    </section>
+
+    {/* Formats */}
+    <section class="section" id="formats">
+      <h2>Formats de mission freelance SEO</h2>
+
+      <h3>Audit SEO (mission ponctuelle)</h3>
+      <p>
+        Diagnostic complet + livrables actionnables. Adapté pour cadrer un projet
+        ou reprendre un site existant.
+      </p>
+      <p class="intro">
+        Base méthodologique :
+        <a href="/projets/referencement-web/audit-seo/">Audit SEO</a>.
+      </p>
+
+      <h3>Accompagnement / sprints</h3>
+      <p>
+        Travail par itérations : on choisit un chantier, on exécute, on valide,
+        puis on passe au suivant.
+      </p>
+
+      <h3>Coaching / transfert de méthode</h3>
+      <p>
+        Le freelance apporte la méthode et les arbitrages ; l’exécution est réalisée
+        en interne.
+      </p>
+    </section>
+
+    {/* Ordres de grandeur */}
+    <section class="section" id="ordres-de-grandeur">
+      <h2>Ordres de grandeur réalistes</h2>
+      <p>
+        Sans entrer dans des chiffres figés, voici des <strong>repères usuels</strong> observés
+        sur des missions freelance SEO sérieuses :
+      </p>
+      <ul>
+        <li>Audit SEO : mission ponctuelle cadrée</li>
+        <li>Accompagnement : forfait mensuel ou par sprint</li>
+        <li>Coaching : sessions ou lots d’heures</li>
+      </ul>
+
+      <p>
+        Un prix très bas implique souvent un périmètre très réduit,
+        ou une absence de livrables structurés.
+      </p>
+
+      <p class="intro">
+        Vue d’ensemble :
+        <a href="/projets/referencement-web/cout-referencement-web/">Coût d’un référencement web</a>.
+      </p>
+    </section>
+
+    {/* Comparaison */}
+    <section class="section" id="comparaison">
+      <h2>Freelance SEO vs agence SEO</h2>
+      <p>
+        Un freelance propose généralement :
+      </p>
+      <ul>
+        <li>un interlocuteur unique</li>
+        <li>un périmètre plus ciblé</li>
+        <li>moins de coûts fixes</li>
+      </ul>
+
+      <p>
+        Une agence est pertinente pour des dispositifs lourds ou multi-sites,
+        mais pas toujours adaptée à des besoins ciblés ou progressifs.
+      </p>
+    </section>
+
+    {/* Erreurs */}
+    <section class="section" id="erreurs">
+      <h2>Erreurs fréquentes</h2>
+      <ul>
+        <li>Comparer uniquement les prix, sans comparer les livrables</li>
+        <li>Attendre des résultats garantis</li>
+        <li>Confondre volume de travail et efficacité</li>
+        <li>Multiplier les actions sans priorisation</li>
+      </ul>
+    </section>
+
+    {/* FAQ */}
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">FAQ — Prix freelance SEO</h2>
+
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Pourquoi les prix freelance SEO varient-ils autant ?</summary>
+          <div class="faq-answer">
+            <p>
+              Parce que les sites, les objectifs et l’état initial varient.
+              Le SEO est un travail d’analyse et d’arbitrage, pas un produit standardisé.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Un freelance SEO est-il moins cher qu’une agence ?</summary>
+          <div class="faq-answer">
+            <p>
+              Souvent, oui, à périmètre équivalent. Mais le critère principal reste
+              l’adéquation entre le besoin et le format de mission.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Peut-on cadrer un budget avant de démarrer ?</summary>
+          <div class="faq-answer">
+            <p>
+              Oui, après un cadrage du besoin. Avant diagnostic,
+              toute estimation reste approximative.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn" href="/contact/">Discuter d’un budget SEO</a>
+        <a class="btn btn-ghost" href="/projets/referencement-web/cout-referencement-web/">Retour au hub coût</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

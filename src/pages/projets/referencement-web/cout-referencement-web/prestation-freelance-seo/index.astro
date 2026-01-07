@@ -1,0 +1,275 @@
+---
+import BaseLayout from "../../../../../layouts/BaseLayout.astro";
+import Header from "../../../../../components/Header.astro";
+
+const sections = [
+  { href: "#definition", label: "Ce qu’est une prestation SEO" },
+  { href: "#formats", label: "Formats de prestation (3 modèles)" },
+  { href: "#perimetre", label: "Périmètre & responsabilités" },
+  { href: "#livrables", label: "Livrables typiques" },
+  { href: "#comment-choisir", label: "Comment choisir le bon format" },
+  { href: "#erreurs", label: "Erreurs fréquentes" },
+  { href: "#faq", label: "FAQ" },
+];
+---
+
+<BaseLayout
+  title="Prestation freelance SEO — formats, périmètre et livrables | Cassandra Michel"
+  description="Prestation freelance SEO : ce que vous achetez réellement (formats, périmètre, responsabilités, livrables). Différences audit, accompagnement, exécution, et comment choisir."
+>
+  <Header />
+
+  <main>
+    <p class="muted">
+      <a href="/projets/referencement-web/cout-referencement-web/">← Coût d’un référencement web</a> ·{" "}
+      <a href="/projets/referencement-web/cout-referencement-web/prix-freelance-seo/">Prix freelance SEO</a> ·{" "}
+      <a href="/projets/referencement-web/cout-referencement-web/mission-referencement-web/">Mission référencement web</a> ·{" "}
+      <a href="/projets/referencement-web/cout-referencement-web/budget-seo-site-web/">Budget SEO site web</a> ·{" "}
+      <a href="/projets/referencement-web/">Référencement web</a>
+    </p>
+
+    <h1>Prestation freelance SEO</h1>
+
+    <p>
+      Une prestation SEO n’est pas un “pack magique”. C’est un périmètre défini, des livrables,
+      des responsabilités (vous / votre équipe / la freelance), et une méthode pour décider quoi faire,
+      dans quel ordre, puis valider.
+    </p>
+
+    <p>
+      Cette page sert à clarifier <strong>ce que couvre une prestation</strong>, les <strong>formats possibles</strong>,
+      et comment choisir sans payer pour un “flou premium”.
+    </p>
+
+    <div class="cta-row" aria-label="Accès rapides prestation freelance SEO">
+      <a class="btn btn-ghost" href="#formats">Voir les formats</a>
+      <a class="btn btn-ghost" href="#comment-choisir">Choisir le bon format</a>
+      <a class="btn" href="/contact/">Discuter d’un besoin concret</a>
+    </div>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <p id="toc-title" class="toc-title">Sommaire</p>
+      <ul class="toc-list">
+        {sections.map((s) => (
+          <li><a href={s.href}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    {/* Définition */}
+    <section class="section" id="definition">
+      <h2>Ce qu’est une prestation SEO (en clair)</h2>
+      <p>
+        Une prestation SEO, c’est un travail qui se matérialise par :
+      </p>
+      <ul>
+        <li><strong>un périmètre</strong> (pages, sections, marchés, langues, local/national…)</li>
+        <li><strong>une méthode</strong> (SERP, intention, structure, technique, validation)</li>
+        <li><strong>des livrables</strong> (audit, brief, plan d’action, checklist, recommandations)</li>
+        <li><strong>des responsabilités</strong> (qui implémente quoi, et comment on valide)</li>
+      </ul>
+
+      <p class="intro">
+        Référence méthode : <a href="/projets/referencement-web/audit-seo/">Audit SEO</a> ·
+        preuves & formats : <a href="/projets/referencement-web/livrables-seo/">Livrables SEO</a> ·
+        mise en œuvre : <a href="/projets/referencement-web/accompagnement-seo/">Accompagnement SEO</a>.
+      </p>
+    </section>
+
+    {/* Formats */}
+    <section class="section" id="formats">
+      <h2>Formats de prestation (3 modèles)</h2>
+
+      <h3>1) Audit + plan d’action (vous exécutez)</h3>
+      <p>
+        Format “décisionnel” : on clarifie ce qui bloque, ce qui manque, et l’ordre d’exécution.
+        Recommandé si vous avez une équipe dev/contenu (ou un prestataire) pour implémenter.
+      </p>
+      <ul>
+        <li>diagnostic (SERP, intention, structure, technique)</li>
+        <li>plan d’action P0/P1/P2</li>
+        <li>livrables exploitables (dev / contenu)</li>
+      </ul>
+      <p class="intro">
+        Hub : <a href="/projets/referencement-web/audit-seo/">Audit SEO</a>.
+      </p>
+
+      <h3>2) Accompagnement (itérations / sprints)</h3>
+      <p>
+        Format “progression” : on avance par chantiers, avec validation après mise en œuvre.
+        Recommandé si vous voulez éviter le “l’audit dort dans un dossier”.
+      </p>
+      <ul>
+        <li>1 chantier à la fois (tech / contenu / pages services / maillage)</li>
+        <li>priorisation + suivi</li>
+        <li>validation (indexation, signaux, SERP, Search Console)</li>
+      </ul>
+      <p class="intro">
+        Hub : <a href="/projets/referencement-web/accompagnement-seo/">Accompagnement SEO</a>.
+      </p>
+
+      <h3>3) Exécution SEO cadrée (production + contrôle)</h3>
+      <p>
+        Format “on fait” : production de livrables + participation à la mise en place (selon périmètre),
+        avec contrôle qualité SEO (structure, on-page, maillage, indexation).
+      </p>
+      <ul>
+        <li>briefs SEO + plans de page</li>
+        <li>recommandations on-page et maillage interne</li>
+        <li>checklists techniques et validation</li>
+      </ul>
+
+      <p class="intro">
+        Pour cadrer le budget : <a href="/projets/referencement-web/cout-referencement-web/budget-seo-site-web/">Budget SEO site web</a> ·
+        pour comprendre les missions : <a href="/projets/referencement-web/cout-referencement-web/mission-referencement-web/">Mission référencement web</a>.
+      </p>
+    </section>
+
+    {/* Périmètre */}
+    <section class="section" id="perimetre">
+      <h2>Périmètre & responsabilités (la partie que tout le monde oublie)</h2>
+
+      <h3>Périmètre</h3>
+      <ul>
+        <li>nombre de pages / templates</li>
+        <li>type de site (vitrine, e-commerce, média, local, multi-sites…)</li>
+        <li>niveau de concurrence (SERP)</li>
+        <li>périmètre technique (CMS, accès, contraintes dev)</li>
+      </ul>
+
+      <h3>Responsabilités</h3>
+      <ul>
+        <li><strong>Vous / votre équipe</strong> : implémentation dev/contenu si internalisée</li>
+        <li><strong>Freelance SEO</strong> : diagnostic, priorisation, livrables, contrôle qualité, validation</li>
+        <li><strong>Collaboration</strong> : arbitrages, points de suivi, validation des changements</li>
+      </ul>
+
+      <p class="intro">
+        C’est souvent là que se joue le coût réel : un bon livrable sans implémentation = une très belle théorie.
+      </p>
+    </section>
+
+    {/* Livrables */}
+    <section class="section" id="livrables">
+      <h2>Livrables typiques (selon le format)</h2>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">Synthèse</span>
+          <h3>Plan d’action priorisé</h3>
+          <p>P0/P1/P2, chantiers, dépendances, ordre d’exécution.</p>
+          <a href="/projets/referencement-web/livrables-seo/">Voir les livrables</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Analyse</span>
+          <h3>Analyse SERP</h3>
+          <p>Intent, features, concurrence, entités, opportunités.</p>
+          <a href="/projets/referencement-web/audit-seo/analyse-serp/">Voir la méthode</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Contenu</span>
+          <h3>Brief SEO complet</h3>
+          <p>Intention, SERP, Hn, FAQ, CTA, maillage interne.</p>
+          <a href="/projets/referencement-web/apprendre-chanter-gospel/">Voir un exemple</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Technique</span>
+          <h3>Crawl & indexation (checklist)</h3>
+          <p>Robots, sitemap, canonicals, statuts HTTP, validation.</p>
+          <a href="/projets/referencement-web/audit-seo/crawl-indexation/">Voir la checklist</a>
+        </article>
+      </div>
+    </section>
+
+    {/* Choisir */}
+    <section class="section" id="comment-choisir">
+      <h2>Comment choisir le bon format (sans payer pour du théâtre)</h2>
+
+      <h3>Choisir “Audit + plan” si :</h3>
+      <ul>
+        <li>vous avez une équipe capable d’implémenter</li>
+        <li>vous voulez clarifier vite ce qui bloque</li>
+        <li>vous avez besoin d’un ordre d’exécution (P0/P1/P2)</li>
+      </ul>
+
+      <h3>Choisir “Accompagnement” si :</h3>
+      <ul>
+        <li>vous voulez avancer en continu, par chantiers</li>
+        <li>vous avez besoin d’un pilotage et de validation</li>
+        <li>vous voulez éviter l’audit qui finit en décoration</li>
+      </ul>
+
+      <h3>Choisir “Exécution cadrée” si :</h3>
+      <ul>
+        <li>vous manquez de temps/compétences en interne</li>
+        <li>vous voulez produire (pages/services/contenus) + contrôler la qualité</li>
+        <li>vous acceptez un périmètre clair (sinon c’est la foire)</li>
+      </ul>
+
+      <p class="intro">
+        Pour estimer un budget réaliste : <a href="/projets/referencement-web/cout-referencement-web/budget-seo-site-web/">Budget SEO site web</a>.
+      </p>
+    </section>
+
+    {/* Erreurs */}
+    <section class="section" id="erreurs">
+      <h2>Erreurs fréquentes</h2>
+      <ul>
+        <li>Comparer des devis sans comparer le périmètre et les livrables</li>
+        <li>Oublier l’implémentation (le SEO “recommandé” ne ranke pas)</li>
+        <li>Tout lancer en parallèle (et ne rien finir)</li>
+        <li>Confondre “beaucoup d’actions” avec “beaucoup d’impact”</li>
+      </ul>
+
+      <p class="intro">
+        Repères de prix : <a href="/projets/referencement-web/cout-referencement-web/prix-freelance-seo/">Prix freelance SEO</a>.
+      </p>
+    </section>
+
+    {/* FAQ */}
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">FAQ — Prestation freelance SEO</h2>
+
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Une prestation SEO inclut-elle l’implémentation ?</summary>
+          <div class="faq-answer">
+            <p>
+              Pas toujours. Certaines prestations couvrent diagnostic + livrables (audit),
+              d’autres incluent l’accompagnement (pilotage) ou une exécution cadrée.
+              Le point clé : définir qui fait quoi et comment on valide.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Comment savoir si une prestation est “sérieuse” ?</summary>
+          <div class="faq-answer">
+            <p>
+              Si le périmètre est clair, les livrables sont explicités, la priorisation est présente,
+              et la validation après mise en œuvre est prévue. Le SEO sans validation, c’est du récit.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Faut-il forcément un accompagnement mensuel ?</summary>
+          <div class="faq-answer">
+            <p>
+              Non. Beaucoup de projets gagnent déjà avec un audit + plan d’action bien cadré,
+              puis quelques itérations ciblées. Le bon format dépend du site et des ressources internes.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn" href="/contact/">Discuter d’une prestation SEO</a>
+        <a class="btn btn-ghost" href="/projets/referencement-web/cout-referencement-web/">Retour au hub coût</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

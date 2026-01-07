@@ -18,10 +18,16 @@ import Header from "../../../../../components/Header.astro";
 
     <h1>Intention de recherche (audit SEO)</h1>
     <p>
-      L’intention de recherche, c’est le besoin implicite derrière une requête. En SEO, une page ranke rarement
-      parce qu’elle “contient le mot-clé”. Elle ranke parce qu’elle correspond au format et au niveau de preuve
-      attendus par Google… et par les utilisateurs.
+      L’intention de recherche, c’est le besoin implicite derrière une requête. En SEO, une page performe rarement
+      parce qu’elle “contient le mot-clé”. Elle performe parce qu’elle correspond au <strong>format</strong> et au
+      <strong>niveau de preuve</strong> attendus — par Google et par les utilisateurs.
     </p>
+
+    <div class="cta-row" aria-label="Accès rapides intention de recherche">
+      <a class="btn btn-ghost" href="#methode">Voir la méthode</a>
+      <a class="btn btn-ghost" href="#checklist">Checklist</a>
+      <a class="btn" href="/contact/">Discuter d’un besoin</a>
+    </div>
 
     <nav class="toc" aria-labelledby="toc-title">
       <p id="toc-title" class="toc-title">Sommaire</p>
@@ -31,6 +37,7 @@ import Header from "../../../../../components/Header.astro";
         <li><a href="#methode">Méthode pour valider l’intention</a></li>
         <li><a href="#erreurs">Erreurs fréquentes</a></li>
         <li><a href="#checklist">Checklist</a></li>
+        <li><a href="#livrable">Ce que produit une analyse d’intention</a></li>
         <li><a href="#exemples">Exemples</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
@@ -51,20 +58,17 @@ import Header from "../../../../../components/Header.astro";
       </ul>
 
       <p>
-        Une même requête peut être <strong>mixte</strong> : par exemple “apprendre X” (info) avec une attente de
-        cours/coach (transactionnel). Dans ce cas, la page doit répondre à l’info tout en ouvrant une porte de conversion
-        cohérente (CTA).
+        Une requête peut être <strong>mixte</strong> : par exemple “apprendre X” (info) avec une attente de cours/coach
+        (transactionnel). Dans ce cas, la page doit répondre à l’info <em>avant</em> d’ouvrir une porte de conversion cohérente.
       </p>
     </section>
 
     <section class="section" id="signaux">
       <h2>Signaux d’intention dans la SERP</h2>
-      <p>
-        La SERP révèle l’intention dominante. Quelques signaux concrets :
-      </p>
+      <p>La SERP révèle l’intention dominante. Quelques signaux concrets :</p>
 
       <ul>
-        <li><strong>Présence de pages “service”</strong> (devis, tarifs, offres) → intention transactionnelle.</li>
+        <li><strong>Pages “service”</strong> (devis, tarifs, offres) → intention transactionnelle.</li>
         <li><strong>Guides / tutoriels</strong> en top positions → intention informationnelle.</li>
         <li><strong>Local pack</strong>, avis, “près de moi” → intention locale.</li>
         <li><strong>Marque + sitelinks</strong>, pages officielles → intention navigationnelle.</li>
@@ -80,7 +84,7 @@ import Header from "../../../../../components/Header.astro";
           </li>
           <li>
             <a href="/projets/referencement-web/audit-seo/mots-cles-seo/">Mots-clés SEO (cartographie & clusters)</a>
-            <span class="hint">— construire un mapping pages ↔ intentions</span>
+            <span class="hint">— mapping pages ↔ intentions</span>
           </li>
         </ul>
       </div>
@@ -92,6 +96,7 @@ import Header from "../../../../../components/Header.astro";
       <h3>1) Observer le top 5–10</h3>
       <p>
         Le top résultats impose souvent le format : article, page service, liste, comparatif, annuaire, vidéo…
+        Si tu produis l’opposé, tu pars avec un handicap structurel.
       </p>
 
       <h3>2) Identifier le “job to be done”</h3>
@@ -103,13 +108,13 @@ import Header from "../../../../../components/Header.astro";
       <h3>3) Déduire les éléments attendus</h3>
       <p>
         Selon l’intention, la page doit apporter : définitions, étapes, exemples, preuves, comparatifs, tarifs,
-        FAQ, avis, informations locales, etc.
+        FAQ, avis, informations locales…
       </p>
 
       <h3>4) Choisir un CTA cohérent</h3>
       <p>
-        Info → CTA “ressource / diagnostic / checklist”. Transactionnel → CTA “contact / devis”.
-        Mixte → d’abord répondre à l’info, puis proposer la conversion.
+        Informationnel → CTA “ressource / checklist / diagnostic”. Transactionnel → CTA “contact / devis”.
+        Mixte → d’abord répondre à l’info, puis proposer la conversion (sans sabotage de crédibilité).
       </p>
     </section>
 
@@ -135,12 +140,28 @@ import Header from "../../../../../components/Header.astro";
       </ul>
     </section>
 
+    <section class="section" id="livrable">
+      <h2>Ce que produit une analyse d’intention</h2>
+      <p>Une analyse d’intention utile débouche sur des décisions concrètes :</p>
+      <ul>
+        <li>le format cible (guide, page service, hub, local…)</li>
+        <li>les sections indispensables (et celles qui sont du bruit)</li>
+        <li>le niveau de preuve minimum (avis, sources, expertise, exemples)</li>
+        <li>les sous-questions à couvrir (PAA, associés, H2 concurrents)</li>
+        <li>un CTA cohérent (et placé au bon moment)</li>
+      </ul>
+
+      <p class="intro">
+        Pour voir l’ensemble des formats produits : <a href="/projets/referencement-web/livrables-seo/">Livrables SEO</a>.
+      </p>
+    </section>
+
     <section class="section" id="exemples">
       <h2>Exemples</h2>
       <p>
         Exemple de requête à intention <strong>mixte</strong> : “apprendre à chanter du gospel”.
         On attend de la pédagogie (informationnel) mais aussi des formats d’accompagnement (cours/coach),
-        donc une page performante doit traiter les deux sans se contredire.
+        donc une page performante traite les deux <strong>sans se contredire</strong>.
       </p>
 
       <div class="highlights">
@@ -158,6 +179,7 @@ import Header from "../../../../../components/Header.astro";
           <a href="/projets/referencement-web/audit-seo/analyse-serp/">Voir la page</a>
         </article>
       </div>
+    </section>
 
     <section class="section" id="faq" aria-labelledby="faq-title">
       <h2 id="faq-title">FAQ — Intention de recherche</h2>
@@ -168,7 +190,7 @@ import Header from "../../../../../components/Header.astro";
           <div class="faq-answer">
             <p>
               Si le top 10 mélange des guides et des pages “service/offre”, ou si Google affiche à la fois PAA/vidéos
-              et des résultats orientés achat/devis. Dans ce cas, réponds d’abord à l’info, puis propose un CTA cohérent.
+              et des résultats orientés achat/devis. Dans ce cas, répondez d’abord à l’info, puis proposez un CTA cohérent.
             </p>
           </div>
         </details>
@@ -198,6 +220,8 @@ import Header from "../../../../../components/Header.astro";
         <a class="btn" href="/contact/">Discuter d’un diagnostic d’intention</a>
         <a class="btn btn-ghost" href="/projets/referencement-web/audit-seo/">Retour à la page Audit SEO</a>
       </div>
+
+      <p class="intro">Après diagnostic, pas avant.</p>
     </section>
   </main>
 </BaseLayout>

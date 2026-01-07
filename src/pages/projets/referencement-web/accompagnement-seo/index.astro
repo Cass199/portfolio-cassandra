@@ -1,0 +1,393 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import Header from "../../../../components/Header.astro";
+
+const sections = [
+  { href: "#pourquoi", label: "Pourquoi un accompagnement SEO" },
+  { href: "#formats", label: "Formats d’accompagnement" },
+  { href: "#selon-besoins", label: "Selon les besoins" },
+  { href: "#process", label: "Process (simple, mais réel)" },
+  { href: "#livrables", label: "Livrables typiques" },
+  { href: "#pas-adapte", label: "Quand ce n’est pas adapté" },
+  { href: "#faq", label: "FAQ" },
+];
+---
+
+<BaseLayout
+  title="Accompagnement SEO — entreprise, PME, site local | Cassandra Michel"
+  description="Accompagnement SEO : diagnostic, feuille de route priorisée, itérations, et livrables concrets. Pour entreprises, PME, sites vitrines et SEO local."
+>
+  <Header />
+
+  <main>
+    <p class="muted">
+      <a href="/projets/referencement-web/">← Référencement web (page pilier)</a> ·{" "}
+      <a href="/projets/referencement-web/audit-seo/">Audit SEO</a> ·{" "}
+      <a href="/projets/referencement-web/livrables-seo/">Livrables SEO</a>
+    </p>
+
+    <h1>Accompagnement SEO</h1>
+
+    <p>
+      Un accompagnement SEO sert à faire avancer un site <strong>dans le bon ordre</strong> : diagnostic,
+      arbitrages, mise en œuvre, puis validation. Le SEO n’est pas une série de “petites optimisations”
+      posées au hasard comme des pansements sur un robot en feu.
+    </p>
+
+    <p>
+      Ici, je pose un cadre : <strong>comment j’accompagne</strong>, pour quels types de sites,
+      avec quels formats de mission, et surtout <strong>quand ce n’est pas adapté</strong>.
+      Objectif : vous aider à décider si on travaille ensemble — sans forcing.
+    </p>
+
+    <section class="section">
+      <h2>Les pages de l’accompagnement SEO</h2>
+      <p class="intro">
+        Chaque contexte a ses priorités et ses leviers. Ces pages détaillent objectifs, erreurs fréquentes,
+        livrables et checklists, selon le type de site.
+      </p>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">Entreprise</span>
+          <h3>Référencement web entreprise</h3>
+          <p>Gouvernance, pages business, dépendances (dev/contenu), pilotage et validation.</p>
+          <a href="/projets/referencement-web/accompagnement-seo/referencement-web-entreprise/">Voir la page</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">PME</span>
+          <h3>SEO pour PME</h3>
+          <p>Priorisation pragmatique, quick wins propres, pages services, structure simple.</p>
+          <a href="/projets/referencement-web/accompagnement-seo/seo-pour-pme/">Voir la page</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Site vitrine</span>
+          <h3>Référencement site vitrine</h3>
+          <p>Pages services, preuve, intention, conversion sobre, architecture légère.</p>
+          <a href="/projets/referencement-web/accompagnement-seo/referencement-site-vitrine/">Voir la page</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Local</span>
+          <h3>Référencement site local</h3>
+          <p>Local pack, avis, signaux de confiance, pages zones/services, cohérence NAP.</p>
+          <a href="/projets/referencement-web/accompagnement-seo/referencement-site-local/">Voir la page</a>
+        </article>
+      </div>
+    </section>
+
+    <div class="cta-row" aria-label="Accès rapides accompagnement SEO">
+      <a class="btn btn-ghost" href="#formats">Voir les formats</a>
+      <a class="btn btn-ghost" href="#pas-adapte">Quand ce n’est pas adapté</a>
+      <a class="btn" href="/contact/">Discuter d’un besoin SEO concret</a>
+    </div>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <p id="toc-title" class="toc-title">Sommaire</p>
+      <ul class="toc-list">
+        {sections.map((s) => (
+          <li><a href={s.href}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    {/* Pourquoi */}
+    <section class="section" id="pourquoi">
+      <h2>Pourquoi un accompagnement SEO (plutôt qu’un audit qui dort)</h2>
+      <p>
+        Un audit SEO donne une photo. Un accompagnement permet d’en faire quelque chose : exécuter,
+        trier, ajuster, mesurer. La plupart des sites ne manquent pas “d’idées SEO” — ils manquent
+        d’<strong>ordre</strong> et de <strong>priorisation</strong>.
+      </p>
+      <p>
+        L’accompagnement sert à :
+      </p>
+      <ul>
+        <li>éviter de dépenser du budget sur des optimisations secondaires</li>
+        <li>rendre la mission lisible (quoi / pourquoi / dans quel ordre)</li>
+        <li>avancer par itérations, avec livrables et décisions</li>
+      </ul>
+      <p class="intro">
+        Base méthodo : <a href="/projets/referencement-web/audit-seo/">Audit SEO</a> (SERP, intention, structure, technique).
+      </p>
+      <div class="related-links">
+        <h3 class="related-title">À relier</h3>
+        <ul class="related-list">
+          <li>
+            <a href="/projets/referencement-web/accompagnement-seo/referencement-web-entreprise/">Référencement web entreprise</a>
+            <span class="hint">— pilotage, gouvernance, dépendances</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/accompagnement-seo/seo-pour-pme/">SEO pour PME</a>
+            <span class="hint">— priorisation pragmatique</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    {/* Formats */}
+    <section class="section" id="formats">
+      <h2>Formats d’accompagnement SEO</h2>
+
+      <h3>1) Cadrage + feuille de route</h3>
+      <p>
+        Format “on met de l’ordre”. Idéal si vous avez besoin d’un diagnostic clair + d’un plan exécutable,
+        sans forcément externaliser l’exécution complète.
+      </p>
+      <ul>
+        <li>diagnostic (SERP / intentions / structure / technique)</li>
+        <li>plan d’action priorisé (P0/P1/P2)</li>
+        <li>livrables exploitables par dev / contenu</li>
+      </ul>
+
+      <h3>2) Itérations (mensuel ou par sprints)</h3>
+      <p>
+        Format “on avance vraiment”. On choisit un chantier à la fois (tech, contenu, maillage, pages services),
+        on exécute, puis on valide.
+      </p>
+      <ul>
+        <li>1 objectif par sprint (éviter le buffet à volonté)</li>
+        <li>priorisation + suivi</li>
+        <li>ajustements à partir des signaux (Search Console, logs, SERP)</li>
+      </ul>
+
+      <h3>3) Coaching / transfert de méthode</h3>
+      <p>
+        Format “vous gardez la main”. Je fournis la méthode, les checklists, et le cadrage ;
+        vous exécutez côté contenu/dev.
+      </p>
+
+      <p class="intro">
+        Les formats de preuve et livrables : <a href="/projets/referencement-web/livrables-seo/">Livrables SEO</a>.
+      </p>
+      <div class="related-links">
+        <h3 class="related-title">Pages sœurs (méthode)</h3>
+        <ul class="related-list">
+          <li>
+            <a href="/projets/referencement-web/audit-seo/analyse-serp/">Analyse SERP</a>
+            <span class="hint">— valider formats, concurrence, entités</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/audit-seo/intention-recherche/">Intention de recherche</a>
+            <span class="hint">— bon format + bon CTA</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/audit-seo/crawl-indexation/">Crawl & indexation</a>
+            <span class="hint">— robots, sitemap, canonicals</span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="intro">
+        Pour cadrer un budget selon le format (audit, sprints, coaching) :
+        <a href="/projets/referencement-web/cout-referencement-web/">Coût d’un référencement web</a>.
+      </p>
+    </section>
+
+    {/* Selon besoins */}
+    <section class="section" id="selon-besoins">
+      <h2>Accompagnement SEO selon les besoins</h2>
+
+      <h3>Entreprises : cohérence et gouvernance</h3>
+      <p>
+        En entreprise, le SEO est souvent un problème de coordination : qui fait quoi, quelles pages sont prioritaires,
+        comment éviter la duplication, comment faire évoluer une architecture sans tout casser.
+      </p>
+      <p class="intro">
+        Voir : <a href="/projets/referencement-web/accompagnement-seo/referencement-web-entreprise/">référencement web entreprise</a>.
+      </p>
+
+      <h3>PME : impact d’abord, sophistication ensuite</h3>
+      <p>
+        En PME, l’objectif est rarement “de tout optimiser”. On vise des gains solides :
+        corriger les blocages, clarifier les pages business, puis structurer une production de contenu réaliste.
+      </p>
+      <p class="intro">
+        Voir : <a href="/projets/referencement-web/accompagnement-seo/seo-pour-pme/">SEO pour PME</a>.
+      </p>
+
+      <h3>Site vitrine : pages services + preuve</h3>
+      <p>
+        Un site vitrine performe quand il répond vite : offre claire, pages services solides, signaux de confiance,
+        et maillage interne simple. Le reste (blog, contenus) vient après — si c’est justifié.
+      </p>
+      <p class="intro">
+        Voir : <a href="/projets/referencement-web/accompagnement-seo/referencement-site-vitrine/">référencement site vitrine</a>.
+      </p>
+
+      <h3>SEO local : pertinence + confiance + cohérence</h3>
+      <p>
+        En local, la SERP impose souvent ses règles : local pack, avis, entités locales, informations pratiques.
+        Le travail porte autant sur la clarté de l’offre que sur les signaux (cohérence NAP, pages locales, preuves).
+      </p>
+      <p class="intro">
+        Voir : <a href="/projets/referencement-web/accompagnement-seo/referencement-site-local/">référencement site local</a>.
+      </p>
+    </section>
+
+    {/* Process */}
+    <section class="section" id="process">
+      <h2>Process (simple, mais réel)</h2>
+
+      <h3>1) Clarifier le besoin</h3>
+      <p>
+        Objectifs, contraintes, état du site, ressources internes. On évite le flou : “je veux plus de trafic”
+        n’est pas un besoin, c’est un symptôme.
+      </p>
+
+      <h3>2) Diagnostic (SERP / intention / structure / technique)</h3>
+      <p>
+        On valide l’environnement de recherche (SERP), le format attendu, les pages existantes, et les blocages techniques.
+      </p>
+      <p class="intro">
+        Voir le hub : <a href="/projets/referencement-web/audit-seo/">Audit SEO</a>.
+      </p>
+
+      <h3>3) Priorisation (P0/P1/P2)</h3>
+      <p>
+        P0 = bloquants. P1 = gros impact. P2 = améliorations continues. Sans ça, tout a l’air urgent et rien n’avance.
+      </p>
+      <p class="intro">
+        Format livrable : <a href="/projets/referencement-web/livrables-seo/">plan d’action priorisé (P0/P1/P2)</a>.
+      </p>
+
+      <h3>4) Mise en œuvre + validation</h3>
+      <p>
+        Implémentation par vous, par votre équipe, ou en collaboration. Puis validation : indexation, signaux, cohérence,
+        évolution SERP. On ajuste si nécessaire.
+      </p>
+      <p class="intro">
+        Technique : <a href="/projets/referencement-web/audit-seo/crawl-indexation/">checklist crawl & indexation</a>.
+      </p>
+
+      <p class="intro">
+        Méthode détaillée : <a href="/projets/referencement-web/audit-seo/">Audit SEO</a> (hub).
+      </p>
+    </section>
+
+    {/* Livrables */}
+    <section class="section" id="livrables">
+      <h2>Livrables typiques en accompagnement</h2>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">Cadrage</span>
+          <h3>Plan d’action priorisé</h3>
+          <p>P0/P1/P2, chantiers, dépendances, ordre d’exécution.</p>
+          <a href="/projets/referencement-web/livrables-seo/">Voir les livrables</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Contenu</span>
+          <h3>Brief SEO complet</h3>
+          <p>Intention, SERP, structure Hn, FAQ, CTA, maillage.</p>
+          <a href="/projets/referencement-web/apprendre-chanter-gospel/">Voir un exemple</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Structure</span>
+          <h3>Architecture & maillage</h3>
+          <p>Hubs/satellites, liens contextuels, pages orphelines.</p>
+          <a href="/projets/referencement-web/audit-seo/structure-site/">Voir la méthode</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Technique</span>
+          <h3>Crawl & indexation</h3>
+          <p>Robots, sitemap, canonicals, statuts HTTP, validation.</p>
+          <a href="/projets/referencement-web/audit-seo/crawl-indexation/">Voir la checklist</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="exemples">
+      <h2>Exemples (cas pratiques)</h2>
+      <p class="intro">
+        Des pages qui illustrent la logique diagnostic → livrables → décisions.
+      </p>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">Audit / Technique</span>
+          <h3>Audit SEO — Mac4Ever</h3>
+          <p>Crawl, indexation, architecture + plan d’action priorisé.</p>
+          <a href="/projets/referencement-web/seo-audit-mac4ever/">Voir le projet</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">SERP / Intention</span>
+          <h3>Apprendre à chanter du gospel</h3>
+          <p>Intention mixte, cluster, brief SEO complet.</p>
+          <a href="/projets/referencement-web/apprendre-chanter-gospel/">Voir l’étude de cas</a>
+        </article>
+      </div>
+    </section>
+
+    {/* Pas adapté */}
+    <section class="section" id="pas-adapte">
+      <h2>Quand ce n’est pas adapté</h2>
+      <p>
+        Le SEO n’est pas une incantation. C’est un chantier. Donc non, ce n’est pas adapté si :
+      </p>
+      <ul>
+        <li>vous cherchez un résultat garanti (personne de sérieux ne peut le promettre)</li>
+        <li>vous voulez “juste des optimisations rapides” sans toucher au fond (structure/contenu/tech)</li>
+        <li>vous n’avez aucune ressource pour implémenter (ou aucun budget pour le faire)</li>
+        <li>vous voulez lancer 12 chantiers en parallèle (ça finit généralement en ruines fumantes)</li>
+      </ul>
+
+      <div class="cta-row">
+        <a class="btn" href="/contact/">Discuter d’un besoin SEO concret</a>
+        <a class="btn btn-ghost" href="/projets/referencement-web/">Retour à la page Référencement web</a>
+      </div>
+
+      <p class="intro">Après analyse, pas avant.</p>
+    </section>
+
+    {/* FAQ */}
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">FAQ — Accompagnement SEO</h2>
+
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Quelle différence entre audit SEO et accompagnement SEO ?</summary>
+          <div class="faq-answer">
+            <p>
+              L’audit produit un diagnostic + des recommandations. L’accompagnement inclut la priorisation,
+              l’exécution (par vous, votre équipe ou en collaboration), puis la validation et les ajustements.
+              En clair : audit = photo ; accompagnement = progression.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Combien de temps dure un accompagnement SEO ?</summary>
+          <div class="faq-answer">
+            <p>
+              Ça dépend du contexte (site, concurrence, ressources). On peut cadrer en sprints (quelques semaines),
+              ou en suivi mensuel. Le bon repère : avancer par chantiers, pas par durée “au hasard”.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Est-ce adapté à un petit site vitrine ou une PME ?</summary>
+          <div class="faq-answer">
+            <p>
+              Oui, si les priorités restent pragmatiques : pages services solides, cohérence locale si besoin,
+              structure simple et propre, puis contenu ciblé. L’accompagnement sert surtout à éviter de faire
+              trop, trop tôt, et mal.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn" href="/contact/">Discuter d’un accompagnement</a>
+        <a class="btn btn-ghost" href="/projets/referencement-web/">Retour à la page Référencement web</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

@@ -1,0 +1,289 @@
+---
+import BaseLayout from "../../../../../layouts/BaseLayout.astro";
+import Header from "../../../../../components/Header.astro";
+
+const sections = [
+  { href: "#enjeux", label: "Enjeux SEO pour une PME" },
+  { href: "#priorites", label: "Priorités (dans le bon ordre)" },
+  { href: "#quickwins", label: "Quick wins (propres)" },
+  { href: "#contenu", label: "Contenu : quoi produire (et quoi éviter)" },
+  { href: "#local", label: "Si la PME est locale" },
+  { href: "#process", label: "Process d’accompagnement" },
+  { href: "#livrables", label: "Livrables adaptés aux PME" },
+  { href: "#faq", label: "FAQ" },
+];
+---
+
+<BaseLayout
+  title="SEO pour PME — priorités, méthode & accompagnement pragmatique | Cassandra Michel"
+  description="Accompagnement SEO pour PME : priorisation P0/P1/P2, quick wins propres, pages services, maillage interne, contenu réaliste et checklist. Méthode et livrables."
+>
+  <Header />
+
+  <main>
+    <p class="muted">
+      <a href="/projets/referencement-web/accompagnement-seo/">← Hub Accompagnement SEO</a> ·{" "}
+      <a href="/projets/referencement-web/">Référencement web (page pilier)</a> ·{" "}
+      <a href="/projets/referencement-web/audit-seo/">Audit SEO</a> ·{" "}
+      <a href="/projets/referencement-web/livrables-seo/">Livrables SEO</a>
+    </p>
+
+    <h1>SEO pour PME</h1>
+
+    <p>
+      En PME, le SEO échoue rarement par manque de talent. Il échoue par <strong>manque de bande passante</strong> :
+      pas assez de temps, pas assez de contenu, pas assez de dev, et beaucoup d’urgences.
+      L’objectif n’est donc pas de “tout optimiser”, mais de faire avancer le site <strong>dans le bon ordre</strong>,
+      avec des actions qui tiennent dans la réalité.
+    </p>
+
+    <p class="intro">
+      En PME, le SEO se pense en arbitrages réalistes :
+      <a href="/projets/referencement-web/cout-referencement-web/">budget et formats de mission SEO</a>.
+    </p>
+
+    <p>
+      Cette page présente une approche pragmatique : priorisation P0/P1/P2, pages qui convertissent,
+      structure simple, puis contenu ciblé — sans usine à gaz ni stratégie “blog quotidien jusqu’à la mort”.
+    </p>
+
+    <div class="cta-row" aria-label="Accès rapides SEO pour PME">
+      <a class="btn btn-ghost" href="#priorites">Voir les priorités</a>
+      <a class="btn btn-ghost" href="#quickwins">Quick wins propres</a>
+      <a class="btn" href="/contact/">Discuter d’un besoin SEO concret</a>
+    </div>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <p id="toc-title" class="toc-title">Sommaire</p>
+      <ul class="toc-list">
+        {sections.map((s) => (
+          <li><a href={s.href}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    {/* Enjeux */}
+    <section class="section" id="enjeux">
+      <h2>Enjeux SEO pour une PME</h2>
+      <ul>
+        <li><strong>Ressources limitées</strong> : contenu/dev/temps → arbitrages obligatoires.</li>
+        <li><strong>ROI attendu</strong> : besoin de résultats durables, pas d’activités “pour faire du SEO”.</li>
+        <li><strong>Offre parfois floue</strong> : pages services insuffisantes ou mal structurées.</li>
+        <li><strong>Dette technique</strong> : CMS, plugins, lenteurs, duplication, indexation instable.</li>
+      </ul>
+
+      <div class="related-links">
+        <h3 class="related-title">Bases méthodo (pages sœurs)</h3>
+        <ul class="related-list">
+          <li>
+            <a href="/projets/referencement-web/audit-seo/analyse-serp/">Analyse SERP</a>
+            <span class="hint">— valider le format attendu</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/audit-seo/intention-recherche/">Intention de recherche</a>
+            <span class="hint">— bon contenu, bon CTA</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/audit-seo/structure-site/">Structure de site</a>
+            <span class="hint">— hubs/satellites, maillage simple</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/audit-seo/crawl-indexation/">Crawl & indexation</a>
+            <span class="hint">— plomberie : robots, sitemap, canonicals</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    {/* Priorités */}
+    <section class="section" id="priorites">
+      <h2>Priorités (dans le bon ordre)</h2>
+
+      <h3>P0 — Bloquants</h3>
+      <ul>
+        <li>Pages importantes non indexables (noindex/canonical/robots mal réglés)</li>
+        <li>Erreurs serveur / 4xx/5xx sur pages stratégiques</li>
+        <li>Duplication massive (paramètres, variantes d’URL, pages quasi identiques)</li>
+      </ul>
+
+      <h3>P1 — Fort impact</h3>
+      <ul>
+        <li><strong>Pages services</strong> : offre claire, preuve, structure, FAQ, CTA cohérent</li>
+        <li><strong>Architecture</strong> : navigation simple, hubs, maillage interne utile</li>
+        <li><strong>Consolidation</strong> : fusion de pages faibles, réduction cannibalisation</li>
+      </ul>
+
+      <h3>P2 — Amélioration continue</h3>
+      <ul>
+        <li>Contenu ciblé (répondre à des besoins réels, pas remplir des mots)</li>
+        <li>Optimisations on-page (entités, sections, lisibilité)</li>
+        <li>Monitoring Search Console + ajustements</li>
+      </ul>
+    </section>
+
+    {/* Quick wins */}
+    <section class="section" id="quickwins">
+      <h2>Quick wins (propres)</h2>
+      <p>
+        Un “quick win” n’est pas une astuce. C’est une action courte qui a un impact disproportionné parce qu’elle
+        corrige une évidence : clarté, indexation, structure, pages business.
+      </p>
+
+      <ul>
+        <li><strong>Réécrire les titles/meta</strong> des pages services (alignés intention + offre)</li>
+        <li><strong>Ajouter de la preuve</strong> (réalisations, cas, avis, références, garanties, process)</li>
+        <li><strong>Structurer Hn</strong> pour répondre vite (et éviter la bouillie)</li>
+        <li><strong>Maillage interne</strong> : lier les pages services depuis les hubs et pages pertinentes</li>
+        <li><strong>Nettoyer l’index</strong> : supprimer/fusionner les pages faibles ou redondantes</li>
+      </ul>
+
+      <p class="intro">
+        Formats de livrables associés : <a href="/projets/referencement-web/livrables-seo/">Livrables SEO</a>.
+      </p>
+    </section>
+
+    {/* Contenu */}
+    <section class="section" id="contenu">
+      <h2>Contenu : quoi produire (et quoi éviter)</h2>
+
+      <h3>Produire ce qui sert l’offre</h3>
+      <ul>
+        <li>Pages services solides (une page par intention dominante)</li>
+        <li>Pages “preuves” : études de cas, réalisations, méthodologie, FAQ</li>
+        <li>Contenu support : guides ciblés qui répondent à des objections / questions récurrentes</li>
+      </ul>
+
+      <h3>Éviter les pièges</h3>
+      <ul>
+        <li>Blog “fourre-tout” sans lien avec les pages business</li>
+        <li>Une page par mot-clé → duplication + cannibalisation</li>
+        <li>Contenu écrit sans validation SERP/intention → mauvais format</li>
+      </ul>
+
+      <div class="related-links">
+        <h3 class="related-title">Exemple de brief (contenu cadré)</h3>
+        <ul class="related-list">
+          <li>
+            <a href="/projets/referencement-web/apprendre-chanter-gospel/">Brief SEO complet : “Apprendre à chanter du gospel”</a>
+            <span class="hint">— intention, structure, FAQ, CTA, maillage</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    {/* Local */}
+    <section class="section" id="local">
+      <h2>Si la PME est locale</h2>
+      <p>
+        Si l’activité dépend d’une zone géographique, la SERP locale impose souvent : local pack, avis, entités locales,
+        informations pratiques. La stratégie devient très orientée <strong>confiance</strong> et <strong>cohérence</strong>.
+      </p>
+
+      <ul>
+        <li>Pages locales claires (zones desservies, accès, horaires, contact)</li>
+        <li>Signaux de confiance (avis, preuves, réalisations, mentions)</li>
+        <li>Cohérence NAP (nom/adresse/téléphone) sur le site et les sources externes</li>
+      </ul>
+
+      <div class="related-links">
+        <h3 class="related-title">À relier</h3>
+        <ul class="related-list">
+          <li>
+            <a href="/projets/referencement-web/accompagnement-seo/referencement-site-local/">Référencement site local</a>
+            <span class="hint">— local pack, confiance, pages locales</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/librairies-independantes-niort/">Analyse SERP locale : librairies à Niort</a>
+            <span class="hint">— entités, signaux, formats</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    {/* Process */}
+    <section class="section" id="process">
+      <h2>Process d’accompagnement (PME)</h2>
+      <ol>
+        <li><strong>Cadrage</strong> : objectifs, offre, zones, contraintes (temps/dev/contenu).</li>
+        <li><strong>Diagnostic</strong> : SERP + intentions + structure + technique.</li>
+        <li><strong>Priorisation</strong> : P0/P1/P2, avec un backlog réaliste.</li>
+        <li><strong>Itérations</strong> : un chantier à la fois, mise en œuvre, validation, ajustements.</li>
+      </ol>
+
+      <p class="intro">
+        Vue d’ensemble : <a href="/projets/referencement-web/accompagnement-seo/">Hub Accompagnement SEO</a>.
+      </p>
+    </section>
+
+    {/* Livrables */}
+    <section class="section" id="livrables">
+      <h2>Livrables adaptés aux PME</h2>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">Synthèse</span>
+          <h3>Plan d’action priorisé</h3>
+          <p>P0/P1/P2, chantiers, ordre d’exécution, dépendances.</p>
+          <a href="/projets/referencement-web/livrables-seo/">Voir les formats</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Cadrage</span>
+          <h3>Brief SEO complet</h3>
+          <p>Intention, SERP, structure Hn, FAQ, CTA, maillage.</p>
+          <a href="/projets/referencement-web/apprendre-chanter-gospel/">Voir un exemple</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Technique</span>
+          <h3>Checklist crawl & indexation</h3>
+          <p>Robots, sitemap, canonicals, statuts HTTP, validation.</p>
+          <a href="/projets/referencement-web/audit-seo/crawl-indexation/">Voir la checklist</a>
+        </article>
+      </div>
+    </section>
+
+    {/* FAQ */}
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">FAQ — SEO pour PME</h2>
+
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Faut-il publier beaucoup de contenu pour faire du SEO en PME ?</summary>
+          <div class="faq-answer">
+            <p>
+              Non. Le plus rentable est souvent : pages services solides, structure claire, preuve, indexation propre,
+              puis contenu ciblé. Publier beaucoup sans stratégie crée surtout du bruit.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Par quoi commencer si le budget est limité ?</summary>
+          <div class="faq-answer">
+            <p>
+              Par un diagnostic court + une priorisation P0/P1/P2. Corriger les blocages, renforcer les pages business,
+              puis construire un plan de contenu réaliste.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Quels résultats attendre, et quand ?</summary>
+          <div class="faq-answer">
+            <p>
+              Le SEO dépend du contexte. Les corrections techniques peuvent produire des effets plus rapides,
+              tandis que la consolidation (structure + contenu) est progressive. L’accompagnement sert à avancer
+              par chantiers validés, pas à promettre un chiffre.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn" href="/contact/">Discuter d’un accompagnement PME</a>
+        <a class="btn btn-ghost" href="/projets/referencement-web/accompagnement-seo/">Retour au hub Accompagnement SEO</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

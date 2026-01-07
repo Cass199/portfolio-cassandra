@@ -1,0 +1,302 @@
+---
+import BaseLayout from "../../../../../layouts/BaseLayout.astro";
+import Header from "../../../../../components/Header.astro";
+---
+
+<BaseLayout
+  title="Référencement web entreprise — accompagnement SEO (pilotage & gouvernance) | Cassandra Michel"
+  description="Accompagnement SEO pour entreprises : priorisation, gouvernance, coordination dev/contenu, architecture, pages business et validation. Méthode, checklist et exemples."
+>
+  <Header />
+
+  <main>
+    <p class="muted">
+      <a href="/projets/referencement-web/accompagnement-seo/">← Hub Accompagnement SEO</a> ·{" "}
+      <a href="/projets/referencement-web/audit-seo/">Audit SEO</a> ·{" "}
+      <a href="/projets/referencement-web/">Référencement web (page pilier)</a>
+    </p>
+
+    <h1>Référencement web entreprise</h1>
+    <p>
+      En entreprise, le SEO échoue rarement par manque d’idées. Il échoue parce que personne ne sait
+      <strong>dans quel ordre</strong> agir, <strong>qui fait quoi</strong>, et <strong>comment valider</strong>.
+      L’accompagnement sert à transformer un diagnostic en chantiers exécutables : coordination, arbitrages,
+      gouvernance et mesures de contrôle.
+    </p>
+
+    <p class="intro">
+      Les budgets varient selon la taille du site, la gouvernance et le périmètre :
+      <a href="/projets/referencement-web/cout-referencement-web/">voir le coût d’un référencement web</a>.
+    </p>
+
+    <div class="cta-row" aria-label="Accès rapides référencement web entreprise">
+      <a class="btn btn-ghost" href="#checklist">Checklist entreprise</a>
+      <a class="btn btn-ghost" href="#gouvernance">Gouvernance SEO</a>
+      <a class="btn" href="/contact/">Discuter d’un besoin SEO</a>
+    </div>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <p id="toc-title" class="toc-title">Sommaire</p>
+      <ul class="toc-list">
+        <li><a href="#enjeux">Enjeux SEO en entreprise</a></li>
+        <li><a href="#priorites">Priorités typiques (dans le bon ordre)</a></li>
+        <li><a href="#gouvernance">Gouvernance & coordination (le vrai chantier)</a></li>
+        <li><a href="#pages">Pages business, pages support, et cannibalisation</a></li>
+        <li><a href="#process">Process d’accompagnement</a></li>
+        <li><a href="#checklist">Checklist actionnable</a></li>
+        <li><a href="#exemples">Exemples</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" id="enjeux">
+      <h2>Enjeux SEO en entreprise</h2>
+      <p>
+        Le SEO en entreprise implique souvent des contraintes structurelles : organisation en silos,
+        cycles de validation longs, dette technique, empilement de contenus, et multiplication des parties prenantes.
+        Un accompagnement efficace ne “fait pas du SEO” dans le vide : il rend le SEO gouvernable.
+      </p>
+
+      <ul>
+        <li><strong>Visibilité</strong> : gagner sur des requêtes stratégiques, pas uniquement du trafic “volume”.</li>
+        <li><strong>Clarté</strong> : une page = une intention dominante (éviter la cannibalisation).</li>
+        <li><strong>Scalabilité</strong> : des règles simples pour produire sans casser l’existant.</li>
+        <li><strong>Validation</strong> : mesurer, corriger, consolider (Search Console, logs, SERP).</li>
+      </ul>
+
+      <p class="intro">
+        Base méthodo : <a href="/projets/referencement-web/audit-seo/">Audit SEO</a> (SERP, intention, structure, technique).
+      </p>
+    </section>
+
+    <section class="section" id="priorites">
+      <h2>Priorités typiques (dans le bon ordre)</h2>
+
+      <h3>1) Sécuriser l’indexation et l’exploration</h3>
+      <p>
+        Tant que crawl/indexation sont instables, le reste est une décoration coûteuse.
+        On vérifie robots, sitemap, canonicals, statuts HTTP, duplication et pages stratégiques.
+      </p>
+      <p class="intro">
+        Voir : <a href="/projets/referencement-web/audit-seo/crawl-indexation/">Crawl & indexation (checklist)</a>.
+      </p>
+
+      <h3>2) Clarifier l’intention et le format attendu</h3>
+      <p>
+        Les pages “corporate” ont souvent un problème simple : elles veulent tout faire à la fois.
+        Résultat : Google ne comprend pas, et l’utilisateur non plus. On valide intention + format via SERP.
+      </p>
+      <p class="intro">
+        Voir : <a href="/projets/referencement-web/audit-seo/analyse-serp/">Analyse SERP</a> ·{" "}
+        <a href="/projets/referencement-web/audit-seo/intention-recherche/">Intention de recherche</a>.
+      </p>
+
+      <h3>3) Architecture et maillage (hubs, pages business, pages support)</h3>
+      <p>
+        On structure les thématiques en hubs/satellites et on distribue l’importance via le maillage interne.
+        L’objectif : rendre les pages stratégiques facilement trouvables et cohérentes.
+      </p>
+      <p class="intro">
+        Voir : <a href="/projets/referencement-web/audit-seo/structure-site/">Structure de site</a>.
+      </p>
+
+      <h3>4) Production / refonte de contenu avec règles simples</h3>
+      <p>
+        Une fois le socle propre, on fixe des règles de production (titles, Hn, FAQ, preuves, entités, liens internes),
+        pour éviter la régression permanente.
+      </p>
+      <p class="intro">
+        Voir : <a href="/projets/referencement-web/livrables-seo/">Livrables SEO</a>.
+      </p>
+    </section>
+
+    <section class="section" id="gouvernance">
+      <h2>Gouvernance & coordination (le vrai chantier)</h2>
+
+      <h3>Définir qui décide (et sur quels critères)</h3>
+      <p>
+        En entreprise, l’ennemi du SEO, c’est souvent “tout le monde valide”. L’accompagnement pose un cadre :
+        objectifs, priorités, critères de validation, et responsabilités.
+      </p>
+
+      <h3>Coordonner contenu / produit / dev</h3>
+      <p>
+        Un bon plan SEO est inutile s’il n’est pas implémentable. On transforme les sujets en tickets exploitables :
+        problème → impact → recommandation → validation.
+      </p>
+
+      <h3>Gérer le risque (refontes, migrations, changements d’URL)</h3>
+      <p>
+        Les refontes “on verra après” coûtent cher. Un accompagnement sérieux anticipe :
+        redirections, canonicals, maillage, gabarits, performances, et monitoring post-déploiement.
+      </p>
+
+      <div class="related-links">
+        <h3 class="related-title">Pages sœurs</h3>
+        <ul class="related-list">
+          <li>
+            <a href="/projets/referencement-web/audit-seo/crawl-indexation/">Crawl & indexation</a>
+            <span class="hint">— robots, sitemap, canonicals, statuts</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/audit-seo/structure-site/">Structure de site</a>
+            <span class="hint">— hubs/satellites, profondeur, pages orphelines</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/livrables-seo/">Livrables SEO</a>
+            <span class="hint">— formats exploitables côté équipe</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="pages">
+      <h2>Pages business, pages support, et cannibalisation</h2>
+
+      <h3>Pages business</h3>
+      <p>
+        Les pages business (offres, services, solutions) doivent répondre à une intention transactionnelle claire
+        et prouver la crédibilité rapidement (preuve, cas, éléments concrets, CTA cohérent).
+      </p>
+
+      <h3>Pages support</h3>
+      <p>
+        Les pages support (guides, définitions, comparatifs, FAQ) servent la couverture thématique et la réassurance.
+        Elles ne doivent pas cannibaliser les pages business, mais les alimenter via maillage interne.
+      </p>
+
+      <h3>Cannibalisation : symptôme fréquent</h3>
+      <p>
+        Plusieurs pages qui ciblent la même intention finissent par se neutraliser. L’accompagnement vise à :
+        fusionner, redifférencier, ou repositionner, puis ajuster le maillage.
+      </p>
+
+      <p class="intro">
+        Voir : <a href="/projets/referencement-web/audit-seo/mots-cles-seo/">Mots-clés SEO (clusters & mapping)</a>.
+      </p>
+    </section>
+
+    <section class="section" id="process">
+      <h2>Process d’accompagnement (entreprise)</h2>
+
+      <h3>1) Cadrage</h3>
+      <p>
+        Objectifs, contraintes, périmètre, parties prenantes, dépendances (dev, contenu, validation).
+      </p>
+
+      <h3>2) Diagnostic</h3>
+      <p>
+        SERP, intention, structure, technique et état des pages business/support. On identifie les P0/P1/P2.
+      </p>
+
+      <h3>3) Plan d’action priorisé</h3>
+      <p>
+        Chantiers, dépendances, ordre d’exécution. On évite le “tout en même temps”.
+      </p>
+
+      <h3>4) Mise en œuvre + validation</h3>
+      <p>
+        Implémentation (équipe interne, prestataires ou collaboration), puis validation : indexation, logs, Search Console,
+        cohérence SERP, ajustements.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn" href="/contact/">Discuter d’un cadrage</a>
+        <a class="btn btn-ghost" href="/projets/referencement-web/accompagnement-seo/">Retour au hub Accompagnement SEO</a>
+      </div>
+    </section>
+
+    <section class="section" id="checklist">
+      <h2>Checklist actionnable (SEO entreprise)</h2>
+
+      <h3>P0 (bloquants)</h3>
+      <ul>
+        <li>Pages business en noindex / canonicals incohérents / erreurs 4xx/5xx</li>
+        <li>Robots.txt ou gabarits bloquants (ou incohérents)</li>
+        <li>Redirections en chaînes / boucles / pertes d’URL stratégiques</li>
+        <li>Duplication massive (paramètres, variantes, gabarits)</li>
+      </ul>
+
+      <h3>P1 (fort impact)</h3>
+      <ul>
+        <li>Architecture : hubs/satellites clairs + maillage vers pages business prioritaires</li>
+        <li>Intention : pages “fourre-tout” à découper / clarifier</li>
+        <li>Mapping : une intention dominante = une page principale (anti-cannibalisation)</li>
+        <li>Règles de production : titres, Hn, preuves, FAQ, liens internes</li>
+      </ul>
+
+      <h3>P2 (améliorations continues)</h3>
+      <ul>
+        <li>Consolidation progressive des contenus faibles</li>
+        <li>Optimisation CTR (titles/meta) sur pages stables</li>
+        <li>Monitoring (Search Console, logs, SERP) + itérations</li>
+      </ul>
+    </section>
+
+    <section class="section" id="exemples">
+      <h2>Exemples</h2>
+      <p class="intro">
+        Deux pages qui illustrent des livrables et des chantiers typiques (diagnostic → priorisation → exécution).
+      </p>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">Audit / Technique</span>
+          <h3>Audit SEO — Mac4Ever</h3>
+          <p>Architecture, URLs, crawl, robots.txt, sitemap, indexation + plan d’action priorisé.</p>
+          <a href="/projets/referencement-web/seo-audit-mac4ever/">Voir le projet</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Audit / Mobile</span>
+          <h3>Audit mobile — Butsoccers</h3>
+          <p>Core Web Vitals + erreurs techniques + plan d’action (validation).</p>
+          <a href="/projets/referencement-web/audit-mobile-butsoccers/">Voir le projet</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">FAQ — Référencement web entreprise</h2>
+
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Pourquoi le SEO est-il plus lent en entreprise ?</summary>
+          <div class="faq-answer">
+            <p>
+              Parce que le SEO dépend d’équipes et de cycles de validation : dev, contenu, juridique, produit.
+              L’accompagnement sert à réduire ce délai en transformant les sujets en chantiers clairs et validables.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Faut-il créer beaucoup de contenus pour performer ?</summary>
+          <div class="faq-answer">
+            <p>
+              Non. En entreprise, les gains viennent souvent d’abord de la structure, des pages business,
+              de la suppression de duplications et de la clarification des intentions. La production vient ensuite,
+              de manière ciblée.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Comment éviter la cannibalisation entre pages ?</summary>
+          <div class="faq-answer">
+            <p>
+              En mappant les intentions : une page principale par intention dominante, puis des pages support
+              qui alimentent la page business via le maillage interne. Si deux pages ciblent la même intention,
+              elles doivent être fusionnées ou différenciées.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn" href="/contact/">Discuter d’un accompagnement entreprise</a>
+        <a class="btn btn-ghost" href="/projets/referencement-web/accompagnement-seo/">Retour au hub Accompagnement SEO</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

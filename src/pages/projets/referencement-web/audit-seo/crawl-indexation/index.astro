@@ -24,12 +24,19 @@ import Header from "../../../../../components/Header.astro";
       actionnable pour diagnostiquer vite.
     </p>
 
+    <div class="cta-row" aria-label="Accès rapides crawl et indexation">
+      <a class="btn btn-ghost" href="#checklist">Voir la checklist</a>
+      <a class="btn btn-ghost" href="#exemples">Voir des exemples</a>
+      <a class="btn" href="/contact/">Discuter d’un audit</a>
+    </div>
+
     <nav class="toc" aria-labelledby="toc-title">
       <p id="toc-title" class="toc-title">Sommaire</p>
       <ul class="toc-list">
         <li><a href="#definitions">Crawl vs indexation</a></li>
         <li><a href="#symptomes">Symptômes typiques</a></li>
         <li><a href="#points">Points de contrôle essentiels</a></li>
+        <li><a href="#livrables">Ce que produit un audit</a></li>
         <li><a href="#checklist">Checklist actionnable</a></li>
         <li><a href="#exemples">Exemples</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -43,8 +50,8 @@ import Header from "../../../../../components/Header.astro";
         <li><strong>Indexation</strong> : Google décide de stocker une page dans son index (donc éligible à ranker).</li>
       </ul>
       <p>
-        Une page peut être crawlée mais non indexée (qualité faible, duplication, noindex, canonicals, etc.),
-        et une page peut être théoriquement indexable mais jamais découverte (maillage pauvre, orpheline).
+        Une page peut être crawlée mais non indexée (qualité faible, duplication, <code>noindex</code>, canonicals, etc.),
+        et une page peut être indexable mais jamais découverte (maillage pauvre, page orpheline).
       </p>
     </section>
 
@@ -71,7 +78,7 @@ import Header from "../../../../../components/Header.astro";
       <h3>2) robots.txt</h3>
       <p>
         Robots bloque le crawl. Ce n’est pas un outil de “désindexation”. On évite de bloquer des sections stratégiques
-        et on s’assure que sitemap est déclaré.
+        et on s’assure que le sitemap est déclaré.
       </p>
 
       <h3>3) Sitemap XML</h3>
@@ -82,7 +89,7 @@ import Header from "../../../../../components/Header.astro";
 
       <h3>4) Balises meta robots (noindex/nofollow)</h3>
       <p>
-        Noindex empêche l’indexation (même si la page est crawlée). Très utile, mais dangereux si appliqué par erreur.
+        <code>noindex</code> empêche l’indexation (même si la page est crawlée). Très utile, mais dangereux si appliqué par erreur.
       </p>
 
       <h3>5) Canonicals</h3>
@@ -114,8 +121,27 @@ import Header from "../../../../../components/Header.astro";
             <a href="/projets/referencement-web/audit-seo/mots-cles-seo/">Mots-clés SEO</a>
             <span class="hint">— mapping pages ↔ intentions</span>
           </li>
+          <li>
+            <a href="/projets/referencement-web/audit-seo/analyse-serp/">Analyse SERP</a>
+            <span class="hint">— comprendre l’exigence avant d’optimiser</span>
+          </li>
         </ul>
       </div>
+    </section>
+
+    <section class="section" id="livrables">
+      <h2>Ce que produit un audit crawl/indexation</h2>
+      <p>
+        L’objectif n’est pas de “lister des erreurs”, mais de décider quoi corriger et dans quel ordre.
+        Un audit crawl/indexation sérieux aboutit généralement à :
+      </p>
+      <ul>
+        <li>une liste d’URLs / sections bloquées (crawl) et exclues (indexation) avec cause probable</li>
+        <li>des corrections techniques prioritaires (P0/P1/P2) : redirections, robots, canonicals, noindex, statuts</li>
+        <li>un sitemap nettoyé (URLs canoniques + importantes)</li>
+        <li>une stratégie anti-duplication (variantes + paramètres + consolidation)</li>
+        <li>un plan de validation (Search Console + recrawl) pour vérifier que la correction produit un effet</li>
+      </ul>
     </section>
 
     <section class="section" id="checklist">
@@ -123,8 +149,8 @@ import Header from "../../../../../components/Header.astro";
 
       <h3>P0 (bloquants)</h3>
       <ul>
-        <li>Pages stratégiques en noindex / canonicals erronés</li>
-        <li>Robots.txt bloque des sections importantes</li>
+        <li>Pages stratégiques en <code>noindex</code> / canonicals erronés</li>
+        <li>robots.txt bloque des sections importantes</li>
         <li>5xx / erreurs serveur sur pages importantes</li>
         <li>Chaînes de redirections ou boucles</li>
       </ul>
@@ -133,15 +159,15 @@ import Header from "../../../../../components/Header.astro";
       <ul>
         <li>Sitemap pollué (URLs non canoniques / inutiles)</li>
         <li>Duplication d’URLs (variantes, paramètres)</li>
-        <li>Orphelines : pages importantes sans liens internes</li>
+        <li>Pages importantes orphelines (pas de liens internes)</li>
         <li>Pagination/facettes mal contrôlées</li>
       </ul>
 
       <h3>P2 (améliorations continues)</h3>
       <ul>
-        <li>Nettoyage du crawl “bruit” (paramètres inutiles)</li>
-        <li>Consolidation progressive des clusters (fusion de pages faibles)</li>
-        <li>Monitoring Search Console (exclusions, couverture)</li>
+        <li>Nettoyage progressif du crawl “bruit” (paramètres inutiles)</li>
+        <li>Consolidation des contenus faibles (fusion / redirections)</li>
+        <li>Monitoring Search Console (exclusions, couverture, sitemaps)</li>
       </ul>
     </section>
 
@@ -207,6 +233,8 @@ import Header from "../../../../../components/Header.astro";
         <a class="btn" href="/contact/">Discuter d’un audit crawl/indexation</a>
         <a class="btn btn-ghost" href="/projets/referencement-web/audit-seo/">Retour à la page Audit SEO</a>
       </div>
+
+      <p class="intro">Après diagnostic, pas avant.</p>
     </section>
   </main>
 </BaseLayout>

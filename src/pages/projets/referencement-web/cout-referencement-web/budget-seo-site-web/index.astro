@@ -1,0 +1,211 @@
+---
+import BaseLayout from "../../../../../layouts/BaseLayout.astro";
+import Header from "../../../../../components/Header.astro";
+
+const sections = [
+  { href: "#objectif", label: "Objectif du budget SEO" },
+  { href: "#etapes", label: "Élaborer un budget SEO" },
+  { href: "#priorisation", label: "Priorisation P0/P1/P2" },
+  { href: "#exemples", label: "Exemples de budget (scénarios)" },
+  { href: "#erreurs", label: "Erreurs fréquentes" },
+  { href: "#faq", label: "FAQ" },
+];
+---
+
+<BaseLayout
+  title="Budget SEO site web — comment le définir sans se tromper | Cassandra Michel"
+  description="Budget SEO site web : étapes pour construire un budget réaliste, priorisation P0/P1/P2, scénarios selon types de site et erreurs à éviter. Approche pragmatique."
+>
+  <Header />
+
+  <main>
+    <p class="muted">
+      <a href="/projets/referencement-web/cout-referencement-web/">← Coût d’un référencement web</a> ·{" "}
+      <a href="/projets/referencement-web/cout-referencement-web/prix-freelance-seo/">Prix freelance SEO</a> ·{" "}
+      <a href="/projets/referencement-web/cout-referencement-web/mission-referencement-web/">Mission référencement web</a> ·{" "}
+      <a href="/projets/referencement-web/">Référencement web</a>
+    </p>
+
+    <h1>Budget SEO site web</h1>
+
+    <p>
+      Définir un budget SEO, ce n’est pas cocher une grille tarifaire. C’est
+      structurer des travaux, évaluer leurs impacts, arbitrer en fonction des ressources,
+      puis traduire cela en temps / phases / responsabilités.
+    </p>
+
+    <p>
+      Cette page vous donne une méthodologie pour "construire un budget réaliste",
+      articulé avec les besoins du site, les dépendances internes, et les objectifs business.
+    </p>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <p id="toc-title" class="toc-title">Sommaire</p>
+      <ul class="toc-list">
+        {sections.map((s) => (
+          <li><a href={s.href}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    {/* Objectif */}
+    <section class="section" id="objectif">
+      <h2>Objectif du budget SEO</h2>
+      <p>
+        Un budget SEO sert à répondre à :
+      </p>
+      <ul>
+        <li>Quelles actions doivent être faites ?</li>
+        <li>Dans quel ordre et avec quelles dépendances ?</li>
+        <li>Quels livrables / validations attendues ?</li>
+        <li>Quel est le niveau d’effort requis (temps / compétence) ?</li>
+      </ul>
+
+      <p class="intro">
+        Il ne s’agit pas d’un coût isolé : il s’aligne avec
+        <a href="/projets/referencement-web/accompagnement-seo/">Accompagnement SEO</a>
+        et les livrables définis dans
+        <a href="/projets/referencement-web/livrables-seo/">Livrables SEO</a>.
+      </p>
+    </section>
+
+    {/* Étapes */}
+    <section class="section" id="etapes">
+      <h2>Élaborer un budget SEO site web — les étapes</h2>
+
+      <h3>1) Cadrer le périmètre</h3>
+      <p>
+        Définissez les pages clés : pages services, hubs, intent, contenu support.
+        Regarde aussi la technique : indexation, performance, duplication.
+      </p>
+
+      <h3>2) Diagnostic rapide</h3>
+      <p>
+        Analyse SERP, intentions, concurrence, structure. Une mission d’audit SEO
+        (même courte) limitez les approximations.
+      </p>
+
+      <h3>3) Cartographier les chantiers</h3>
+      <p>
+        Regroupez par lot : technique, architecture, contenu, maillage, preuves,
+        SEO local ou international.
+      </p>
+
+      <h3>4) Prioriser (P0/P1/P2)</h3>
+      <p>
+        Les actions à fort impact doivent être financées en premier (P0),
+        les chantiers secondaires suivent (P1, P2).
+      </p>
+
+      <h3>5) Traduire en effort</h3>
+      <p>
+        Estimez pour chaque lot : heures / compétence requise / dépendances.
+      </p>
+
+      <p class="intro">
+        Besoin d’un diagnostic complet ?
+        <a href="/projets/referencement-web/audit-seo/">Audit SEO</a>
+        éclaire le réel avant d’estimer.
+      </p>
+    </section>
+
+    {/* Priorisation */}
+    <section class="section" id="priorisation">
+      <h2>Priorisation P0 / P1 / P2 — clé du budget</h2>
+      <p>
+        Sans priorisation, un budget SEO devient un buffet à volonté :
+        tout est “urgent” et rien n’avance.
+      </p>
+
+      <ul>
+        <li><strong>P0</strong> — Bloquants (indexation, erreurs 5xx, canonical, robots)</li>
+        <li><strong>P1</strong> — Fort impact (pages services, maillage interne, hubs)</li>
+        <li><strong>P2</strong> — Améliorations continues (contenu support, tests d’angles)</li>
+      </ul>
+
+      <p>
+        Cette priorisation sert à décomposer le budget en phases réalistes.
+      </p>
+    </section>
+
+    {/* Exemples */}
+    <section class="section" id="exemples">
+      <h2>Exemples de scénarios de budget</h2>
+
+      <p>
+        Chaque site est unique, mais voici des schémas observés dans la vraie vie :
+      </p>
+
+      <h3>Site vitrine (petit périmètre)</h3>
+      <p>
+        Diagnostic court + pages services + maillage basique.
+        Priorité : indexation & clarité de l’offre.
+      </p>
+
+      <h3>PME (priorités pragmatiques)</h3>
+      <p>
+        Diagnostic + architecture + pages business + soutiens de contenu.
+        Priorité : cohérence + impact business.
+      </p>
+
+      <h3>Concurrence forte (national)</h3>
+      <p>
+        Diagnostic + roadmap par lot + sprints d’accompagnement.
+        Priorité : SERP + preuve + structure robuste.
+      </p>
+    </section>
+
+    {/* Erreurs */}
+    <section class="section" id="erreurs">
+      <h2>Erreurs fréquentes dans l’estimation du budget</h2>
+      <ul>
+        <li>Comparer des devis sans comparer les périmètres</li>
+        <li>Sous-estimer l’effort d’implémentation</li>
+        <li>Oublier la validation après mise en œuvre</li>
+        <li>Confondre budget SEO et coût purement technique</li>
+      </ul>
+    </section>
+
+    {/* FAQ */}
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">FAQ — Budget SEO site web</h2>
+
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Un petit site a-t-il besoin d’un budget SEO ?</summary>
+          <div class="faq-answer">
+            <p>
+              Oui, mais souvent concentré sur les pages clés, l’indexation et la structure,
+              plutôt que sur des contenus secondaires.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Peut-on définir un budget avant diagnostic ?</summary>
+          <div class="faq-answer">
+            <p>
+              On peut poser des repères, mais un budget fiable vient après
+              un diagnostic ciblé (audit SEO).
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Comment intégrer les ressources internes dans le budget ?</summary>
+          <div class="faq-answer">
+            <p>
+              En listant les dépendances (contenu, dev, governance) et leur charge prévue,
+              puis en traduisant cela en temps/effort côté interne ou externe.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn" href="/contact/">Discuter d’un budget SEO concret</a>
+        <a class="btn btn-ghost" href="/projets/referencement-web/cout-referencement-web/">Retour au hub coût</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

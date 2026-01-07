@@ -1,0 +1,214 @@
+---
+import BaseLayout from "../../../../../layouts/BaseLayout.astro";
+import Header from "../../../../../components/Header.astro";
+
+const sections = [
+  { href: "#definition", label: "Ce qu’est une mission SEO" },
+  { href: "#contenu", label: "Ce que contient une mission" },
+  { href: "#types", label: "Types de missions SEO" },
+  { href: "#duree", label: "Durée et temporalité" },
+  { href: "#livrables", label: "Livrables attendus" },
+  { href: "#differences", label: "Mission vs audit vs accompagnement" },
+  { href: "#erreurs", label: "Erreurs fréquentes" },
+  { href: "#faq", label: "FAQ" },
+];
+---
+
+<BaseLayout
+  title="Mission référencement web — cadrage, durée et livrables | Cassandra Michel"
+  description="Mission référencement web : ce qu’elle recouvre, durée, livrables, différences avec audit et accompagnement SEO. Cadre clair, sans flou commercial."
+>
+  <Header />
+
+  <main>
+    <p class="muted">
+      <a href="/projets/referencement-web/cout-referencement-web/">← Coût d’un référencement web</a> ·{" "}
+      <a href="/projets/referencement-web/cout-referencement-web/prix-freelance-seo/">Prix freelance SEO</a> ·{" "}
+      <a href="/projets/referencement-web/">Référencement web</a>
+    </p>
+
+    <h1>Mission référencement web</h1>
+
+    <p>
+      Une mission de référencement web est un <strong>cadre de travail défini</strong> :
+      objectifs, périmètre, livrables, durée. Contrairement à une idée répandue,
+      le SEO n’est pas une prestation “en continu par défaut”.
+    </p>
+
+    <p>
+      Cette page sert à clarifier ce qu’est une mission SEO,
+      ce qu’elle inclut concrètement, et dans quels cas elle est pertinente.
+    </p>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <p id="toc-title" class="toc-title">Sommaire</p>
+      <ul class="toc-list">
+        {sections.map((s) => (
+          <li><a href={s.href}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    {/* Définition */}
+    <section class="section" id="definition">
+      <h2>Ce qu’est une mission de référencement web</h2>
+      <p>
+        Une mission SEO correspond à un <strong>ensemble d’actions ciblées</strong>,
+        limitées dans le temps, avec un objectif clair :
+        corriger, structurer, lancer ou débloquer une situation.
+      </p>
+      <p>
+        Elle n’implique pas forcément un suivi mensuel,
+        ni une externalisation complète du SEO.
+      </p>
+    </section>
+
+    {/* Contenu */}
+    <section class="section" id="contenu">
+      <h2>Ce que contient une mission SEO</h2>
+      <ul>
+        <li>un cadrage du besoin et des contraintes</li>
+        <li>un diagnostic (SERP, intention, structure, technique)</li>
+        <li>des décisions argumentées</li>
+        <li>des livrables exploitables</li>
+      </ul>
+
+      <p>
+        Une mission ne consiste pas à “faire un peu de tout”,
+        mais à traiter <strong>ce qui bloque ou ce qui manque</strong>.
+      </p>
+
+      <p class="intro">
+        Base méthodologique :
+        <a href="/projets/referencement-web/audit-seo/">Audit SEO</a>.
+      </p>
+    </section>
+
+    {/* Types */}
+    <section class="section" id="types">
+      <h2>Types de missions référencement web</h2>
+
+      <h3>Mission de diagnostic</h3>
+      <p>
+        Audit SEO complet + plan d’action priorisé.
+        Adaptée pour reprendre un site existant ou lancer une refonte.
+      </p>
+
+      <h3>Mission de structuration</h3>
+      <p>
+        Travail sur l’architecture, le maillage interne,
+        les pages piliers et satellites.
+      </p>
+
+      <h3>Mission de lancement</h3>
+      <p>
+        Cadrage SEO avant mise en ligne :
+        structure, pages clés, intentions, bases techniques.
+      </p>
+
+      <h3>Mission de correction ciblée</h3>
+      <p>
+        Intervention sur un point précis :
+        indexation, structure, pages services, SEO local, Core Web Vitals.
+      </p>
+    </section>
+
+    {/* Durée */}
+    <section class="section" id="duree">
+      <h2>Durée et temporalité d’une mission SEO</h2>
+      <p>
+        Une mission SEO est généralement <strong>limitée dans le temps</strong> :
+        quelques semaines à quelques mois, selon le périmètre.
+      </p>
+      <p>
+        Le SEO produit des effets sur le long terme,
+        mais la mission sert à <strong>mettre le site sur de bons rails</strong>.
+      </p>
+    </section>
+
+    {/* Livrables */}
+    <section class="section" id="livrables">
+      <h2>Livrables attendus</h2>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">Diagnostic</span>
+          <h3>Audit SEO</h3>
+          <p>SERP, intentions, structure, technique.</p>
+          <a href="/projets/referencement-web/audit-seo/">Voir la méthode</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Cadrage</span>
+          <h3>Plan d’action priorisé</h3>
+          <p>P0/P1/P2, ordre d’exécution.</p>
+          <a href="/projets/referencement-web/livrables-seo/">Voir les livrables</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Contenu</span>
+          <h3>Brief SEO</h3>
+          <p>Structure Hn, intentions, FAQ, CTA.</p>
+        </article>
+      </div>
+    </section>
+
+    {/* Différences */}
+    <section class="section" id="differences">
+      <h2>Mission SEO, audit SEO, accompagnement : différences</h2>
+      <ul>
+        <li><strong>Audit SEO</strong> : diagnostic + recommandations</li>
+        <li><strong>Mission SEO</strong> : objectif ciblé + livrables + fin définie</li>
+        <li><strong>Accompagnement SEO</strong> : itérations, suivi, ajustements</li>
+      </ul>
+
+      <p class="intro">
+        Voir aussi :
+        <a href="/projets/referencement-web/accompagnement-seo/">Accompagnement SEO</a>.
+      </p>
+    </section>
+
+    {/* Erreurs */}
+    <section class="section" id="erreurs">
+      <h2>Erreurs fréquentes</h2>
+      <ul>
+        <li>lancer une mission sans diagnostic préalable</li>
+        <li>confondre mission et suivi mensuel automatique</li>
+        <li>attendre des résultats immédiats</li>
+        <li>ne pas exploiter les livrables après la mission</li>
+      </ul>
+    </section>
+
+    {/* FAQ */}
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">FAQ — Mission référencement web</h2>
+
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Quand une mission SEO est-elle suffisante ?</summary>
+          <div class="faq-answer">
+            <p>
+              Quand le besoin est identifié et ciblé :
+              diagnostic, structuration, correction ou lancement.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Faut-il un accompagnement après la mission ?</summary>
+          <div class="faq-answer">
+            <p>
+              Pas toujours. Tout dépend de la capacité à implémenter
+              et à suivre les recommandations en interne.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn" href="/contact/">Discuter d’une mission SEO</a>
+        <a class="btn btn-ghost" href="/projets/referencement-web/cout-referencement-web/">Retour au hub coût</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

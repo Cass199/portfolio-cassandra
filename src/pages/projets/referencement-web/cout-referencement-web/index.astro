@@ -1,0 +1,225 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import Header from "../../../../components/Header.astro";
+
+const sections = [
+  { href: "#pourquoi", label: "Pourquoi le coût varie" },
+  { href: "#pages", label: "Pages de la thématique Coût" },
+  { href: "#facteurs", label: "Facteurs qui influencent le budget" },
+  { href: "#formats", label: "Formats de mission" },
+  { href: "#preuves", label: "Exemples (cas pratiques)" },
+  { href: "#liens", label: "Pages sœurs (à relier)" },
+  { href: "#cta", label: "Cadrer un budget" },
+];
+---
+
+<BaseLayout
+  title="Coût d’un référencement web — budget, mission et prix freelance SEO | Cassandra Michel"
+  description="Coût d’un référencement web : facteurs, formats de mission, prix freelance SEO, budget SEO site web. Liens vers audit, accompagnement et exemples."
+>
+  <Header />
+
+  <main>
+    <p class="muted">
+      <a href="/projets/referencement-web/">← Référencement web (page pilier)</a> ·{" "}
+      <a href="/projets/referencement-web/accompagnement-seo/">Accompagnement SEO</a> ·{" "}
+      <a href="/projets/referencement-web/audit-seo/">Audit SEO</a> ·{" "}
+      <a href="/projets/referencement-web/livrables-seo/">Livrables SEO</a>
+    </p>
+
+    <h1>Coût d’un référencement web</h1>
+
+    <p>
+      Le coût d’une prestation SEO n’est pas un prix “catalogue”. Il dépend du <strong>périmètre</strong>,
+      de la <strong>concurrence</strong>, de l’<strong>état du site</strong> (technique/structure/indexation),
+      et du <strong>format de mission</strong> (audit, accompagnement, itérations, coaching).
+    </p>
+
+    <div class="cta-row" aria-label="Accès rapides coût SEO">
+      <a class="btn btn-ghost" href="#pages">Voir les pages Coût</a>
+      <a class="btn btn-ghost" href="#preuves">Voir des exemples</a>
+      <a class="btn" href="/contact/">Cadrer un budget</a>
+    </div>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <p id="toc-title" class="toc-title">Sommaire</p>
+      <ul class="toc-list">
+        {sections.map((s) => (
+          <li><a href={s.href}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    {/* Pourquoi */}
+    <section class="section" id="pourquoi">
+      <h2>Pourquoi le coût varie (et pourquoi c’est normal)</h2>
+      <p>
+        Deux sites “semblables” peuvent demander des efforts très différents : indexation instable,
+        architecture confuse, dette technique, pages business faibles, concurrence élevée…
+        Le point de départ sain, c’est un <strong>diagnostic</strong> qui permet de chiffrer sur du réel :
+        <a href="/projets/referencement-web/audit-seo/">Audit SEO</a>.
+      </p>
+      <p>
+        Ensuite, le budget se pilote par <strong>priorisation</strong> et <strong>livrables exploitables</strong> :
+        <a href="/projets/referencement-web/livrables-seo/">Livrables SEO</a>.
+      </p>
+    </section>
+
+    {/* Pages filles */}
+    <section class="section" id="pages">
+      <h2>Pages de la thématique “Coût”</h2>
+      <p class="intro">
+        Chaque angle est détaillé dans une page dédiée, avec méthode, repères et points de vigilance.
+      </p>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">Tarifs</span>
+          <h3>Prix freelance SEO</h3>
+          <p>TJM, forfait, “à la tâche” : ce qui change vraiment (et ce qui est du cinéma).</p>
+          <a href="/projets/referencement-web/cout-referencement-web/prix-freelance-seo/">Voir la page</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Format</span>
+          <h3>Mission référencement web</h3>
+          <p>Audit, sprints, itérations : comment une mission se découpe et se pilote.</p>
+          <a href="/projets/referencement-web/cout-referencement-web/mission-referencement-web/">Voir la page</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Prestation</span>
+          <h3>Prestation freelance SEO</h3>
+          <p>Périmètre, responsabilités, livrables : ce qui est inclus (et ce qui ne l’est pas).</p>
+          <a href="/projets/referencement-web/cout-referencement-web/prestation-freelance-seo/">Voir la page</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Budget</span>
+          <h3>Budget SEO site web</h3>
+          <p>Comment estimer un budget réaliste selon l’état du site et le niveau de concurrence.</p>
+          <a href="/projets/referencement-web/cout-referencement-web/budget-seo-site-web/">Voir la page</a>
+        </article>
+      </div>
+    </section>
+
+    {/* Facteurs */}
+    <section class="section" id="facteurs">
+      <h2>Les facteurs qui influencent le budget</h2>
+      <ul>
+        <li><strong>Périmètre</strong> : nombre de pages, profondeur technique, international, refonte, migration…</li>
+        <li><strong>Concurrence</strong> : niveau d’exigence SERP, marques/médias présents, historique.</li>
+        <li><strong>État du site</strong> : crawl/indexation, duplication, performance, dettes techniques.</li>
+        <li><strong>Ressources</strong> : qui implémente (interne, dev, contenu), délais, gouvernance.</li>
+        <li><strong>Objectifs</strong> : local/national, pages business, acquisition, notoriété.</li>
+      </ul>
+
+      <p class="intro">
+        Si l’objectif est d’avancer par chantiers concrets (et pas par “conseils” en l’air) :
+        <a href="/projets/referencement-web/accompagnement-seo/">Accompagnement SEO</a>.
+      </p>
+    </section>
+
+    {/* Formats */}
+    <section class="section" id="formats">
+      <h2>Formats de mission (et impact sur le coût)</h2>
+      <p>
+        Le budget dépend moins d’un “prix SEO” que du format choisi :
+      </p>
+      <ul>
+        <li><strong>Audit</strong> : diagnostic + plan d’action priorisé (base de chiffrage).</li>
+        <li><strong>Accompagnement</strong> : itérations/sprints (exécution + validation + ajustements).</li>
+        <li><strong>Coaching</strong> : transfert de méthode, exécution côté interne.</li>
+      </ul>
+
+      <div class="related-links">
+        <h3 class="related-title">Liens utiles</h3>
+        <ul class="related-list">
+          <li>
+            <a href="/projets/referencement-web/audit-seo/">Audit SEO</a>
+            <span class="hint">— diagnostic (SERP, intention, structure, technique)</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/accompagnement-seo/">Accompagnement SEO</a>
+            <span class="hint">— chantiers, itérations, validation</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/livrables-seo/">Livrables SEO</a>
+            <span class="hint">— formats de preuve et documents actionnables</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    {/* Preuves */}
+    <section class="section" id="preuves">
+      <h2>Exemples (cas pratiques)</h2>
+      <p class="intro">
+        Ces pages montrent des livrables “en situation” (périmètre → diagnostic → priorisation).
+      </p>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">Audit / Technique</span>
+          <h3>Audit SEO — Mac4Ever</h3>
+          <p>Architecture, URLs, crawl, indexation + plan d’action priorisé.</p>
+          <a href="/projets/referencement-web/seo-audit-mac4ever/">Voir le projet</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Audit / Mobile</span>
+          <h3>Audit mobile — Butsoccers</h3>
+          <p>Core Web Vitals + erreurs techniques + plan d’action.</p>
+          <a href="/projets/referencement-web/audit-mobile-butsoccers/">Voir le projet</a>
+        </article>
+      </div>
+
+      <p class="intro">
+        Exemple “contenu/brief” :
+        <a href="/projets/referencement-web/apprendre-chanter-gospel/">Apprendre à chanter du gospel</a>.
+      </p>
+    </section>
+
+    {/* Pages sœurs */}
+    <section class="section" id="liens">
+      <h2>Pages sœurs (maillage croisé)</h2>
+      <p>
+        Le coût est indissociable de la méthode, des livrables et du format de mission :
+      </p>
+
+      <div class="related-links">
+        <h3 class="related-title">À relier</h3>
+        <ul class="related-list">
+          <li>
+            <a href="/projets/referencement-web/audit-seo/">Audit SEO</a>
+            <span class="hint">— chiffrer sur du réel (diagnostic)</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/accompagnement-seo/">Accompagnement SEO</a>
+            <span class="hint">— budget piloté par itérations</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/livrables-seo/">Livrables SEO</a>
+            <span class="hint">— ce que le budget produit concrètement</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    {/* CTA */}
+    <section class="section" id="cta">
+      <h2>Cadrer un budget (sans deviner)</h2>
+      <p>
+        Un budget fiable se construit à partir d’un périmètre et d’une priorisation.
+        Sinon, ce n’est pas un budget : c’est une roulette.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn" href="/contact/">Discuter d’un besoin SEO concret</a>
+        <a class="btn btn-ghost" href="/projets/referencement-web/">Retour à la page Référencement web</a>
+      </div>
+
+      <p class="intro">Après diagnostic, pas avant.</p>
+    </section>
+  </main>
+</BaseLayout>

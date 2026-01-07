@@ -1,0 +1,253 @@
+---
+import BaseLayout from "../../../../../layouts/BaseLayout.astro";
+import Header from "../../../../../components/Header.astro";
+
+const sections = [
+  { href: "#enjeux", label: "Enjeux d’un site vitrine" },
+  { href: "#priorites", label: "Priorités SEO (dans l’ordre)" },
+  { href: "#pages", label: "Pages clés à optimiser" },
+  { href: "#contenu", label: "Contenu utile (et inutile)" },
+  { href: "#local", label: "Si le site vitrine est local" },
+  { href: "#process", label: "Process d’accompagnement" },
+  { href: "#livrables", label: "Livrables adaptés" },
+  { href: "#faq", label: "FAQ" },
+];
+---
+
+<BaseLayout
+  title="Référencement site vitrine — pages services, structure & SEO utile | Cassandra Michel"
+  description="Référencement site vitrine : pages services claires, structure simple, SEO local si besoin, priorisation P0/P1/P2 et livrables concrets. Méthode pragmatique."
+>
+  <Header />
+
+  <main>
+    <p class="muted">
+      <a href="/projets/referencement-web/accompagnement-seo/">← Hub Accompagnement SEO</a> ·{" "}
+      <a href="/projets/referencement-web/">Référencement web (page pilier)</a> ·{" "}
+      <a href="/projets/referencement-web/audit-seo/">Audit SEO</a> ·{" "}
+      <a href="/projets/referencement-web/livrables-seo/">Livrables SEO</a>
+    </p>
+
+    <h1>Référencement site vitrine</h1>
+
+    <p>
+      Un site vitrine ne sert pas à “faire du contenu”. Il sert à <strong>présenter une offre</strong>,
+      <strong>inspirer confiance</strong> et <strong>déclencher un contact</strong>.
+      En SEO, le problème n’est donc pas la quantité de pages, mais leur clarté, leur structure
+      et leur alignement avec l’intention de recherche.
+    </p>
+
+    <p class="intro">
+      Pour un site vitrine, le budget dépend surtout des pages services et des blocages techniques :
+      <a href="/projets/referencement-web/cout-referencement-web/">repères de coût SEO</a>.
+    </p>
+
+    <p>
+      Cette page détaille une approche réaliste : prioriser les pages utiles, structurer le site
+      pour qu’il soit compréhensible (par Google et par les humains), puis renforcer ce qui mérite
+      réellement de l’être.
+    </p>
+
+    <div class="cta-row" aria-label="Accès rapides référencement site vitrine">
+      <a class="btn btn-ghost" href="#priorites">Voir les priorités</a>
+      <a class="btn btn-ghost" href="#pages">Pages clés</a>
+      <a class="btn" href="/contact/">Discuter d’un site vitrine</a>
+    </div>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <p id="toc-title" class="toc-title">Sommaire</p>
+      <ul class="toc-list">
+        {sections.map((s) => (
+          <li><a href={s.href}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    {/* Enjeux */}
+    <section class="section" id="enjeux">
+      <h2>Enjeux SEO d’un site vitrine</h2>
+      <ul>
+        <li><strong>Peu de pages</strong> → chaque page doit compter.</li>
+        <li><strong>Offre parfois floue</strong> → pages services trop vagues ou génériques.</li>
+        <li><strong>Manque de preuves</strong> → difficile de convertir et de rassurer.</li>
+        <li><strong>SEO souvent mal compris</strong> → blog inutile avant fondations solides.</li>
+      </ul>
+
+      <div class="related-links">
+        <h3 class="related-title">Fondations méthodologiques</h3>
+        <ul class="related-list">
+          <li>
+            <a href="/projets/referencement-web/audit-seo/analyse-serp/">Analyse SERP</a>
+            <span class="hint">— comprendre le format attendu</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/audit-seo/intention-recherche/">Intention de recherche</a>
+            <span class="hint">— répondre au bon besoin</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/audit-seo/structure-site/">Structure de site</a>
+            <span class="hint">— hiérarchie et maillage simple</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    {/* Priorités */}
+    <section class="section" id="priorites">
+      <h2>Priorités SEO (dans le bon ordre)</h2>
+
+      <h3>P0 — Bloquants</h3>
+      <ul>
+        <li>Pages services non indexables ou mal accessibles</li>
+        <li>Erreurs techniques évidentes (indexation, duplication, lenteur)</li>
+        <li>Architecture confuse ou pages orphelines</li>
+      </ul>
+
+      <h3>P1 — Ce qui fait la différence</h3>
+      <ul>
+        <li>Pages services claires (une intention dominante par page)</li>
+        <li>Structure Hn lisible + FAQ ciblée</li>
+        <li>Maillage interne simple mais logique</li>
+        <li>Ajout de preuves (cas, références, méthode)</li>
+      </ul>
+
+      <h3>P2 — Amélioration continue</h3>
+      <ul>
+        <li>Optimisations on-page (entités, lisibilité)</li>
+        <li>Contenu support si pertinent</li>
+        <li>Suivi Search Console</li>
+      </ul>
+    </section>
+
+    {/* Pages */}
+    <section class="section" id="pages">
+      <h2>Pages clés d’un site vitrine performant</h2>
+      <ul>
+        <li><strong>Accueil</strong> : proposition de valeur claire + orientation.</li>
+        <li><strong>Pages services</strong> : cœur du SEO (offre, méthode, preuve, CTA).</li>
+        <li><strong>À propos</strong> : crédibilité, positionnement, confiance.</li>
+        <li><strong>Contact</strong> : accessible, rassurant, sans friction.</li>
+      </ul>
+
+      <p>
+        Si une page n’aide ni à comprendre l’offre, ni à rassurer, ni à convertir,
+        elle n’a probablement pas besoin d’exister.
+      </p>
+    </section>
+
+    {/* Contenu */}
+    <section class="section" id="contenu">
+      <h2>Contenu : quoi produire (et quoi éviter)</h2>
+
+      <h3>Utile</h3>
+      <ul>
+        <li>Pages services détaillées</li>
+        <li>FAQ issues de vraies questions clients</li>
+        <li>Pages “preuves” (cas, réalisations, méthode)</li>
+      </ul>
+
+      <h3>À éviter</h3>
+      <ul>
+        <li>Blog générique sans lien avec l’offre</li>
+        <li>Pages vagues “pour le SEO”</li>
+        <li>Duplication de contenus similaires</li>
+      </ul>
+
+      <div class="related-links">
+        <h3 class="related-title">Exemple de cadrage contenu</h3>
+        <ul class="related-list">
+          <li>
+            <a href="/projets/referencement-web/apprendre-chanter-gospel/">Brief SEO complet — étude de cas</a>
+            <span class="hint">— intention, structure, CTA, maillage</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    {/* Local */}
+    <section class="section" id="local">
+      <h2>Si le site vitrine est local</h2>
+      <p>
+        Pour une activité locale, le SEO repose autant sur la visibilité que sur la confiance :
+        cohérence des informations, avis, pages locales et clarté de l’offre.
+      </p>
+
+      <div class="related-links">
+        <h3 class="related-title">À relier</h3>
+        <ul class="related-list">
+          <li>
+            <a href="/projets/referencement-web/accompagnement-seo/referencement-site-local/">Référencement site local</a>
+            <span class="hint">— local pack, signaux, pages locales</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    {/* Process */}
+    <section class="section" id="process">
+      <h2>Process d’accompagnement (site vitrine)</h2>
+      <ol>
+        <li><strong>Diagnostic</strong> : SERP, intentions, structure, technique.</li>
+        <li><strong>Priorisation</strong> : pages à corriger / renforcer.</li>
+        <li><strong>Optimisation</strong> : contenu, structure, maillage.</li>
+        <li><strong>Validation</strong> : indexation, signaux, ajustements.</li>
+      </ol>
+
+      <p class="intro">
+        Vue d’ensemble : <a href="/projets/referencement-web/accompagnement-seo/">Hub Accompagnement SEO</a>.
+      </p>
+    </section>
+
+    {/* Livrables */}
+    <section class="section" id="livrables">
+      <h2>Livrables adaptés à un site vitrine</h2>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">Synthèse</span>
+          <h3>Plan d’action priorisé</h3>
+          <p>Corrections, ordre d’exécution, arbitrages.</p>
+          <a href="/projets/referencement-web/livrables-seo/">Voir les livrables</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Contenu</span>
+          <h3>Brief SEO pages services</h3>
+          <p>Intention, structure Hn, FAQ, CTA.</p>
+        </article>
+      </div>
+    </section>
+
+    {/* FAQ */}
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">FAQ — Référencement site vitrine</h2>
+
+      <div class="faq">
+        <details class="faq-item">
+          <summary>Un site vitrine peut-il vraiment performer en SEO ?</summary>
+          <div class="faq-answer">
+            <p>
+              Oui, si les pages services sont solides et alignées avec l’intention de recherche.
+              La qualité et la clarté priment largement sur le volume.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Faut-il un blog pour un site vitrine ?</summary>
+          <div class="faq-answer">
+            <p>
+              Pas forcément. Un blog n’a de sens que s’il soutient les pages services
+              et répond à des questions réelles.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn" href="/contact/">Discuter d’un site vitrine</a>
+        <a class="btn btn-ghost" href="/projets/referencement-web/accompagnement-seo/">Retour au hub Accompagnement SEO</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
