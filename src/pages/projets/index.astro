@@ -4,7 +4,6 @@ import Header from "../../components/Header.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
 
 const projects = [
-  // Etudes de cas (SEO)
   {
     type: "case",
     title: "Librairies indépendantes à Niort",
@@ -24,7 +23,7 @@ const projects = [
     summary:
       "Analyse SERP : intention mixte, entités, vidéos en position 0, PAA + cluster sémantique et brief SEO pour une page pillar.",
     tags: ["Intention", "SERP", "Cluster", "Brief SEO"],
-},
+  },
   {
     type: "case",
     title: "Audit SEO — Mac4Ever",
@@ -47,22 +46,28 @@ const projects = [
   },
 ];
 
-const categories = projects.filter((p) => p.type === "category");
 const cases = projects.filter((p) => p.type === "case");
-const cyberProjects = projects.filter((p) => p.type === "cyber-project");
 ---
 
-<BaseLayout title="Projets - Cassandra" description="Portfolio de projets : SEO, cybersécurité, montage vidéo.">
+<BaseLayout
+  title="Projets SEO — études de cas | Cassandra Michel"
+  description="Études de cas SEO : analyse SERP, intention de recherche, audits techniques, Core Web Vitals et livrables."
+>
   <Header />
 
   <main>
-    <h1>Projets</h1>
-    <p class="intro">Des preuves concrètes.</p>
+    <h1>Projets SEO</h1>
+    <p class="intro">Études de cas et livrables concrets.</p>
 
-    <section aria-label="Études de cas">
+    <section aria-label="Études de cas SEO">
       <h2>Études de cas</h2>
       <section class="grid" aria-label="Liste des études de cas">
         {cases.map((p) => <ProjectCard {...p} />)}
+      </section>
     </section>
+
+    <p class="muted" style="margin-top: 1rem;">
+      <a href="/projets/referencement-web/">Voir la page pilier : Référencement web</a>
+    </p>
   </main>
 </BaseLayout>

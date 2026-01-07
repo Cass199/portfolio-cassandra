@@ -453,3 +453,45 @@ code{
     transition: none;
   }
 }
+
+/* ========== Contact form (scopé) ========== */
+.contact-form label{
+  display: grid;
+  gap: .35rem;
+  color: rgba(233,234,245,0.92);
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select{
+  width: 100%;
+  background: rgba(255,255,255,0.06);
+  color: rgba(233,234,245,0.92);
+  border: 1px solid rgba(233,234,245,0.16);
+  border-radius: 12px;
+  padding: .6rem .75rem;
+  font: inherit;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+  color: rgba(233,234,245,0.55);
+  opacity: 1;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus{
+  outline: none;
+  border-color: rgba(139,92,246,0.65);
+  box-shadow: 0 0 0 3px rgba(139,92,246,0.18);
+}
+
+/* Safari/Chrome : évite le “text-fill” chelou */
+.contact-form input,
+.contact-form textarea{
+  -webkit-text-fill-color: rgba(233,234,245,0.92);
+  caret-color: rgba(233,234,245,0.92);
+}
+
+
