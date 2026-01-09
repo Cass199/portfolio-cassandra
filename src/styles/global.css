@@ -494,4 +494,12 @@ code{
   caret-color: rgba(233,234,245,0.92);
 }
 
-
+/* Chrome / Edge autofill (le vrai coupable) */
+.contact-form input:-webkit-autofill,
+.contact-form input:-webkit-autofill:hover,
+.contact-form input:-webkit-autofill:focus,
+.contact-form textarea:-webkit-autofill {
+  -webkit-text-fill-color: var(--text, #111) !important;
+  box-shadow: 0 0 0px 1000px var(--card, #fff) inset !important;
+  transition: background-color 9999s ease-out 0s;
+}
