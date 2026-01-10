@@ -29,12 +29,19 @@ const description = "Contacter Cassandra Michel pour une question ou un besoin S
         <input type="hidden" name="form-name" value="contact" />
 
         {/* Honeypot anti-spam */}
-        <p style="display:none;">
+        <p class="honeypot" aria-hidden="true">
           <label>
             Ne pas remplir ce champ :
-            <input name="bot-field" />
+              <input
+                type="text"
+                name="bot-field"
+                tabindex="-1"
+                autocomplete="off"
+                inputmode="none"
+              />
           </label>
         </p>
+
 
         <div style="display:grid; gap: 0.75rem;">
           <label>

@@ -490,7 +490,6 @@ code{
 /* Safari/Chrome : évite le “text-fill” chelou */
 .contact-form input,
 .contact-form textarea{
-  -webkit-text-fill-color: rgba(233,234,245,0.92);
   caret-color: rgba(233,234,245,0.92);
 }
 
@@ -500,6 +499,16 @@ code{
 .contact-form input:-webkit-autofill:focus,
 .contact-form textarea:-webkit-autofill {
   -webkit-text-fill-color: var(--text, #111) !important;
-  box-shadow: 0 0 0px 1000px var(--card, #fff) inset !important;
+  caret-color: rgba(233,234,245,0.92) !important;
+  box-shadow: 0 0 0px 1000px var(--surface-solid #fff) inset !important;
   transition: background-color 9999s ease-out 0s;
+}
+
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
