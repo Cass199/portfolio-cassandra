@@ -36,7 +36,7 @@ const description = "Contacter Cassandra Michel pour une question ou un besoin S
                 type="text"
                 name="bot-field"
                 tabindex="-1"
-                autocomplete="off"
+                autocomplete="new-password"
                 inputmode="none"
               />
           </label>
@@ -74,5 +74,30 @@ const description = "Contacter Cassandra Michel pour une question ou un besoin S
       <br />
       Email direct : <a href="mailto:heinui.cassandra@gmail.com">heinui.cassandra@gmail.com</a>
     </p>
+
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.querySelector("form.contact-form");
+        if (!form) return;
+
+        const fields = form.querySelectorAll("input, textarea, select");
+
+        /** @param {HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement} el */
+        const syncField = (el) => {
+          el.dispatchEvent(new Event("input", { bubbles: true }));
+          el.dispatchEvent(new Event("change", { bubbles: true }));
+          el.dispatchEvent(new Event("blur", { bubbles: true }));
+        };
+
+        form.addEventListener("submit", () => {
+          fields.forEach(syncField);
+        });
+
+        fields.forEach((el) => {
+          el.addEventListener("focus", () => syncField(el));
+        });
+      });
+    </script>
+
   </main>
 </BaseLayout>
