@@ -5,12 +5,14 @@ const {
   href,
   category = "Projet",
   status = "Publié",
+  angle = "",
   summary = "",
   tags = [],
 } = Astro.props;
 
 const safeTitle = typeof title === "string" && title.trim() ? title : "Projet";
 const safeHref = typeof href === "string" && href.trim() ? href : "#";
+const safeAngle = typeof angle === "string" ? angle : "";
 const safeSummary = typeof summary === "string" ? summary : "";
 const safeTags = Array.isArray(tags) ? tags : [];
 const isLive = status === "Publié";
@@ -27,6 +29,7 @@ const typeLabel =
       <div class="badges">
         <span class={`badge badge-type ${type}`}>{typeLabel}</span>
         <span class="badge badge-category">{category}</span>
+        {safeAngle ? <span class="badge badge-angle">{safeAngle}</span> : null}
         <span class={`badge badge-status ${isLive ? "is-live" : "is-soon"}`}>
           {status}
         </span>
@@ -94,6 +97,11 @@ const typeLabel =
     /* Optionnel : rendre la catégorie légèrement “moins lourde” visuellement */
     .project-card[data-type="category"] .card-summary {
       opacity: 0.95;
+    }
+
+    .project-card .badge-angle {
+      font-size: 0.72rem;
+      letter-spacing: 0.02em;
     }
   </style>
 </article>

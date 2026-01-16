@@ -1,0 +1,266 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import Header from "../../../../components/Header.astro";
+
+const sections = [
+  { href: "#intention", label: "Intention de recherche" },
+  { href: "#semantique", label: "Recherche sémantique & entités" },
+  { href: "#structure", label: "Structure & UX rédactionnelle" },
+  { href: "#livrables", label: "Livrables" },
+  { href: "#preuves", label: "Exemples" },
+];
+---
+
+<BaseLayout
+  title="Rédaction SEO — méthode, livrables et exemples | Cassandra Michel"
+  description="Hub Rédaction SEO : intention de recherche, recherche sémantique (mots-clés, champ lexical, entités), structure éditoriale, UX rédactionnelle et exemples d’études de cas."
+>
+  <Header />
+
+  <main>
+    <p class="muted">
+      <a href="/projets/referencement-web/">← Référencement web : méthode & livrables</a>
+    </p>
+
+    <h1>Rédaction SEO</h1>
+    <p>
+      La rédaction SEO, ce n’est pas “placer des mots-clés”. C’est écrire un contenu qui répond vite et bien à une intention,
+      tout en envoyant des signaux clairs à Google : sujet, entités, structure, qualité perçue et engagement.
+      Ici, je regroupe une méthode simple (intention → sémantique → structure → UX), les livrables typiques et des exemples
+      issus d’études de cas.
+    </p>
+
+    <div class="cta-row" aria-label="Accès rapides rédaction SEO">
+      <a class="btn btn-ghost" href="#preuves">Voir des exemples</a>
+      <a class="btn btn-ghost" href="/projets/referencement-web/livrables-seo/">Voir les livrables</a>
+      <a class="btn btn-ghost" href="/projets/referencement-web/audit-seo/">Voir l’audit SEO</a>
+      <a class="btn" href="/contact/">Discuter d’un contenu</a>
+    </div>
+
+    <section class="section">
+      <h2>Les pages de la rédaction SEO</h2>
+      <p class="intro">
+        Chaque brique de la rédaction SEO est détaillée dans une page dédiée : méthode, checklists et exemples concrets.
+      </p>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">Méthode</span>
+          <h3>Intention de recherche</h3>
+          <p>Typologie, signaux SERP, pièges fréquents, alignement contenu ↔ attentes.</p>
+          <a href="/projets/referencement-web/redaction-seo/intention-recherche-redaction/">Voir la page</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Sémantique</span>
+          <h3>Mots-clés & clusters</h3>
+          <p>Mot-clé principal, secondaires, longue traîne, mapping sections.</p>
+          <a href="/projets/referencement-web/redaction-seo/mots-cles-cluster-redaction/">Voir la page</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Sémantique</span>
+          <h3>Champ lexical & entités</h3>
+          <p>Couverture thématique, entités reliées, crédibilité, cohérence.</p>
+          <a href="/projets/referencement-web/redaction-seo/champ-lexical-entites/">Voir la page</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Structure</span>
+          <h3>Structure Hn & snippets</h3>
+          <p>H1/H2/H3, réponses directes, PAA, listes, encadrés.</p>
+          <a href="/projets/referencement-web/redaction-seo/structure-hn-snippets/">Voir la page</a>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">UX</span>
+          <h3>UX rédactionnelle</h3>
+          <p>Scannabilité, rythme visuel, clarté, micro-copies, CTA sobres.</p>
+          <a href="/projets/referencement-web/redaction-seo/ux-redactionnelle/">Voir la page</a>
+        </article>
+      </div>
+
+      <p class="intro">
+        Remarque : ces pages peuvent être lues indépendamment, mais la logique complète est :
+        <strong> intention → sémantique → structure → UX</strong>.
+      </p>
+    </section>
+
+    <br />
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <p id="toc-title" class="toc-title">Sommaire</p>
+      <ul class="toc-list">
+        {sections.map((s) => (
+          <li><a href={s.href}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <section class="section" id="intention">
+      <h2>Intention de recherche</h2>
+      <p>
+        La première étape, c’est d’identifier <strong>ce que l’utilisateur veut vraiment</strong> obtenir.
+        Une requête peut sembler simple, mais la SERP montre souvent des attentes précises : format (guide, liste, comparatif),
+        angle (débutant vs expert), niveau de preuve, et signaux de confiance.
+      </p>
+      <p>
+        La rédaction SEO consiste à aligner le contenu sur cette intention, sans surpromettre.
+        Si tu écris “le meilleur guide” mais que tu ne réponds pas aux questions de base, Google le verra… et l’utilisateur aussi.
+      </p>
+      <p class="intro">
+        Méthode détaillée :{" "}
+        <a href="/projets/referencement-web/redaction-seo/intention-recherche-redaction/">Intention de recherche (rédaction SEO)</a>.
+      </p>
+
+      <div class="related-links">
+        <h3 class="related-title">Exemples</h3>
+        <ul class="related-list">
+          <li>
+            <a href="/projets/referencement-web/apprendre-chanter-gospel/">Analyse SERP — Apprendre à chanter du gospel</a>
+            <span class="hint">— intention mixte, formats, vidéos</span>
+          </li>
+          <li>
+            <a href="/projets/referencement-web/librairies-independantes-niort/">Analyse SERP locale — Librairies indépendantes à Niort</a>
+            <span class="hint">— local pack, entités, signaux</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="semantique">
+      <h2>Recherche sémantique & entités</h2>
+      <p>
+        Une bonne page ne “répète” pas un mot-clé : elle couvre un sujet.
+        On part d’un <strong>mot-clé principal</strong>, on cartographie des <strong>mots-clés secondaires</strong> (sous-intentions),
+        puis on travaille un <strong>champ lexical</strong> et des <strong>entités sémantiques</strong> pour renforcer la compréhension.
+      </p>
+      <p>
+        Les entités (ex : objets, acteurs légitimes, concepts, lieux, outils) aident Google à relier la page à un univers de sens
+        cohérent — et aident le lecteur à sentir qu’il est “au bon endroit”.
+      </p>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">Sémantique</span>
+          <h3>Mot-clé → sections</h3>
+          <p>Transformer une liste de questions en H2/H3 utiles et logiques.</p>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Crédibilité</span>
+          <h3>Entités & signaux</h3>
+          <p>Acteurs, objets, concepts : ce qui fait “expert” sans en faire des tonnes.</p>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Clarté</span>
+          <h3>Champ lexical maîtrisé</h3>
+          <p>Réduire les redites, enrichir le texte, mieux couvrir le sujet.</p>
+        </article>
+      </div>
+
+      <p class="intro">
+        À lire :{" "}
+        <a href="/projets/referencement-web/redaction-seo/champ-lexical-entites/">Champ lexical & entités</a> ·{" "}
+        <a href="/projets/referencement-web/redaction-seo/mots-cles-cluster-redaction/">Mots-clés & clusters</a>
+      </p>
+    </section>
+
+    <section class="section" id="structure">
+      <h2>Structure & UX rédactionnelle</h2>
+      <p>
+        Une page peut être “bonne” sur le fond et inefficace en SEO si la structure est floue.
+        La structure (Hn) sert à la fois au lecteur (scannabilité) et à Google (hiérarchie du sujet).
+      </p>
+
+      <h3>Réponses directes (featured snippets)</h3>
+      <p>
+        Pour certaines sous-questions, on insère des <strong>réponses courtes et nettes</strong> au bon endroit.
+      </p>
+      <blockquote>
+        Exemple : “On peut commencer à éduquer un chaton dès son arrivée à la maison, généralement vers 2 à 3 mois.”
+      </blockquote>
+      <p>
+        L’objectif : réduire la friction cognitive, répondre vite, puis détailler ensuite.
+        C’est bon pour l’utilisateur et ça augmente les chances d’extraction en snippet.
+      </p>
+
+      <h3>Rythme visuel</h3>
+      <p>
+        Paragraphes courts, listes quand nécessaire, mises en gras stratégiques, transitions simples.
+        Le but n’est pas d’écrire long : c’est d’écrire <strong>lisible</strong>.
+      </p>
+
+      <p class="intro">
+        Méthode :{" "}
+        <a href="/projets/referencement-web/redaction-seo/structure-hn-snippets/">Structure Hn & snippets</a> ·{" "}
+        <a href="/projets/referencement-web/redaction-seo/ux-redactionnelle/">UX rédactionnelle</a>
+      </p>
+    </section>
+
+    <section class="section" id="livrables">
+      <h2>Livrables d’une rédaction SEO</h2>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">Plan</span>
+          <h3>Structure H1/H2/H3</h3>
+          <p>Plan aligné intention + logique pédagogique + sections prioritaires.</p>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Sémantique</span>
+          <h3>Brief mots-clés / entités</h3>
+          <p>Mot-clé principal, secondaires, champ lexical, entités reliées.</p>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Rédaction</span>
+          <h3>Article optimisé</h3>
+          <p>Contenu rédigé avec UX (scannable) + réponses directes/snippets.</p>
+        </article>
+
+        <article class="card highlight">
+          <span class="badge">Amélioration</span>
+          <h3>Recommandations on-page</h3>
+          <p>Titres, meta, FAQ, maillage interne, sections à renforcer.</p>
+        </article>
+      </div>
+
+      <p class="intro">
+        Les formats de livrables SEO sont détaillés ici :{" "}
+        <a href="/projets/referencement-web/livrables-seo/">Livrables SEO</a>.
+      </p>
+    </section>
+
+    <section class="section" id="preuves">
+      <h2>Exemples et cas pratiques</h2>
+      <p>
+        Un exemple de rédaction SEO informationnelle : analyse de la requête, recherche sémantique, structure et article complet.
+      </p>
+
+      <div class="highlights">
+        <article class="card highlight">
+          <span class="badge">Rédaction / Informationnel</span>
+          <h3>Comment éduquer un chaton</h3>
+          <p>
+            Requête large (débutants) : intention, mots-clés secondaires (propreté, morsures, griffades), champ lexical,
+            entités (éthologie féline, litière, griffoir, vétérinaire) + intégration de featured snippets.
+          </p>
+          <a href="/projets/referencement-web/eduquer-un-chaton/">Voir le projet</a>
+        </article>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn" href="/contact/">Discuter d’un contenu SEO</a>
+        <a class="btn btn-ghost" href="/projets/referencement-web/">Retour à la page Référencement web</a>
+      </div>
+
+      <p class="intro">
+        Objectif : un contenu utile qui se lit — et qui se positionne parce qu’il répond mieux, plus vite, plus clairement.
+      </p>
+    </section>
+  </main>
+</BaseLayout>
+```
