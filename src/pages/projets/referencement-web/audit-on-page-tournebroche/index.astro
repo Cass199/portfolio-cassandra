@@ -1,0 +1,133 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import Header from "../../../../components/Header.astro";
+
+const pageTitle = "Audit on-page : “Quelles viandes rôtir à la broche / au tournebroche”";
+const pageDescription =
+  "Étude de cas : mini-audit on-page complet (intention, Hn, enrichissement, maillage interne, UX) sur une page positionnée top 3.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <Header />
+
+  <main>
+    <p class="muted">
+      <a href="/projets/">← Tous les projets</a> ·{" "}
+      <a href="/projets/referencement-web/">Référencement web</a> ·{" "}
+      <a href="/projets/referencement-web/audit-seo/">Audit SEO</a>
+    </p>
+
+    <h1>Audit on-page — “Quelles viandes rôtir au tournebroche”</h1>
+
+    <p class="intro">
+      Étude de cas réalisée à titre d’exemple : analyse intentionnelle et on-page d’une page positionnée dans le top 3
+      sur une requête informationnelle proche de <em>“quelle viande rôtir à la broche”</em>.
+    </p>
+
+    <div class="card" style="margin-top: 1rem;">
+      <p><strong>URL analysée :</strong> <a href="https://chefadomicile-soulkitchen.fr/quelles-viandes-rotir-au-tournebroche.html" rel="nofollow">chefadomicile-soulkitchen.fr/quelles-viandes-rotir-au-tournebroche.html</a></p>
+      <p><strong>Requête cible :</strong> quelle viande rôtir à la broche</p>
+      <p><strong>Type d’intention :</strong> informationnelle (choix des viandes)</p>
+      <p class="muted" style="margin-bottom: 0;">
+        Note : recommandations non implémentées sur le site analysé.
+      </p>
+    </div>
+
+    <br>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <p id="toc-title" class="toc-title">Sommaire</p>
+      <ul class="toc-list">
+        <li><a href="#intention">Audit intention</a></li>
+        <li><a href="#hn">Optimisation des H2</a></li>
+        <li><a href="#enrichissement">Enrichissement ciblé</a></li>
+        <li><a href="#maillage">Amélioration du maillage</a></li>
+        <li><a href="#ux">Ajustements UX</a></li>
+        <li><a href="#avant-apres">Avant / Après</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" id="intention">
+      <h2>Audit intention</h2>
+      <p>
+        L’utilisateur cible est un amateur qui veut savoir quelles viandes fonctionnent au tournebroche : soit parce qu’il
+        en possède déjà un, soit parce qu’il s’informe avant achat. Dans les deux cas, l’intention est informationnelle.
+      </p>
+      <p>
+        La page répond correctement : title et H1 alignés, et contenu listant plusieurs viandes adaptées (poulet, agneau,
+        porcelet, mouton…).
+      </p>
+    </section>
+
+    <section class="section" id="hn">
+      <h2>Optimisation des H2</h2>
+      <ul>
+        <li><strong>“Vous pouvez cuire différents types de viande au tournebroche”</strong> → <strong>“Les différents types de viande à cuire au tournebroche”</strong></li>
+        <li><strong>“Et bien sûr !”</strong> → <strong>“Autres viandes possibles au tournebroche”</strong></li>
+      </ul>
+      <p class="muted">
+        Objectif : titres scannables, explicites, sans section “vague” qui ralentit la lecture.
+      </p>
+    </section>
+
+    <section class="section" id="enrichissement">
+      <h2>Enrichissement ciblé</h2>
+      <h3>Introduction (à ajouter)</h3>
+      <p>
+        Rôtir une viande à la broche ne fonctionne pas avec n’importe quel morceau. Certaines viandes supportent mal la
+        rotation et la cuisson lente, tandis que d’autres deviennent particulièrement tendres et savoureuses.
+      </p>
+      <p>
+        Dans cet article, nous passons en revue <strong>les viandes les plus adaptées à la cuisson au tournebroche</strong>,
+        avec leurs caractéristiques, afin de vous aider à faire le bon choix selon votre événement et le type de cuisson souhaité.
+      </p>
+
+      <h3>Section à ajouter : conseils de cuisson</h3>
+      <p>
+        Ajouter une section courte “Conseils de cuisson au tournebroche” pour répondre au “comment réussir” après le “quoi choisir”.
+      </p>
+    </section>
+
+    <section class="section" id="maillage">
+      <h2>Amélioration du maillage</h2>
+      <p>
+        La page est difficile à retrouver sans passer par le plan du site. Recommandation : ajouter un lien “Articles” dans
+        le menu et organiser les articles par catégories (ex. “Rôtisserie”).
+      </p>
+      <p>
+        Lien contextuel possible depuis la page “Traiteur”, pour faire le pont entre informationnel et transactionnel.
+      </p>
+      <h3>Ancres (exemple)</h3>
+      <p>
+        “Tournebroche - Artisan rôtisseur” → “Découvrir notre prestation Tournebroche - Artisan rôtisseur”
+      </p>
+    </section>
+
+    <section class="section" id="ux">
+      <h2>Ajustements UX</h2>
+      <ul>
+        <li>Séparer visuellement “Articles similaires” du contenu principal.</li>
+        <li>Ajouter un sommaire cliquable en haut de page pour naviguer rapidement.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="avant-apres">
+      <h2>Avant / Après</h2>
+      <p>
+        <strong>Title et H1 :</strong> inchangés — “Quelles viandes rôtir au tournebroche”.
+      </p>
+      <p>
+        Changements proposés : introduction claire, H2 plus explicites, section conseils, maillage amélioré (menu Articles),
+        et navigation facilitée (sommaire + séparation des sections).
+      </p>
+      <p class="intro">
+        Résultat attendu : une page plus lisible et plus rapide à comprendre, sans modifier le cœur du contenu.
+      </p>
+    </section>
+
+    <div class="cta-row">
+      <a class="btn btn-ghost" href="/projets/">Voir tous les projets</a>
+      <a class="btn" href="/contact/">Discuter d’un besoin SEO concret</a>
+    </div>
+  </main>
+</BaseLayout>
